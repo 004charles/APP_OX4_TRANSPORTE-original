@@ -50,12 +50,12 @@
     <!-- onboarding section start -->
     <section class="onboarding-section pt-0">
         <div class="onboarding-wrapper user-intro">
-            <img class="img-fluid vehicle1" src="assets/images/onboarding/intro-bike.png" alt="moto"
-                data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000">
-            <img class="img-fluid vehicle2" src="assets/images/onboarding/intro-bike.png" alt="moto"
-                data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000">
-            <img class="img-fluid vehicle3" src="assets/images/onboarding/intro-car.png" alt="carro"
-                data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000">
+            <img class="img-fluid vehicle1" src="assets/images/onboarding/intro-bike.png" alt="moto" data-aos="zoom-in"
+                data-aos-duration="500" data-aos-delay="1000">
+            <img class="img-fluid vehicle2" src="assets/images/onboarding/intro-bike.png" alt="moto" data-aos="zoom-in"
+                data-aos-duration="500" data-aos-delay="1000">
+            <img class="img-fluid vehicle3" src="assets/images/onboarding/intro-car.png" alt="carro" data-aos="zoom-in"
+                data-aos-duration="500" data-aos-delay="1000">
         </div>
 
         <div class="user-onboarding-content-box">
@@ -87,13 +87,44 @@
                 </div>
             </div>
 
-            <a href="index.html#!" class="btn theme-btn install-app btn-inline home-screen-btn m-0" id="installApp">
-                Adicionar à Tela Inicial
-            </a>
+            <main>
+                <section>
+                    <p>Diga adeus às longas esperas e às tarifas imprevisíveis.</p>
+                    <a href="index.html#!" class="btn theme-btn install-app btn-inline home-screen-btn m-0"
+                        id="installApp">
+                        Adicionar à Tela Inicial
+                    </a>
+                </section>
+            </main>
 
         </div>
     </div>
     <!-- pwa install app popup start -->
+
+
+    <script>
+        let deferredPrompt;
+        const installBtn = document.getElementById('installApp');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installBtn.style.display = 'inline-block'; // mostra o botão
+        });
+
+        installBtn.addEventListener('click', async () => {
+            if (!deferredPrompt) return;
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+                console.log('Usuário aceitou a instalação');
+            } else {
+                console.log('Usuário rejeitou a instalação');
+            }
+            deferredPrompt = null;
+            installBtn.style.display = 'none';
+        });
+    </script>
 
     <!-- iconsax js -->
     <script src="assets/js/iconsax.js"></script>
