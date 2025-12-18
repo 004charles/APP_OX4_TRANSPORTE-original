@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="taxify">
+    <meta name="keywords" content="taxify">
+    <meta name="author" content="taxify">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="assets/images/logo/favicon.png" type="image/x-icon">
+    <title>OX4 Transporte - Pesquisar Localizacao </title>
+
+    <link rel="apple-touch-icon" href="assets/images/logo/favicon.png">
+    <meta name="title-color" content="#01AA85">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="taxify">
+    <meta name="msapplication-TileImage" content="../assets/images/logo/favicon.png">
+
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- iconsax css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/iconsax.css">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" id="rtl-link" type="text/css" href="assets/css/vendors/bootstrap.css">
+
+
+    <!-- Theme css -->
+    <link rel="stylesheet" id="change-link" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- header starts -->
+    <header id="header" class="main-header">
+    <div class="custom-container">
+        <div class="header-panel">
+            <div class="d-flex align-items-center justify-content-between gap-2 w-100">
+                <a href="home.html">
+                    <i class="iconsax icon-btn" data-icon="chevron-left"> </i>
+                </a>
+
+                <select class="form-select rider-options">
+                    <option selected>Trocar Passageiro</option>
+                    <option value="1">Eu mesmo</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- header end -->
+
+    <!-- location section starts -->
+    <section class="location-section pt-0">
+        <div class="custom-container">
+            <ul class="pickup-location-listing">
+                <li>
+                    <div class="location-box">
+                        <img class="icon" src="assets/images/svg/location-fill.svg" alt="location">
+                        <input type="text" id="inputpickup" class="form-control" placeholder="Pickup location">
+                    </div>
+                </li>
+                <li>
+                    <div class="location-box">
+                        <img class="icon" src="assets/images/svg/gps.svg" alt="gps">
+                        <input type="text" id="inputdestination" class="form-control border-0"
+                            placeholder="Enter destination">
+                        <i class="iconsax add-stop" data-icon="add"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- location section starts -->
+
+    <!-- categories place list starts -->
+    <section>
+        <div class="custom-container">
+            <ul class="categories-place-list">
+                <li class="ps-0">
+                    <a href="search-location.html#" class="categories-place-box">
+                        <div class="place-icon">
+                            <img class="icon-btn" src="assets/images/svg/home-fill.svg" alt="home">
+                        </div>
+                        <h5>Add Home</h5>
+                    </a>
+                </li>
+                <li class="pe-0">
+                    <a href="search-location.html#" class="categories-place-box">
+                        <div class="place-icon">
+                            <img class="icon-btn" src="assets/images/svg/work-fill.svg" alt="home">
+                        </div>
+                        <h5>Add Trabalho</h5>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- categories place list starts -->
+
+    <!-- recent search list starts -->
+    <section>
+    <div class="custom-container">
+        <h3 class="title-color fw-semibold">Recentes</h3>
+        <ul class="recent-place-list">
+            <li>
+                <div class="recent-box">
+                    <div class="recent-icon">
+                        <img class="icon" src="assets/images/svg/history.svg" alt="history">
+                    </div>
+                    <div>
+                        <h5>Talatona</h5>
+                        <p>Avenida de Talatona, Luanda</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="recent-box">
+                    <div class="recent-icon">
+                        <img class="icon" src="assets/images/svg/history.svg" alt="history">
+                    </div>
+                    <div>
+                        <h5>Belas Shopping</h5>
+                        <p>Rua Principal, Belas, Luanda</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="recent-box">
+                    <div class="recent-icon">
+                        <img class="icon" src="assets/images/svg/history.svg" alt="history">
+                    </div>
+                    <div>
+                        <h5>Marginal de Luanda</h5>
+                        <p>Avenida 4 de Fevereiro, Luanda</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="recent-box">
+                    <div class="recent-icon">
+                        <img class="icon" src="assets/images/svg/history.svg" alt="history">
+                    </div>
+                    <div>
+                        <h5>Palanca</h5>
+                        <p>Bairro Palanca, Luanda</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="recent-box">
+                    <div class="recent-icon">
+                        <img class="icon" src="assets/images/svg/history.svg" alt="history">
+                    </div>
+                    <div>
+                        <h5>Viana</h5>
+                        <p>Avenida Comandante Valódia, Viana, Luanda</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="fixed-btn">
+        <div class="custom-container">
+            <a href="search-location.html#ride" data-bs-toggle="offcanvas" class="btn theme-btn w-100">Concluído</a>
+        </div>
+    </div>
+</section>
+<!-- lista de pesquisas recentes encerrada -->
+
+<!-- ride-offcanvas inicia -->
+<div class="offcanvas ride-offcanvas" tabindex="-1" id="ride">
+    <div class="offcanvas-body p-0">
+        <h3>Outra pessoa vai pegar esta corrida?</h3>
+        <p>Escolha um contato para que ele também receba o número do motorista, detalhes do veículo e o OTP da corrida via SMS.</p>
+
+        <div class="form-check">
+            <label class="form-check-label" for="fixed1"> <i class="iconsax icon" data-icon="user-1"></i>
+                Eu mesmo</label>
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="fixed1" checked="">
+        </div>
+        <a href="choose-rider.html" class="choose-contact">
+            <div class="d-flex align-items-center gap-2">
+                <img class="img-fluid user-icon" src="assets/images/svg/user-octagon.svg" alt="user">
+                <h5>Escolher outro contato</h5>
+            </div>
+            <i class="iconsax icon-btn" data-icon="chevron-right"> </i>
+
+        </a>
+    </div>
+    <div class="offcanvas-footer d-flex align-items-center flex-nowrap gap-3 border-0 pt-3 px-0 pb-0">
+        <a href="selact-ride.html" class="btn gray-btn title-color w-100 mt-0">Pular</a>
+        <a href="selact-ride.html" class="btn theme-btn w-100 mt-0">Continuar</a>
+    </div>
+</div>
+
+    <!-- ride-offcanvas end -->
+
+    <!-- panel-space start -->
+    <section class="panel-space"></section>
+    <!-- panel-space end -->
+
+    <!-- iconsax js -->
+    <script src="assets/js/iconsax.js"></script>
+
+    <!-- sticky-header js -->
+    <script src="assets/js/sticky-header.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- template-setting js -->
+    <script src="assets/js/template-setting.js"></script>
+
+    <!-- script js -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
