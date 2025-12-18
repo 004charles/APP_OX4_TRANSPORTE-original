@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="taxify">
+    <meta name="keywords" content="taxify">
+    <meta name="author" content="taxify">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="assets/images/logo/favicon.png" type="image/x-icon">
+    <title>OX4 - Transporte - Localizacao </title>
+
+    <link rel="apple-touch-icon" href="assets/images/logo/Logotipo 1.png">
+    <meta name="title-color" content="#01AA85">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="taxify">
+    <meta name="msapplication-TileImage" content="../assets/images/logo/Logotipo 1.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/iconsax.css">
+
+    <link rel="stylesheet" id="rtl-link" type="text/css" href="assets/css/vendors/bootstrap.css">
+
+
+    <link rel="stylesheet" id="change-link" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <header id="header" class="main-header inner-page-header position-absolute bg-transparent">
+        <div class="custom-container">
+            <div class="header-panel p-0">
+                <a href="otp.html">
+                    <i class="iconsax icon-btn" data-icon="chevron-left"> </i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="location-map mt-0 position-relative w-100 h-100" id="map"></div>
+
+    <<div class="location-bg">
+    <div class="location-title-content">
+        <h5 class="fw-normal ">Selecionar Local de Serviço</h5>
+        <a href="add-new-location.html" class="change-location fw-medium secondary-color">Alterar</a>
+    </div>
+    <div class="ride-content-bg mt-0">
+        <div class="current-location-box">
+            <div class="d-flex align-items-center gap-2">
+                <div class="location-icon">
+                    <img class="icon" src="assets/images/svg/location-fill.svg" alt="localização">
+                </div>
+
+                <h5 class="title-color fw-bold">Rua da Mesquita</h5>
+            </div>
+            <p>123, Rua da Mesquita, Ingombota, Luanda, Angola.</p>
+        </div>
+        <a href="home.html" class="btn theme-btn w-100 mt-3">Confirmar Localização</a>
+    </div>
+</div>
+
+    <!-- map js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGCQvcXUsXwCdYArPXo72dLZ31WS3WQRw"></script>
+    <script src="assets/js/custom-map.js"></script>
+
+    <script src="assets/js/iconsax.js"></script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/template-setting.js"></script>
+
+    <!-- script js -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
