@@ -27,25 +27,21 @@
       "src": "assets/images/logo/Colorful Modern Infinity Creative Studio Logo.png",
       "sizes": "96x96",
       "type": "image/png",
-      "purpose": "any maskable"
     },
     {
       "src": "assets/images/logo/Colorful Modern Infinity Creative Studio Logo.png",
       "sizes": "144x144",
       "type": "image/png",
-      "purpose": "any maskable"
     },
     {
       "src": "assets/images/logo/Colorful Modern Infinity Creative Studio Logo.png",
       "sizes": "168x168",
       "type": "image/png",
-      "purpose": "any maskable"
     },
     {
       "src": "assets/images/logo/Colorful Modern Infinity Creative Studio Logo.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
     }
   ]
 }

@@ -1,45 +1,4 @@
-/*-----------------------------------------------------------------------------------
 
-    Template Name:Taxify APP
-    Template URI: https://themes.pixelstrap.net/pwa/taxify/
-    Description: This is PWA Html Template
-    Author: Pixelstrap
-    Author URL: https://themeforest.net/user/pixelstrap
-
------------------------------------------------------------------------------------ */
-/* 1.1 animation CSS  */
-/* 1.2 variable CSS  */
-/* 2.1 Reset CSS  */
-/* 2.2 Typography CSS */
-/* 3.1 Button CSS  */
-/* 3.2 Calender CSS  */
-/* 3.3 Chatting CSS  */
-/* 3.4 Form CSS  */
-/* 3.5 Modal CSS  */
-/* 3.6 Offcanvas CSS  */
-/* 3.7 Ratio CSS  */
-/* 3.8 Slider CSS  */
-/* 3.8 Tab CSS */
-/* 3.10 Title CSS */
-/* 4.1 Header css */
-/* 4.2 Nav CSS */
-/* 5.1 Authentication CSS */
-/* 5.2 Category CSS */
-/* 5.3 Elements Page CSS */
-/* 5.4 Empty Pages CSS */
-/* 5.5 Home CSS */
-/* 5.7 Location CSS*/
-/* 5.7 Notification CSS */
-/* 5.8 onboarding CSS */
-/* 5.9 Outstation CSS */
-/* 5.10 Page List CSS */
-/* 5.11 Profile CSS */
-/* 5.12 Ride CSS */
-/* 6.1 Dark CSS */
-/*utils scss files */
-/*========================
-    1.1 animation CSS start
-==========================*/
 @-webkit-keyframes moveObject1 {
   0%, 100% {
     top: 0;
@@ -340,18 +299,43 @@
 /* font family */
 /* color variables */
 :root {
-  --theme-color: 23, 28, 38;
-  --title-color: 23, 28, 38;
-  --content-color: 127, 131, 132;
-  --box-bg: 243, 244, 246;
-  --line-color: 232, 232, 233;
-  --secondary-color: 255, 180, 0;
-  --success-color: 32, 177, 73;
-  --error-color: 255, 75, 75;
-  --accent-color: 58, 109, 229;
+  /* Cores principais da marca */
+  --primary-color: 46, 63, 110;    /* #2e3f6e - Azul escuro do logo */
+  --primary-light: 67, 89, 145;    /* Versão mais clara do azul */
+  --primary-dark: 35, 48, 85;      /* Versão mais escura do azul */
+  
+  /* Paleta de cinzas (escala completa) */
+  --gray-900: 23, 28, 38;          /* Quase preto - títulos */
+  --gray-800: 46, 52, 64;          /* Cinza muito escuro */
+  --gray-700: 74, 85, 104;         /* Cinza escuro - subtítulos */
+  --gray-600: 101, 116, 139;       /* Cinza médio-escuro */
+  --gray-500: 127, 131, 132;       /* Cinza médio - conteúdo (mantido) */
+  --gray-400: 148, 163, 184;       /* Cinza médio-claro */
+  --gray-300: 203, 213, 224;       /* Cinza claro - bordas */
+  --gray-200: 226, 232, 240;       /* Cinza muito claro */
+  --gray-100: 237, 242, 247;       /* Cinza claro de fundo */
+  --gray-50: 248, 250, 252;        /* Cinza quase branco */
+  
+  /* Cores funcionais e de estado */
+  --secondary-color: 255, 180, 0;  /* Amarelo/laranja para destaques */
+  --success-color: 32, 177, 73;    /* Verde para sucesso */
+  --error-color: 255, 75, 75;      /* Vermelho para erros */
+  --warning-color: 255, 159, 67;   /* Laranja para avisos */
+  --info-color: 58, 109, 229;      /* Azul para informações */
+  
+  /* Cores neutras */
   --white: 255, 255, 255;
   --black: 0, 0, 0;
+  
+  /* Variáveis de uso específico (compatibilidade) */
+  --theme-color: var(--primary-color);         /* Para tema principal */
+  --title-color: var(--gray-900);              /* Para títulos */
+  --content-color: var(--gray-500);            /* Para conteúdo */
+  --box-bg: var(--gray-100);                   /* Para fundos de caixa */
+  --line-color: var(--gray-300);               /* Para bordas/linhas */
+  --accent-color: var(--info-color);           /* Para elementos de destaque */
 }
+
 
 .dark {
   --theme-color: 2, 2, 3;
