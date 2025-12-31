@@ -273,6 +273,25 @@
                 margin-bottom: 15px;
             }
         }
+
+
+/* Adicione esta regra CSS para feedback visual nos botões */
+.next-btn:active, .prev-btn:active, .skip-btn:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+/* Adicione uma animação de carregamento quando clicar */
+@keyframes loadingPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.loading {
+    animation: loadingPulse 0.5s ease infinite;
+}
+
     </style>
 </head>
 
@@ -392,82 +411,163 @@
     </div>
 
     <script>
-        // Script para navegação entre telas de onboarding
-        let currentScreen = 1;
-        const totalScreens = 3;
+    // Script para navegação entre telas de onboarding
+    let currentScreen = 1;
+    const totalScreens = 3;
+    
+    // Verifica se o usuário já completou o onboarding
+    document.addEventListener('DOMContentLoaded', function() {
+        const onboardingCompleted = localStorage.getItem('onboardingCompleted');
         
-        function nextScreen(screenNumber) {
-            // Remove animação da tela atual
-            document.querySelectorAll('.animate-content').forEach(el => {
-                el.style.animation = 'none';
-            });
-            
-            // Esconde a tela atual
-            document.getElementById(`screen-${currentScreen}`).classList.remove('active');
-            
-            // Atualiza a tela atual
-            currentScreen = screenNumber;
-            
-            // Mostra a nova tela
-            const newScreen = document.getElementById(`screen-${currentScreen}`);
-            newScreen.classList.add('active');
-            
-            // Restaura animações
-            setTimeout(() => {
-                newScreen.querySelectorAll('.animate-content').forEach(el => {
-                    el.style.animation = '';
-                });
-            }, 10);
-            
-            // Atualiza os dots de paginação
-            updatePaginationDots();
-        }
-        
-        function prevScreen() {
-            if (currentScreen > 1) {
-                nextScreen(currentScreen - 1);
-            }
-        }
-        
-        function updatePaginationDots() {
-            // Remove a classe active de todos os dots
-            document.querySelectorAll('.dot').forEach(dot => {
-                dot.classList.remove('active');
-            });
-            
-            // Adiciona a classe active ao dot correspondente
-            const activeDots = document.querySelectorAll(`#screen-${currentScreen} .dot`);
-            if (activeDots.length >= currentScreen) {
-                activeDots[currentScreen - 1].classList.add('active');
-            }
-        }
-        
-        function skipOnboarding() {
-            // Redireciona para a tela principal (login.html)
+        // Se já completou, redireciona direto para login
+        if (onboardingCompleted === 'true') {
             window.location.href = "login.html";
         }
-        
-        function startApp() {
-            // Redireciona para a tela principal (login.html)
-            window.location.href = "login.html";
-        }
-        
-        // Inicializa os dots de paginação
-        updatePaginationDots();
-        
-        // Adiciona navegação por teclado
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'ArrowRight') {
-                if (currentScreen < totalScreens) {
-                    nextScreen(currentScreen + 1);
-                }
-            } else if (e.key === 'ArrowLeft') {
-                if (currentScreen > 1) {
-                    prevScreen();
-                }
-            }
+    });
+    
+    function nextScreen(screenNumber) {
+        // Remove animação da tela atual
+        document.querySelectorAll('.animate-content').forEach(el => {
+            el.style.animation = 'none';
         });
-    </script>
+        
+        // Esconde a tela atual
+        document.getElementById(`screen-${currentScreen}`).classList.remove('active');
+        
+        // Atualiza a tela atual
+        currentScreen = screenNumber;
+        
+        // Mostra a nova tela
+        const newScreen = document.getElementById(`screen-${currentScreen}`);
+        newScreen.classList.add('active');
+        
+        // Restaura animações
+        setTimeout(() => {
+            newScreen.querySelectorAll('.animate-content').forEach(el => {
+                el.style.animation = '';
+            });
+        }, 10);
+        
+        // Atualiza os dots de paginação
+        updatePaginationDots();
+    }
+    
+    function prevScreen() {
+        if (currentScreen > 1) {
+            nextScreen(currentScreen - 1);
+        }
+    }
+    
+    function updatePaginationDots() {
+        // Remove a classe active de todos os dots
+        document.querySelectorAll('.dot').forEach(dot => {
+            dot.classList.remove('active');
+        });
+        
+        // Adiciona a classe active ao dot correspondente
+        const activeDots = document.querySelectorAll(`#screen-${currentScreen} .dot`);
+        if (activeDots.length >= currentScreen) {
+            activeDots[currentScreen - 1].classList.add('active');
+        }
+    }
+    
+    function skipOnboarding() {
+        // Salva no localStorage que o usuário já viu o onboarding
+        localStorage.setItem('onboardingCompleted', 'true');
+        
+        // Redireciona para a tela de login
+        window.location.href = "login.html";
+    }
+    
+    function startApp() {
+        // Salva no localStorage que o usuário completou o onboarding
+        localStorage.setItem('onboardingCompleted', 'true');
+        
+        // Redireciona para a tela de login
+        window.location.href = "login.html";
+    }
+    
+    // Inicializa os dots de paginação
+    updatePaginationDots();
+    
+    // Adiciona navegação por teclado
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowRight') {
+            if (currentScreen < totalScreens) {
+                nextScreen(currentScreen + 1);
+            }
+        } else if (e.key === 'ArrowLeft') {
+            if (currentScreen > 1) {
+                prevScreen();
+            }
+        } else if (e.key === 'Escape') {
+            skipOnboarding();
+        }
+    });
+    
+    // Adiciona suporte para swipe em dispositivos móveis
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    document.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    document.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        
+        // Swipe para a esquerda (próxima tela)
+        if (touchStartX - touchEndX > swipeThreshold) {
+            if (currentScreen < totalScreens) {
+                nextScreen(currentScreen + 1);
+            }
+        }
+        
+        // Swipe para a direita (tela anterior)
+        if (touchEndX - touchStartX > swipeThreshold) {
+            if (currentScreen > 1) {
+                prevScreen();
+            }
+        }
+    }
+</script>
+
+<script>
+    function startApp() {
+    // Adiciona feedback visual
+    const startButton = document.querySelector('#screen-3 .next-btn');
+    startButton.classList.add('loading');
+    startButton.innerHTML = 'Carregando...';
+    
+    // Salva no localStorage que o usuário completou o onboarding
+    localStorage.setItem('onboardingCompleted', 'true');
+    
+    // Redireciona para a tela de login após um breve delay para visualização
+    setTimeout(() => {
+        window.location.href = "login.html";
+    }, 500);
+}
+
+function skipOnboarding() {
+    // Adiciona feedback visual
+    const skipButton = document.querySelector('.skip-btn');
+    skipButton.classList.add('loading');
+    skipButton.innerHTML = 'Redirecionando...';
+    
+    // Salva no localStorage que o usuário já viu o onboarding
+    localStorage.setItem('onboardingCompleted', 'true');
+    
+    // Redireciona para a tela de login após um breve delay
+    setTimeout(() => {
+        window.location.href = "login.html";
+    }, 300);
+}
+</script>
 
     <!-- iconsax js -->
     <script src="assets/js/iconsax.js"></script>
