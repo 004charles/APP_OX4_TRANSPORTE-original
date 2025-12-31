@@ -415,12 +415,26 @@
         const totalScreens = 3;
         
         // Verifica se o usuário já completou o onboarding
+        // Vamos adicionar um pequeno delay para evitar redirecionamento imediato
         document.addEventListener('DOMContentLoaded', function() {
+            // Verifica se é a primeira vez do usuário
             const onboardingCompleted = localStorage.getItem('onboardingCompleted');
+            const firstTimeKey = 'firstTimeVisit';
+            const isFirstTime = localStorage.getItem(firstTimeKey);
             
-            // Se já completou, redireciona direto para login
-            if (onboardingCompleted === 'true') {
-                window.location.href = "login.html";
+            // Se NÃO for a primeira vez E o onboarding já foi completado
+            // então redireciona direto para login
+            if (!isFirstTime && onboardingCompleted === 'true') {
+                // Marca que já visitou pela primeira vez
+                localStorage.setItem(firstTimeKey, 'true');
+                // Redireciona após um pequeno delay para evitar flash
+                setTimeout(() => {
+                    window.location.href = "login.html";
+                }, 100);
+            } else {
+                // Primeira visita ou onboarding não completado
+                // Marca que já visitou pela primeira vez
+                localStorage.setItem(firstTimeKey, 'true');
             }
         });
         
@@ -479,13 +493,19 @@
                 button.disabled = true;
             });
             
+            // Desabilita também os botões de próxima/voltar
+            const nextButtons = document.querySelectorAll('.next-btn, .prev-btn');
+            nextButtons.forEach(button => {
+                button.disabled = true;
+            });
+            
             // Salva no localStorage que o usuário já viu o onboarding
             localStorage.setItem('onboardingCompleted', 'true');
             
             // Redireciona para a tela de login após um breve delay
             setTimeout(() => {
                 window.location.href = "login.html";
-            }, 300);
+            }, 800); // Aumentei para 800ms para dar tempo de ver a animação
         }
         
         function startApp() {
@@ -495,13 +515,19 @@
             startButton.innerHTML = 'Carregando...';
             startButton.disabled = true;
             
+            // Desabilita outros botões
+            const skipButtons = document.querySelectorAll('.skip-btn, .prev-btn');
+            skipButtons.forEach(button => {
+                button.disabled = true;
+            });
+            
             // Salva no localStorage que o usuário completou o onboarding
             localStorage.setItem('onboardingCompleted', 'true');
             
             // Redireciona para a tela de login após um breve delay para visualização
             setTimeout(() => {
                 window.location.href = "login.html";
-            }, 500);
+            }, 800); // Aumentei para 800ms para dar tempo de ver a animação
         }
         
         // Inicializa os dots de paginação
@@ -552,6 +578,10 @@
                 }
             }
         }
+        
+        // Para debug: Mostra no console o status do localStorage
+        console.log('Onboarding status:', localStorage.getItem('onboardingCompleted'));
+        console.log('First visit:', localStorage.getItem('firstTimeVisit'));
     </script>
 
     <!-- iconsax js -->
