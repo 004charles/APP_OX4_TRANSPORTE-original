@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,16 +10,16 @@
     <meta name="author" content="OX4 Transporte">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="assets/images/logo/Logo 6.png" type="image/x-icon">
-    <title>OX4 Transporte - Carregando</title>
+    <title>OX4 Transporte - loading </title>
 
     <link rel="apple-touch-icon" href="assets/images/logo/Logo 6.png">
-    <meta name="title-color" content="#2e3f6e">
+    <meta name="title-color" content="#01AA85">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="OX4 Transporte">
     <meta name="msapplication-TileImage" content="assets/images/logo/Logo 6.png">
 
-    <meta name="msapplication-TileColor" content="#2e3f6e">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!--Google font-->
@@ -29,409 +29,32 @@
         rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/iconsax.css">
+
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/swiper-bundle.min.css">
+
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/aos.css">
+
+
     <link rel="stylesheet" id="rtl-link" type="text/css" href="assets/css/vendors/bootstrap.css">
+
+
     <link rel="stylesheet" id="change-link" type="text/css" href="assets/css/style.css">
-    
-    <style>
-        :root {
-            --ox4-blue: #2e3f6e;
-            --ox4-light-blue: #3a4f88;
-            --ox4-dark-blue: #1e2a4a;
-            --ox4-green: #01AA85;
-            --ox4-light: #FFFFFF;
-            --ox4-gray: #E2E8F0;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Lexend', sans-serif;
-            background-color: var(--ox4-blue);
-            color: var(--ox4-light);
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .box-background {
-            background: linear-gradient(135deg, var(--ox4-blue) 0%, var(--ox4-dark-blue) 100%);
-        }
-        
-        /* Animação de partículas de fundo */
-        .background-particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            overflow: hidden;
-        }
-        
-        .particle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-        }
-        
-        .particle:nth-child(1) {
-            width: 100px;
-            height: 100px;
-            top: 10%;
-            left: 5%;
-            animation: floatParticle 20s infinite linear;
-        }
-        
-        .particle:nth-child(2) {
-            width: 150px;
-            height: 150px;
-            top: 60%;
-            right: 10%;
-            animation: floatParticle 25s infinite linear reverse;
-        }
-        
-        .particle:nth-child(3) {
-            width: 80px;
-            height: 80px;
-            bottom: 20%;
-            left: 15%;
-            animation: floatParticle 18s infinite linear;
-        }
-        
-        @keyframes floatParticle {
-            0% {
-                transform: translateY(0) rotate(0deg);
-            }
-            100% {
-                transform: translateY(-1000px) rotate(720deg);
-            }
-        }
-        
-        /* Seção principal */
-        .onboarding-section.pt-0 {
-            padding-top: 0 !important;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .onboarding-wrapper.user-intro {
-            position: relative;
-            height: 50vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        /* Veículos com animação melhorada */
-        .img-fluid.vehicle1, 
-        .img-fluid.vehicle2, 
-        .img-fluid.vehicle3 {
-            position: absolute;
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
-            transition: transform 0.5s ease;
-        }
-        
-        .img-fluid.vehicle1 {
-            width: 120px;
-            top: 20%;
-            left: 15%;
-            animation: driveInLeft 1.5s ease-out forwards,
-                     floatVehicle 3s ease-in-out infinite 1.5s;
-            animation-delay: 0s, 1.5s;
-        }
-        
-        .img-fluid.vehicle2 {
-            width: 100px;
-            top: 40%;
-            right: 20%;
-            animation: driveInRight 1.8s ease-out forwards,
-                     floatVehicle 3.5s ease-in-out infinite 1.8s;
-            animation-delay: 0.3s, 1.8s;
-        }
-        
-        .img-fluid.vehicle3 {
-            width: 150px;
-            bottom: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: driveInBottom 2s ease-out forwards,
-                     floatVehicle 4s ease-in-out infinite 2s;
-            animation-delay: 0.6s, 2s;
-        }
-        
-        @keyframes driveInLeft {
-            0% {
-                transform: translateX(-300px) rotate(-10deg);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0) rotate(0);
-                opacity: 1;
-            }
-        }
-        
-        @keyframes driveInRight {
-            0% {
-                transform: translateX(300px) rotate(10deg);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0) rotate(0);
-                opacity: 1;
-            }
-        }
-        
-        @keyframes driveInBottom {
-            0% {
-                transform: translateX(-50%) translateY(300px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(-50%) translateY(0);
-                opacity: 1;
-            }
-        }
-        
-        @keyframes floatVehicle {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-        
-        /* Caixa de conteúdo */
-        .user-onboarding-content-box {
-            background: rgba(30, 42, 74, 0.8);
-            backdrop-filter: blur(20px);
-            border-radius: 30px 30px 0 0;
-            padding: 40px 30px;
-            text-align: center;
-            position: relative;
-            margin-top: auto;
-            box-shadow: 0 -10px 30px rgba(0,0,0,0.3);
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .user-onboarding-content-box::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: var(--ox4-green);
-            border-radius: 2px;
-        }
-        
-        .union-img, .union-img-dark {
-            width: 80px;
-            margin-bottom: 20px;
-            filter: brightness(0) invert(1);
-            opacity: 0.8;
-        }
-        
-        .user-onboarding-content-box h2 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--ox4-light);
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .user-onboarding-content-box p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: var(--ox4-gray);
-            margin-bottom: 30px;
-            max-width: 320px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* Botão de próximo */
-        .onboarding-next {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background: var(--ox4-green);
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            font-size: 24px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(1, 170, 133, 0.4);
-            animation: pulseButton 2s infinite;
-        }
-        
-        .onboarding-next:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(1, 170, 133, 0.6);
-        }
-        
-        @keyframes pulseButton {
-            0%, 100% {
-                box-shadow: 0 4px 15px rgba(1, 170, 133, 0.4);
-            }
-            50% {
-                box-shadow: 0 4px 25px rgba(1, 170, 133, 0.8);
-            }
-        }
-        
-        /* Popup PWA */
-        .theme-offcanvas.show {
-            background: rgba(30, 42, 74, 0.95);
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .theme-offcanvas .btn-close {
-            filter: brightness(0) invert(1);
-            opacity: 0.7;
-        }
-        
-        .theme-offcanvas .app-info {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .theme-offcanvas .content h3 {
-            color: var(--ox4-light);
-            font-size: 22px;
-            margin-bottom: 5px;
-        }
-        
-        .theme-offcanvas .content a {
-            color: var(--ox4-gray);
-            text-decoration: none;
-            font-size: 14px;
-        }
-        
-        .theme-offcanvas section p {
-            color: var(--ox4-gray);
-            margin-bottom: 20px;
-        }
-        
-        .theme-btn.install-app {
-            background: var(--ox4-green);
-            color: white;
-            border: none;
-            border-radius: 25px;
-            padding: 12px 30px;
-            font-weight: 600;
-            width: 100%;
-            transition: all 0.3s ease;
-        }
-        
-        .theme-btn.install-app:hover {
-            background: #018f6f;
-            transform: translateY(-2px);
-        }
-        
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .img-fluid.vehicle1 {
-                width: 100px;
-                left: 10%;
-            }
-            
-            .img-fluid.vehicle2 {
-                width: 80px;
-                right: 15%;
-            }
-            
-            .img-fluid.vehicle3 {
-                width: 120px;
-            }
-            
-            .user-onboarding-content-box h2 {
-                font-size: 24px;
-            }
-            
-            .user-onboarding-content-box p {
-                font-size: 15px;
-                max-width: 280px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .img-fluid.vehicle1 {
-                width: 80px;
-                left: 5%;
-                top: 25%;
-            }
-            
-            .img-fluid.vehicle2 {
-                width: 70px;
-                right: 10%;
-                top: 45%;
-            }
-            
-            .img-fluid.vehicle3 {
-                width: 100px;
-                bottom: 25%;
-            }
-            
-            .user-onboarding-content-box {
-                padding: 30px 20px;
-            }
-            
-            .user-onboarding-content-box h2 {
-                font-size: 22px;
-            }
-        }
-        
-        @media (max-height: 700px) {
-            .onboarding-wrapper.user-intro {
-                height: 40vh;
-            }
-            
-            .img-fluid.vehicle1,
-            .img-fluid.vehicle2,
-            .img-fluid.vehicle3 {
-                width: 70px;
-            }
-            
-            .img-fluid.vehicle3 {
-                width: 90px;
-            }
-        }
-    </style>
 </head>
 
 <body class="box-background">
-    <!-- Partículas de fundo animadas -->
-    <div class="background-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
-    
     <section class="onboarding-section pt-0">
         <div class="onboarding-wrapper user-intro">
-            <img class="img-fluid vehicle1" src="assets/images/onboarding/intro-bike.png" alt="moto">
-            <img class="img-fluid vehicle2" src="assets/images/onboarding/intro-bike.png" alt="moto">
-            <img class="img-fluid vehicle3" src="assets/images/onboarding/intro-car.png" alt="carro">
+            <img class="img-fluid vehicle1" src="assets/images/onboarding/intro-bike.png" alt="moto" data-aos="zoom-in"
+                data-aos-duration="500" data-aos-delay="1000">
+            <img class="img-fluid vehicle2" src="assets/images/onboarding/intro-bike.png" alt="moto" data-aos="zoom-in"
+                data-aos-duration="500" data-aos-delay="1000">
+            <img class="img-fluid vehicle3" src="assets/images/onboarding/intro-car.png" alt="carro" data-aos="zoom-in"
+                data-aos-duration="500" data-aos-delay="1000">
         </div>
 
         <div class="user-onboarding-content-box">
             <img class="img-fluid union-img" src="assets/images/svg/union.svg" alt="união">
+            <img class="img-fluid union-img-dark" src="assets/images/svg/union-dark.svg" alt="união">
             <h2>Rastreamento em Tempo Real</h2>
             <p>
                 Bem-vindo ao aplicativo OX4 Transporte, a forma mais inteligente de solicitar uma corrida!
@@ -442,6 +65,7 @@
             </a>
         </div>
     </section>
+
 
     <!-- pwa install app popup start -->
     <div class="offcanvas offcanvas-bottom addtohome-popup theme-offcanvas show" tabindex="-1" id="offcanvas"
@@ -465,42 +89,20 @@
                     </a>
                 </section>
             </main>
+
         </div>
     </div>
     <!-- pwa install app popup start -->
 
+
     <script>
-        // Animações AOS para os veículos
-        document.addEventListener('DOMContentLoaded', function() {
-            // Configura as animações dos veículos
-            const vehicles = document.querySelectorAll('.img-fluid.vehicle1, .img-fluid.vehicle2, .img-fluid.vehicle3');
-            
-            vehicles.forEach((vehicle, index) => {
-                vehicle.style.opacity = '0';
-            });
-            
-            // Ativa as animações CSS
-            setTimeout(() => {
-                vehicles.forEach((vehicle, index) => {
-                    vehicle.style.opacity = '1';
-                });
-            }, 100);
-        });
-        
-        // Script para instalação PWA
         let deferredPrompt;
         const installBtn = document.getElementById('installApp');
 
         window.addEventListener('beforeinstallprompt', (e) => {
             e.preventDefault();
             deferredPrompt = e;
-            installBtn.style.display = 'inline-block';
-            
-            // Mostra o popup automaticamente após 3 segundos
-            setTimeout(() => {
-                const offcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvas'));
-                offcanvas.show();
-            }, 3000);
+            installBtn.style.display = 'inline-block'; // mostra o botão
         });
 
         installBtn.addEventListener('click', async () => {
@@ -509,25 +111,12 @@
             const { outcome } = await deferredPrompt.userChoice;
             if (outcome === 'accepted') {
                 console.log('Usuário aceitou a instalação');
-                const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvas'));
-                offcanvas.hide();
             } else {
                 console.log('Usuário rejeitou a instalação');
             }
             deferredPrompt = null;
             installBtn.style.display = 'none';
         });
-        
-        // Fecha o popup após 10 segundos se não interagir
-        setTimeout(() => {
-            const offcanvasElement = document.getElementById('offcanvas');
-            if (offcanvasElement.classList.contains('show')) {
-                const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
-                if (offcanvas) {
-                    offcanvas.hide();
-                }
-            }
-        }, 10000);
     </script>
 
     <!-- iconsax js -->
@@ -552,4 +141,5 @@
     <!-- script js -->
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
