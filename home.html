@@ -343,162 +343,585 @@
 
 
     <!-- search section starts -->
-    <section class="search-section section-b-space pt-0">
-        <div class="custom-container">
-            <div class="form-input">
-                <input type="search" class="form-control with-icon" id="inputusername"
-                    placeholder="Para onde vamos hoje?">
-                <i class="iconsax search-icon" data-icon="search-normal-2"> </i>
-                <a href="date-time-schedule.html" class="date-time-picker">
-                    <i class="iconsax icon" data-icon="calendar-1">
-                    </i>
-                </a>
+    <!-- Search Section estilo Yango -->
+<section class="search-section-yango">
+    <div class="custom-container">
+        <!-- Localização atual -->
+        <div class="current-location-yango">
+            <i class="iconsax" data-icon="gps"></i>
+            <span class="location-text-yango">A tua localização</span>
+        </div>
+
+        <!-- Campo de pesquisa -->
+        <div class="search-box-yango">
+            <div class="search-input-wrapper">
+                <i class="iconsax search-icon-yango" data-icon="search-normal-2"></i>
+                <input type="text" class="search-input-yango" id="inputusername" placeholder="Para onde?" autocomplete="off">
             </div>
         </div>
-    </section>
-    <!-- search section end -->
 
-    <!-- slider section starts -->
-    <!-- slider section end -->
-
-    <!-- category section starts -->
-
-    <!-- offer section starts -->
-    <section class="section-b-space">
-        <div class="custom-container">
-            <div class="title">
-                <h3>Rotas regulares</h3>
+        <!-- Sugestões de pesquisa -->
+        <div class="suggestions-container" id="suggestionsContainer">
+            <div class="suggestions-header">
+                <h4 class="suggestions-title">Sugestões</h4>
             </div>
-
-            <div class="row gy-3">
-
-                <!-- Rota 1 -->
-                <div class="col-12">
-                    <div class="coupon-box">
-                        <div class="coupon-discount">PREÇO FIXO</div>
-                        <div class="coupon-details">
-                            <div class="coupon-content">
-                                <a href="#" class="coupon-name">
-                                    <img class="img-fluid coupon-img" src="assets/images/profile/p6.png"
-                                        alt="motorista">
-                                    <div>
-                                        <h5 class="fw-normal title-color">Motorista OX4</h5>
-                                        <small>Maianga → Talatona</small>
-                                    </div>
-                                </a>
-                                <div class="rating">
-                                    <img class="img-fluid star" src="assets/images/svg/star.svg" alt="avaliação">
-                                    <h6>4.6</h6>
-                                </div>
-                            </div>
-
-                            <p>Rota diária entre o centro de Luanda e Talatona</p>
-
-                            <ul class="content-list">
-                                <li>
-                                    <i class="iconsax icon" data-icon="car"></i>
-                                    Viatura Compacta
-                                </li>
-                                <li>
-                                    <i class="iconsax icon" data-icon="user-1"></i>
-                                    Até 4 Passageiros
-                                </li>
-                            </ul>
-
-                            <div class="d-flex align-items-center justify-content-between mt-3">
-                                <h6 class="content-color fw-normal">Distância:</h6>
-                                <h6 class="content-color fw-normal">18 km</h6>
-                            </div>
-                        </div>
-                    </div>
+            
+            <div class="suggestions-list" id="suggestionsList">
+                <!-- Sugestões serão carregadas aqui -->
+            </div>
+            
+            <div class="recent-searches">
+                <div class="recent-header">
+                    <h5>Pesquisas Recentes</h5>
+                    <button class="clear-recent" id="clearRecent">Limpar</button>
                 </div>
-
-                <!-- Rota 2 -->
-                <div class="col-12">
-                    <div class="coupon-box">
-                        <div class="coupon-discount">POPULAR</div>
-                        <div class="coupon-details">
-                            <div class="coupon-content">
-                                <a href="#" class="coupon-name">
-                                    <img class="img-fluid coupon-img" src="assets/images/profile/p6.png"
-                                        alt="motorista">
-                                    <div>
-                                        <h5 class="fw-normal title-color">Motorista OX4</h5>
-                                        <small>Viana → Mutamba</small>
-                                    </div>
-                                </a>
-                                <div class="rating">
-                                    <img class="img-fluid star" src="assets/images/svg/star.svg" alt="avaliação">
-                                    <h6>4.4</h6>
-                                </div>
-                            </div>
-
-                            <p>Ligação entre Viana e o centro histórico</p>
-
-                            <ul class="content-list">
-                                <li>
-                                    <i class="iconsax icon" data-icon="car"></i>
-                                    Viatura Normal
-                                </li>
-                                <li>
-                                    <i class="iconsax icon" data-icon="user-1"></i>
-                                    Até 4 Passageiros
-                                </li>
-                            </ul>
-
-                            <div class="d-flex align-items-center justify-content-between mt-3">
-                                <h6 class="content-color fw-normal">Distância:</h6>
-                                <h6 class="content-color fw-normal">22 km</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rota 3 -->
-                <div class="col-12">
-                    <div class="coupon-box">
-                        <div class="coupon-discount">ECONÓMICA</div>
-                        <div class="coupon-details">
-                            <div class="coupon-content">
-                                <a href="#" class="coupon-name">
-                                    <img class="img-fluid coupon-img" src="assets/images/profile/p6.png"
-                                        alt="motorista">
-                                    <div>
-                                        <h5 class="fw-normal title-color">Motorista OX4</h5>
-                                        <small>Cacuaco → Kilamba</small>
-                                    </div>
-                                </a>
-                                <div class="rating">
-                                    <img class="img-fluid star" src="assets/images/svg/star.svg" alt="avaliação">
-                                    <h6>4.3</h6>
-                                </div>
-                            </div>
-
-                            <p>Rota intermunicipal com grande procura</p>
-
-                            <ul class="content-list">
-                                <li>
-                                    <i class="iconsax icon" data-icon="car"></i>
-                                    Viatura Normal
-                                </li>
-                                <li>
-                                    <i class="iconsax icon" data-icon="user-1"></i>
-                                    Até 4 Passageiros
-                                </li>
-                            </ul>
-
-                            <div class="d-flex align-items-center justify-content-between mt-3">
-                                <h6 class="content-color fw-normal">Distância:</h6>
-                                <h6 class="content-color fw-normal">30 km</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <ul class="recent-list" id="recentList">
+                    <!-- Pesquisas recentes serão carregadas aqui -->
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
+<style>
+    /* ====================== */
+/* SEARCH SECTION YANGO STYLE */
+/* ====================== */
+
+.search-section-yango {
+    padding: 16px 16px 8px;
+    background: #FFFFFF;
+}
+
+/* Localização atual */
+.current-location-yango {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #2e3f6e;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    padding-left: 8px;
+}
+
+.current-location-yango i {
+    font-size: 16px;
+}
+
+/* Caixa de pesquisa */
+.search-box-yango {
+    background: #FFFFFF;
+    border-radius: 25px;
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E0E0E0;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.search-icon-yango {
+    position: absolute;
+    left: 20px;
+    color: #2e3f6e;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.search-input-yango {
+    width: 100%;
+    height: 56px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    background: transparent;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+.search-input-yango::placeholder {
+    color: #999999;
+    font-weight: 400;
+}
+
+.search-input-yango:focus {
+    background: #F8F9FA;
+}
+
+/* Container de sugestões */
+.suggestions-container {
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 10px;
+    display: none; /* Inicialmente escondido */
+    animation: fadeInUp 0.3s ease;
+}
+
+.suggestions-container.show {
+    display: block;
+}
+
+.suggestions-header {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.suggestions-title {
+    color: #2e3f6e;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Lista de sugestões */
+.suggestions-list {
+    margin-bottom: 25px;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #F8F9FA;
+    text-decoration: none;
+    color: #333333;
+    transition: background 0.2s ease;
+}
+
+.suggestion-item:hover {
+    background: #F8F9FA;
+    border-radius: 8px;
+    padding: 12px 10px;
+}
+
+.suggestion-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(46, 63, 110, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.suggestion-icon i {
+    color: #2e3f6e;
+    font-size: 18px;
+}
+
+.suggestion-info {
+    flex: 1;
+}
+
+.suggestion-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #333333;
+}
+
+.suggestion-details {
+    font-size: 13px;
+    color: #666666;
+}
+
+.suggestion-time {
+    color: #2e3f6e;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 8px;
+    background: rgba(46, 63, 110, 0.1);
+    border-radius: 6px;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+/* Pesquisas recentes */
+.recent-searches {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #F0F0F0;
+}
+
+.recent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.recent-header h5 {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.clear-recent {
+    background: none;
+    border: none;
+    color: #2e3f6e;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.clear-recent:hover {
+    background: rgba(46, 63, 110, 0.1);
+}
+
+.recent-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #F8F9FA;
+}
+
+.recent-icon {
+    color: #666666;
+    font-size: 16px;
+    margin-right: 12px;
+}
+
+.recent-text {
+    color: #333333;
+    font-size: 15px;
+    flex: 1;
+}
+
+.recent-remove {
+    background: none;
+    border: none;
+    color: #999999;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.recent-remove:hover {
+    color: #FF0000;
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .search-box-yango {
+        border-radius: 20px;
+    }
+    
+    .search-input-yango {
+        height: 52px;
+        font-size: 15px;
+    }
+    
+    .suggestions-container {
+        padding: 16px;
+        border-radius: 12px;
+    }
+    
+    .suggestion-item {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-input-yango {
+        height: 48px;
+        font-size: 14px;
+        padding-left: 36px;
+    }
+    
+    .search-icon-yango {
+        left: 16px;
+        font-size: 18px;
+    }
+    
+    .suggestion-icon {
+        width: 36px;
+        height: 36px;
+        margin-right: 12px;
+    }
+    
+    .suggestion-icon i {
+        font-size: 16px;
+    }
+    
+    .suggestion-name {
+        font-size: 15px;
+    }
+    
+    .suggestion-details {
+        font-size: 12px;
+    }
+}
+</style>
+
+
+<script>
+// Dados de sugestões (pode vir de uma API)
+const suggestionsData = [
+    {
+        name: "Maianga",
+        details: "Município Luanda, Luanda",
+        time: "1h 20 min",
+        icon: "location",
+        type: "bairro"
+    },
+    {
+        name: "Zango IV",
+        details: "Município Viana, Luanda",
+        time: "6 min",
+        icon: "location",
+        type: "bairro"
+    },
+    {
+        name: "Avenida 4 de Fevereiro",
+        details: "Marginal de Luanda",
+        time: "15 min",
+        icon: "location",
+        type: "avenida"
+    },
+    {
+        name: "Talatona",
+        details: "Município Belas, Luanda",
+        time: "25 min",
+        icon: "location",
+        type: "bairro"
+    },
+    {
+        name: "Kilamba",
+        details: "Município Belas, Luanda",
+        time: "40 min",
+        icon: "location",
+        type: "cidade"
+    }
+];
+
+// Pesquisas recentes (armazenadas no localStorage)
+let recentSearches = JSON.parse(localStorage.getItem('ox4_recent_searches')) || [];
+
+// Elementos DOM
+const searchInput = document.getElementById('inputusername');
+const suggestionsContainer = document.getElementById('suggestionsContainer');
+const suggestionsList = document.getElementById('suggestionsList');
+const recentList = document.getElementById('recentList');
+const clearRecentBtn = document.getElementById('clearRecent');
+
+// Mostrar/ocultar sugestões
+searchInput.addEventListener('focus', showSuggestions);
+searchInput.addEventListener('input', handleSearchInput);
+document.addEventListener('click', handleOutsideClick);
+
+// Função para mostrar sugestões
+function showSuggestions() {
+    suggestionsContainer.classList.add('show');
+    renderSuggestions(suggestionsData);
+    renderRecentSearches();
+}
+
+// Função para lidar com input de pesquisa
+function handleSearchInput(e) {
+    const searchTerm = e.target.value.toLowerCase().trim();
+    
+    if (searchTerm.length === 0) {
+        renderSuggestions(suggestionsData);
+        return;
+    }
+    
+    const filteredSuggestions = suggestionsData.filter(suggestion => 
+        suggestion.name.toLowerCase().includes(searchTerm) ||
+        suggestion.details.toLowerCase().includes(searchTerm)
+    );
+    
+    renderSuggestions(filteredSuggestions);
+}
+
+// Função para renderizar sugestões
+function renderSuggestions(suggestions) {
+    if (suggestions.length === 0) {
+        suggestionsList.innerHTML = `
+            <div class="no-results">
+                <i class="iconsax" data-icon="search-normal"></i>
+                <p>Nenhum resultado encontrado</p>
+            </div>
+        `;
+        return;
+    }
+    
+    suggestionsList.innerHTML = suggestions.map(suggestion => `
+        <a href="#" class="suggestion-item" data-location="${suggestion.name}">
+            <div class="suggestion-icon">
+                <i class="iconsax" data-icon="${suggestion.icon}"></i>
+            </div>
+            <div class="suggestion-info">
+                <div class="suggestion-name">${suggestion.name}</div>
+                <div class="suggestion-details">${suggestion.details}</div>
+            </div>
+            <div class="suggestion-time">${suggestion.time}</div>
+        </a>
+    `).join('');
+    
+    // Adicionar eventos aos itens de sugestão
+    document.querySelectorAll('.suggestion-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const location = this.getAttribute('data-location');
+            searchInput.value = location;
+            addToRecentSearches(location);
+            suggestionsContainer.classList.remove('show');
+        });
+    });
+}
+
+// Função para renderizar pesquisas recentes
+function renderRecentSearches() {
+    if (recentSearches.length === 0) {
+        recentList.innerHTML = `
+            <li class="no-recent">
+                <i class="iconsax" data-icon="clock"></i>
+                <span>Nenhuma pesquisa recente</span>
+            </li>
+        `;
+        return;
+    }
+    
+    recentList.innerHTML = recentSearches.map(search => `
+        <li class="recent-item">
+            <i class="iconsax recent-icon" data-icon="clock"></i>
+            <span class="recent-text">${search}</span>
+            <button class="recent-remove" data-search="${search}">
+                <i class="iconsax" data-icon="close-circle"></i>
+            </button>
+        </li>
+    `).join('');
+    
+    // Adicionar eventos aos botões de remover
+    document.querySelectorAll('.recent-remove').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const searchToRemove = this.getAttribute('data-search');
+            removeFromRecentSearches(searchToRemove);
+        });
+    });
+}
+
+// Função para adicionar às pesquisas recentes
+function addToRecentSearches(location) {
+    // Remover se já existir
+    recentSearches = recentSearches.filter(s => s !== location);
+    
+    // Adicionar no início
+    recentSearches.unshift(location);
+    
+    // Manter apenas as últimas 5
+    if (recentSearches.length > 5) {
+        recentSearches = recentSearches.slice(0, 5);
+    }
+    
+    // Salvar no localStorage
+    localStorage.setItem('ox4_recent_searches', JSON.stringify(recentSearches));
+    renderRecentSearches();
+}
+
+// Função para remover das pesquisas recentes
+function removeFromRecentSearches(location) {
+    recentSearches = recentSearches.filter(s => s !== location);
+    localStorage.setItem('ox4_recent_searches', JSON.stringify(recentSearches));
+    renderRecentSearches();
+}
+
+// Limpar todas as pesquisas recentes
+clearRecentBtn.addEventListener('click', function() {
+    recentSearches = [];
+    localStorage.setItem('ox4_recent_searches', JSON.stringify([]));
+    renderRecentSearches();
+});
+
+// Fechar sugestões ao clicar fora
+function handleOutsideClick(e) {
+    if (!searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
+        suggestionsContainer.classList.remove('show');
+    }
+}
+
+// CSS adicional para estados vazios
+const style = document.createElement('style');
+style.textContent = `
+    .no-results {
+        text-align: center;
+        padding: 30px 20px;
+        color: #666666;
+    }
+    
+    .no-results i {
+        font-size: 40px;
+        color: #CCCCCC;
+        margin-bottom: 10px;
+        display: block;
+    }
+    
+    .no-results p {
+        font-size: 14px;
+        margin: 0;
+    }
+    
+    .no-recent {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 0;
+        color: #999999;
+        font-size: 14px;
+    }
+    
+    .no-recent i {
+        font-size: 18px;
+    }
+`;
+document.head.appendChild(style);
+
+// Inicializar
+document.addEventListener('DOMContentLoaded', function() {
+    renderRecentSearches();
+});
+</script>
     <section>
     <div class="swiper banner1 home-banner">
         <div class="swiper-wrapper">
