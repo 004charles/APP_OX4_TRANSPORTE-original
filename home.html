@@ -1,407 +1,713 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="OX4 Transporte">
-    <meta name="keywords" content=OX4 Transporte">
+    <meta name="keywords" content="OX4 Transporte">
     <meta name="author" content="OX4 Transporte">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="assets/images/logo/favicon.png" type="image/x-icon">
-    <title>OX4 Transporte - Home </title>
+    <title>OX4 Transporte</title>
 
     <link rel="apple-touch-icon" href="assets/images/logo/favicon.png">
-    <meta name="title-color" content="#01AA85">
+    <meta name="theme-color" content="#2e3f6e">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="OX4 Transporte">
     <meta name="msapplication-TileImage" content="assets/images/logo/favicon.png">
+    <meta name="msapplication-TileColor" content="#2e3f6e">
 
-    <meta name="msapplication-TileColor" content="#FFFFFF">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!--Google font-->
+    <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- iconsax css -->
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/iconsax.css">
 
     <!-- bootstrap css -->
-    <link rel="stylesheet" id="rtl-link" type="text/css" href="assets/css/vendors/bootstrap.css">
-
-
-    <!-- swiper css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap.css">
 
     <!-- Theme css -->
-    <link rel="stylesheet" id="change-link" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <style>
+        /* ====================================
+   OX4 TRANSPORTE - DESIGN YANGO STYLE
+   ==================================== */
+
+/* 1. RESET E CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #FFFFFF;
+    color: #333333;
+    line-height: 1.5;
+    padding-bottom: 80px; /* Espaço para bottom nav */
+}
+
+.container-fluid {
+    padding: 0 16px;
+    max-width: 100%;
+}
+
+/* 2. HEADER - IGUAL AO YANGO */
+.ox4-header {
+    background: #FFFFFF;
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.menu-btn {
+    color: #2e3f6e;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.ox4-logo {
+    height: 32px;
+    width: auto;
+}
+
+.header-right {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.icon-btn {
+    color: #2e3f6e;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* 3. SEÇÃO DE LOCALIZAÇÃO */
+.location-section {
+    padding: 16px;
+    background: #FFFFFF;
+}
+
+.current-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666666;
+    font-size: 14px;
+}
+
+.current-location i {
+    color: #2e3f6e;
+    font-size: 16px;
+}
+
+/* 4. SEÇÃO ENTREGA - IGUAL AO YANGO */
+.delivery-section {
+    padding: 0 16px 12px;
+}
+
+.delivery-card {
+    background: #F8F9FA;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.delivery-title {
+    color: #2e3f6e;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.delivery-time {
+    color: #333333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* 5. CAMPO DE PESQUISA */
+.search-section {
+    padding: 12px 16px;
+}
+
+.search-container {
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 25px;
+    padding: 14px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E0E0E0;
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666666;
+    font-size: 18px;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-left: 32px;
+    color: #333333;
+    background: transparent;
+}
+
+.search-input::placeholder {
+    color: #999999;
+}
+
+/* 6. LISTA DE DESTINOS - IGUAL AO YANGO */
+.destinations-section {
+    padding: 0 16px;
+}
+
+.destinations-list {
+    list-style: none;
+}
+
+.destination-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.destination-icon {
+    margin-right: 16px;
+}
+
+.destination-icon i {
+    color: #2e3f6e;
+    font-size: 20px;
+}
+
+.destination-info {
+    flex: 1;
+}
+
+.destination-name {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.destination-details {
+    color: #666666;
+    font-size: 14px;
+}
+
+.destination-time {
+    color: #2e3f6e;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 8px;
+    background: #F8F9FA;
+    border-radius: 6px;
+}
+
+/* 7. BANNER SENTE A ENERGIA - AGORA COM IMAGEM */
+.energy-section {
+    padding: 24px 16px;
+}
+
+.energy-banner {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.energy-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* 8. SEÇÃO YANGO ENTREGA - AGORA COM IMAGEM */
+.delivery-brand-section {
+    padding: 0 16px 24px;
+}
+
+.delivery-brand {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.delivery-brand-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 9. BOTTOM NAVIGATION - IGUAL AO YANGO */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+    z-index: 1000;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-item {
+    text-align: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #666666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-icon {
+    font-size: 20px;
+    color: #666666;
+}
+
+.nav-item.active .nav-icon {
+    color: #2e3f6e;
+}
+
+.nav-item.active .nav-text {
+    color: #2e3f6e;
+    font-weight: 500;
+}
+
+.nav-text {
+    font-size: 12px;
+    color: #666666;
+}
+
+/* 10. SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background: #FFFFFF;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 1001;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #F0F0F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-logo img {
+    height: 32px;
+    width: auto;
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #2e3f6e;
+    cursor: pointer;
+}
+
+.sidebar-profile {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.profile-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info h3 {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+.profile-info span {
+    font-size: 14px;
+    color: #666666;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 4px;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+}
+
+.sidebar-menu a i {
+    color: #2e3f6e;
+    font-size: 18px;
+}
+
+.sidebar-menu li.active a {
+    background: #F8F9FA;
+    color: #2e3f6e;
+    border-left: 3px solid #2e3f6e;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid #F0F0F0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #FF0000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.logout-btn i {
+    font-size: 18px;
+}
+
+/* 11. OVERLAY */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+/* 12. ESTILOS RESPONSIVOS */
+@media (min-width: 768px) {
+    .container-fluid {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    
+    .ox4-logo {
+        height: 40px;
+    }
+    
+    .delivery-time {
+        font-size: 20px;
+    }
+    
+    .destination-name {
+        font-size: 18px;
+    }
+    
+    .energy-image,
+    .delivery-brand-image {
+        border-radius: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-fluid {
+        max-width: 960px;
+    }
+}
+
+/* 13. ANIMAÇÕES */
+.energy-banner,
+.delivery-brand {
+    transition: transform 0.3s ease;
+}
+
+.energy-banner:hover,
+.delivery-brand:hover {
+    transform: translateY(-2px);
+}
+    </style>
+
 </head>
 
 <body>
-    <!-- header starts -->
-    <header id="header" class="main-header">
-        <div class="custom-container">
-            <div class="header-panel">
-                <div class="d-flex align-items-center gap-2">
-                    <a href="home.html#offcanvasLeft" data-bs-toggle="offcanvas">
-                        <i class="iconsax icon-btn" data-icon="text-align-left"> </i>
+    <!-- header igual ao Yango -->
+    <header class="ox4-header">
+        <div class="container-fluid">
+            <div class="header-content">
+                <div class="header-left">
+                    <a href="#sidebar" class="menu-btn">
+                        <i class="iconsax" data-icon="text-align-left"></i>
                     </a>
-                    <img class="img-fluid logo" src="assets/images/logo/Logotipo 1.png" alt="logo">
-                    <img class="img-fluid logo-dark" src="assets/images/logo/Logotipo 1.png" alt="logo">
+                    <div class="logo-container">
+                        <img src="assets/images/logo/Logotipo 1.png" alt="OX4" class="ox4-logo">
+                    </div>
                 </div>
-
-                <div class="d-flex align-items-center gap-sm-3 gap-2">
-                    <a href="chatting.html">
-                        <i class="iconsax icon-btn" data-icon="messages-2"> </i>
+                <div class="header-right">
+                    <a href="chatting.html" class="icon-btn">
+                        <i class="iconsax" data-icon="messages-2"></i>
                     </a>
-                    <a href="notification.html">
-                        <i class="iconsax icon-btn" data-icon="bell-2"> </i>
+                    <a href="notification.html" class="icon-btn">
+                        <i class="iconsax" data-icon="bell-2"></i>
                     </a>
                 </div>
             </div>
         </div>
     </header>
-    <!-- header end -->
 
-    <!-- search section starts -->
-    <section class="search-section section-b-space pt-0">
-        <div class="custom-container">
-            <div class="form-input">
-                <input type="search" class="form-control with-icon" id="inputusername"
-                    placeholder="Para onde vamos hoje?">
-                <i class="iconsax search-icon" data-icon="search-normal-2"> </i>
-                <a href="date-time-schedule.html" class="date-time-picker">
-                    <i class="iconsax icon" data-icon="calendar-1">
-                    </i>
-                </a>
+    <!-- Seção de Localização -->
+    <section class="location-section">
+        <div class="container-fluid">
+            <div class="current-location">
+                <i class="iconsax" data-icon="gps"></i>
+                <span class="location-text">A tua localização</span>
             </div>
         </div>
     </section>
-    <!-- search section end -->
 
-    <!-- slider section starts -->
-    <section>
-        <div class="swiper banner1 home-banner">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img class="img-fluid slider-img w-100" src="assets/images/slider/slider1.png" alt="slider">
-                </div>
-                <div class="swiper-slide">
-                    <img class="img-fluid slider-img w-100" src="assets/images/slider/slider2.png" alt="slider">
+    <!-- Seção Entrega -->
+    <section class="delivery-section">
+        <div class="container-fluid">
+            <div class="delivery-card">
+                <div class="delivery-header">
+                    <h5 class="delivery-title">Entrega</h5>
+                    <div class="delivery-time">Viagens - a partir de 4 min.</div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- slider section end -->
 
-    <!-- category section starts -->
-    <section>
-    <div class="custom-container">
-        <div class="title">
-            <h3>Categorias Principais</h3>
+    <!-- Campo de pesquisa -->
+    <section class="search-section">
+        <div class="container-fluid">
+            <div class="search-container">
+                <i class="iconsax search-icon" data-icon="search-normal-2"></i>
+                <input type="text" class="search-input" placeholder="Para onde?">
+            </div>
         </div>
+    </section>
 
-        <ul class="categories-list">
-            <li>
-                <a href="search-location.html" class="categories-box">
-                    <img class="img-fluid categories-img" src="assets/images/svg/c1.svg" alt="c1">
-                    <h6>Corrida</h6>
+    <!-- Lista de destinos -->
+    <section class="destinations-section">
+        <div class="container-fluid">
+            <ul class="destinations-list">
+                <li class="destination-item">
+                    <div class="destination-icon">
+                        <i class="iconsax" data-icon="location"></i>
+                    </div>
+                    <div class="destination-info">
+                        <h4 class="destination-name">Maianga</h4>
+                        <p class="destination-details">Município Lu...cia Luanda</p>
+                    </div>
+                    <div class="destination-time">1h 20 min</div>
+                </li>
+                <li class="destination-item">
+                    <div class="destination-icon">
+                        <i class="iconsax" data-icon="location"></i>
+                    </div>
+                    <div class="destination-info">
+                        <h4 class="destination-name">Zango IV</h4>
+                        <p class="destination-details">Município Via...víncia Luanda</p>
+                    </div>
+                    <div class="destination-time">6 min</div>
+                </li>
+                <li class="destination-item">
+                    <div class="destination-icon">
+                        <i class="iconsax" data-icon="location"></i>
+                    </div>
+                    <div class="destination-info">
+                        <h4 class="destination-name">Avenida R... Outubro</h4>
+                        <p class="destination-details">Luanda</p>
+                    </div>
+                    <div class="destination-time">1h 10 min</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Banner Sente a Energia - AGORA COM IMAGEM -->
+    <section class="energy-section">
+        <div class="container-fluid">
+            <div class="energy-banner">
+                <img src="assets/images/corrida.png" alt="SENTE A ENERGIA" class="energy-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção YANGO ENTREGA - AGORA COM IMAGEM -->
+    <section class="delivery-brand-section">
+        <div class="container-fluid">
+            <div class="delivery-brand">
+                <img src="assets/images/corrida2.png" alt="YANGO ENTREGA PARA TÍDIO" class="delivery-brand-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Navigation igual ao Yango -->
+    <nav class="bottom-nav">
+        <ul class="nav-list">
+            <li class="nav-item active">
+                <a href="home.html" class="nav-link">
+                    <div class="nav-icon">
+                        <i class="iconsax" data-icon="home-2"></i>
+                    </div>
+                    <span class="nav-text">Casa</span>
                 </a>
             </li>
-            <li>
-                <a href="outstation.html" class="categories-box">
-                    <img class="img-fluid categories-img" src="assets/images/svg/c2.svg" alt="c1">
-                    <h6>Viagem</h6>
+            <li class="nav-item">
+                <a href="category.html" class="nav-link">
+                    <div class="nav-icon">
+                        <i class="iconsax" data-icon="category"></i>
+                    </div>
+                    <span class="nav-text">Categoria</span>
                 </a>
             </li>
-            <li>
-                <a href="rental.html" class="categories-box">
-                    <img class="img-fluid categories-img" src="assets/images/svg/c3.svg" alt="c1">
-                    <h6>Aluguer</h6>
+            <li class="nav-item">
+                <a href="my-rides.html" class="nav-link">
+                    <div class="nav-icon">
+                        <i class="iconsax" data-icon="car"></i>
+                    </div>
+                    <span class="nav-text">Viagens</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="setting.html" class="nav-link">
+                    <div class="nav-icon">
+                        <i class="iconsax" data-icon="setting-2"></i>
+                    </div>
+                    <span class="nav-text">Config</span>
                 </a>
             </li>
         </ul>
-    </div>
-</section>
+    </nav>
 
-    <!-- category section end -->
-
-    <!-- offer section starts -->
-    <section class="section-b-space">
-    <div class="custom-container">
-        <div class="title">
-            <h3>Oferta do Dia – OX4 Transporte</h3>
-        </div>
-
-        <div class="row gy-3">
-            <div class="col-12">
-                <div class="coupon-box">
-                    <div class="coupon-discount">20% DE DESCONTO</div>
-                    <div class="coupon-details">
-                        <div class="coupon-content">
-                            <a href="accept-ride-details.html" class="coupon-name">
-                                <img class="img-fluid coupon-img" src="assets/images/profile/p6.png" alt="motorista">
-                                <div>
-                                    <h5 class="fw-normal title-color">Motorista OX4</h5>
-                                </div>
-                            </a>
-                            <div class="rating">
-                                <img class="img-fluid star" src="assets/images/svg/star.svg" alt="avaliação">
-                                <h6>4.5</h6>
-                            </div>
-                        </div>
-
-                        <p>Corridas até 10 km dentro da área urbana</p>
-
-                        <ul class="content-list">
-                            <li>
-                                <i class="iconsax icon" data-icon="car"></i>
-                                Viatura Compacta
-                            </li>
-                            <li>
-                                <i class="iconsax icon" data-icon="user-1"></i>
-                                Até 4 Passageiros
-                            </li>
-                        </ul>
-
-                        <div class="d-flex align-items-center justify-content-between mt-3">
-                            <h6 class="content-color fw-normal">Válido até:</h6>
-                            <h6 class="content-color fw-normal">21/01/2024</h6>
-                        </div>
-                    </div>
-                </div>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <img src="assets/images/logo/Logo 6.png" alt="OX4">
             </div>
-
-            <div class="col-12">
-                <div class="coupon-box">
-                    <div class="coupon-discount">20% DE DESCONTO</div>
-                    <div class="coupon-details">
-                        <div class="coupon-content">
-                            <a href="accept-ride-details.html" class="coupon-name">
-                                <img class="img-fluid coupon-img" src="assets/images/profile/p5.png" alt="motorista">
-                                <div>
-                                    <h5 class="fw-normal title-color">Motorista OX4</h5>
-                                </div>
-                            </a>
-                            <div class="rating">
-                                <img class="img-fluid star" src="assets/images/svg/star.svg" alt="avaliação">
-                                <h6>4.6</h6>
-                            </div>
-                        </div>
-
-                        <p>Deslocações rápidas e seguras na sua cidade</p>
-
-                        <ul class="content-list">
-                            <li>
-                                <i class="iconsax icon" data-icon="car"></i>
-                                Sedan
-                            </li>
-                            <li>
-                                <i class="iconsax icon" data-icon="user-1"></i>
-                                Até 4 Passageiros
-                            </li>
-                        </ul>
-
-                        <div class="d-flex align-items-center justify-content-between mt-3">
-                            <h6 class="content-color fw-normal">Válido até:</h6>
-                            <h6 class="content-color fw-normal">21/01/2024</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12">
-                <div class="coupon-box">
-                    <div class="coupon-discount">20% DE DESCONTO</div>
-                    <div class="coupon-details">
-                        <div class="coupon-content">
-                            <a href="accept-ride-details.html" class="coupon-name">
-                                <img class="img-fluid coupon-img" src="assets/images/profile/p4.png" alt="motorista">
-                                <div>
-                                    <h5 class="fw-normal title-color">Motorista OX4 Premium</h5>
-                                </div>
-                            </a>
-                            <div class="rating">
-                                <img class="img-fluid star" src="assets/images/svg/star.svg" alt="avaliação">
-                                <h6>4.8</h6>
-                            </div>
-                        </div>
-
-                        <p>Conforto, segurança e pontualidade garantidos</p>
-
-                        <ul class="content-list">
-                            <li>
-                                <i class="iconsax icon" data-icon="car"></i>
-                                Viatura Premium
-                            </li>
-                            <li>
-                                <i class="iconsax icon" data-icon="user-1"></i>
-                                Até 4 Passageiros
-                            </li>
-                        </ul>
-
-                        <div class="d-flex align-items-center justify-content-between mt-3">
-                            <h6 class="content-color fw-normal">Válido até:</h6>
-                            <h6 class="content-color fw-normal">21/01/2024</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <button class="close-sidebar">&times;</button>
         </div>
-    </div>
-</section>
-
-    <!-- offer section end -->
-
-    <!-- panel-space start -->
-    <section class="panel-space"></section>
-    <!-- panel-space end -->
-
-    <!-- bottom navbar start -->
-    <div class="navbar-menu">
-    <ul>
-        <li class="active">
-            <a href="home.html">
-                <div class="icon">
-                    <img class="unactive" src="assets/images/svg/home.svg" alt="home">
-                    <img class="active" src="assets/images/svg/home-fill.svg" alt="home">
-                </div>
-                <span class="active">casa</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="category.html">
-                <div class="icon">
-                    <img class="unactive" src="assets/images/svg/category.svg" alt="category">
-                    <img class="active" src="assets/images/svg/category-fill.svg" alt="category">
-                </div>
-                <span>categoria</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="my-rides.html">
-                <div class="icon">
-                    <img class="unactive" src="assets/images/svg/car.svg" alt="car">
-                    <img class="active" src="assets/images/svg/car-fill.svg" alt="car">
-                </div>
-                <span>moto</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="setting.html">
-                <div class="icon">
-                    <img class="unactive" src="assets/images/svg/setting.svg" alt="setting">
-                    <img class="active" src="assets/images/svg/setting-fill.svg" alt="setting">
-                </div>
-                <span>Configurações</span>
-            </a>
-        </li>
-    </ul>
-</div>
-
-    <!-- bottom navbar end -->
-
-    <!-- sidebar starts -->
-    <div class="offcanvas sidebar-offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
-    <div class="offcanvas-header sidebar-header">
-        <div class="sidebar-logo">
-            <img class="img-fluid logo" src="assets/images/logo/Logo 6.png" alt="logo">
-            <img class="img-fluid logo-dark" src="assets/images/logo/Logo 6.png" alt="logo">
-        </div>
-    </div>
-    <div class="offcanvas-body">
-        <a href="profile-setting.html" class="profile-part d-flex align-items-center gap-2">
-            <img class="img-fluid profile-pic" src="assets/images/profile/p8.png" alt="p8">
-            <div>
+        <div class="sidebar-profile">
+            <img src="assets/images/profile/p8.png" alt="Carlos Muquissi" class="profile-img">
+            <div class="profile-info">
                 <h3>Carlos Muquissi</h3>
                 <span>Editar Conta</span>
             </div>
-        </a>
-        <ul class="link-section switch-section">
-            <li class="active">
-                <a href="home.html" class="pages">
-                    <i class="iconsax sidebar-icon" data-icon="home-2"> </i>
-                    <h3>Início</h3>
-                </a>
-            </li>
-            <li>
-                <a href="my-rides.html" class="pages">
-                    <i class="iconsax sidebar-icon" data-icon="car"> </i>
-                    <h3>Minhas Viagens</h3>
-                </a>
-            </li>
-            <li>
-                <a href="notification.html" class="pages">
-                    <i class="iconsax sidebar-icon" data-icon="bell-2"> </i>
-                    <h3>Notificações</h3>
-                </a>
-            </li>
-
-            <li>
-                <a href="setting.html" class="pages">
-                    <i class="iconsax sidebar-icon" data-icon="user-1"> </i>
-                    <h3>Configurações</h3>
-                </a>
-            </li>
-            <li>
-                <a href="page-listing.html" class="pages">
-                    <i class="iconsax sidebar-icon" data-icon="book-closed"> </i>
-                    <h3>Páginas do Template</h3>
-                </a>
-            </li>
-
-
-
-
-            <li>
-                <div class="pages">
-                    <i class="iconsax sidebar-icon" data-icon="brush-3"> </i>
-                    <h3>Escuro</h3>
-                </div>
-                <div class="switch-btn">
-                    <input id="dark-switch" type="checkbox">
-                </div>
-            </li>
-
+        </div>
+        <ul class="sidebar-menu">
+            <li class="active"><a href="home.html"><i class="iconsax" data-icon="home-2"></i> Início</a></li>
+            <li><a href="my-rides.html"><i class="iconsax" data-icon="car"></i> Minhas Viagens</a></li>
+            <li><a href="notification.html"><i class="iconsax" data-icon="bell-2"></i> Notificações</a></li>
+            <li><a href="setting.html"><i class="iconsax" data-icon="setting-2"></i> Configurações</a></li>
+            <li><a href="page-listing.html"><i class="iconsax" data-icon="book"></i> Páginas</a></li>
         </ul>
-
-        <div class="bottom-sidebar">
-            <a href="login.html" class="pages">
-                <i class="iconsax sidebar-icon" data-icon="logout-2"> </i>
-                <h3>Sair</h3>
+        <div class="sidebar-footer">
+            <a href="login.html" class="logout-btn">
+                <i class="iconsax" data-icon="logout-2"></i> Sair
             </a>
         </div>
     </div>
-</div>
-    <!-- sidebar end -->
 
-    <!-- iconsax js -->
-    <script src="assets/js/iconsax.js"></script>
+    <!-- Overlay for sidebar -->
+    <div class="sidebar-overlay"></div>
 
-    <!-- bootstrap js -->
+    <!-- scripts -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/iconsax.js"></script>
+    <script>
+        // Toggle sidebar
+        document.querySelector('.menu-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.sidebar').classList.add('active');
+            document.querySelector('.sidebar-overlay').classList.add('active');
+        });
 
-    <!-- sticky-header js -->
-    <script src="assets/js/sticky-header.js"></script>
+        document.querySelector('.close-sidebar').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.remove('active');
+            document.querySelector('.sidebar-overlay').classList.remove('active');
+        });
 
-    <!-- swiper js -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/custom-swiper.js"></script>
+        document.querySelector('.sidebar-overlay').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.remove('active');
+            this.classList.remove('active');
+        });
 
-    <!-- template-setting js -->
-    <script src="assets/js/template-setting.js"></script>
-
-    <!-- script js -->
-    <script src="assets/js/script.js"></script>
+        // Active nav item
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
