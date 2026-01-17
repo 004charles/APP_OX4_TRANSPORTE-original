@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="OX4 Transporte">
-    <meta name="keywords" content=OX4 Transporte">
+    <meta name="keywords" content="OX4 Transporte">
     <meta name="author" content="OX4 Transporte">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="assets/images/logo/favicon.png" type="image/x-icon">
@@ -34,7 +34,6 @@
     <!-- bootstrap css -->
     <link rel="stylesheet" id="rtl-link" type="text/css" href="assets/css/vendors/bootstrap.css">
 
-
     <!-- swiper css -->
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/swiper-bundle.min.css">
 
@@ -43,251 +42,463 @@
 
     <style>
         /* ====================== */
-        /* BOTÕES AZUL ESCURO */
+        /* RESET E CORREÇÕES */
         /* ====================== */
-
-        /* Botões principais - Azul escuro */
-        .btn-primary,
-        .btn-reservar,
-        button[type="submit"],
-        .btn-confirmar {
-            background-color: #2e3f6e !important;
-            border-color: #2e3f6e !important;
-            color: white !important;
+        
+        * {
+            box-sizing: border-box;
         }
-
-        .btn-primary:hover,
-        .btn-reservar:hover,
-        button[type="submit"]:hover,
-        .btn-confirmar:hover {
-            background-color: #233055 !important;
-            border-color: #233055 !important;
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lexend', sans-serif;
+            background: #FFFFFF;
+            padding-bottom: 80px;
         }
-
-        /* Botões secundários - Borda azul escuro */
-        .btn-outline-primary,
-        .btn-detalhes,
-        .btn-secundario {
-            color: #2e3f6e !important;
-            border-color: #2e3f6e !important;
-            background-color: transparent !important;
+        
+        .custom-container {
+            padding: 0 16px;
+            max-width: 100%;
         }
-
-        .btn-outline-primary:hover,
-        .btn-detalhes:hover,
-        .btn-secundario:hover {
-            background-color: #2e3f6e !important;
-            color: white !important;
+        
+        /* ====================== */
+        /* HEADER FIXO */
+        /* ====================== */
+        
+        .main-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 12px 0;
         }
-
-        /* Botões na seção de ofertas */
-        .coupon-discount {
-            background: #2e3f6e !important;
-            color: white !important;
+        
+        .header-panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
         }
-
-        /* Elementos ativos na navbar */
-        .nav-item.active .nav-text {
-            color: #2e3f6e !important;
+        
+        .icon-btn {
+            color: #2e3f6e;
+            font-size: 20px;
         }
-
-        .nav-icon .active {
-            filter: invert(22%) sepia(23%) saturate(2000%) hue-rotate(200deg) brightness(90%) contrast(90%) !important;
+        
+        .logo {
+            height: 35px;
+            width: auto;
         }
-
-        /* Ícones ativos */
-        .iconsax[data-icon="home-2"],
-        .iconsax[data-icon="car"],
-        .iconsax[data-icon="bell-2"],
-        .iconsax[data-icon="user-1"] {
-            color: #2e3f6e !important;
+        
+        /* ====================== */
+        /* CATEGORIAS */
+        /* ====================== */
+        
+        .categories-list {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
         }
-
-        /* Campo de pesquisa */
-        .search-icon,
-        .date-time-picker i {
-            color: #2e3f6e !important;
+        
+        .categories-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            min-width: 100px;
         }
-
-        /* Títulos das seções */
-        .title h3,
-        .section-title,
-        h3 {
-            color: #2e3f6e !important;
+        
+        .categories-box:hover {
+            background: rgba(46, 63, 110, 0.05);
+            transform: translateY(-5px);
         }
-
-        /* Links ativos */
-        a.active,
-        .active>a {
-            color: #2e3f6e !important;
-        }
-
-        /* Estrelas de avaliação */
-        .star {
-            filter: invert(22%) sepia(23%) saturate(2000%) hue-rotate(200deg) brightness(90%) contrast(90%) !important;
-        }
-
-        /* Cards de rota - borda azul */
-        .coupon-box {
-            border: 2px solid rgba(46, 63, 110, 0.1) !important;
-            transition: all 0.3s ease !important;
-        }
-
-        .coupon-box:hover {
-            border-color: #2e3f6e !important;
-            box-shadow: 0 4px 15px rgba(46, 63, 110, 0.15) !important;
-        }
-
-        /* Categorias - ícones azuis */
+        
         .categories-img {
-            filter: invert(22%) sepia(23%) saturate(2000%) hue-rotate(200deg) brightness(90%) contrast(90%) !important;
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
         }
-
-        /* Sidebar - elementos ativos */
-        .sidebar-menu li.active a {
-            color: #2e3f6e !important;
-            border-left-color: #2e3f6e !important;
-            background: rgba(46, 63, 110, 0.1) !important;
+        
+        .categories-box h6 {
+            color: #2e3f6e;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+            text-transform: uppercase;
         }
-
-        /* Swiper - indicadores ativos */
-        .swiper-pagination-bullet-active {
-            background: #2e3f6e !important;
-        }
-
+        
         /* ====================== */
-        /* AJUSTES ESPECÍFICOS PARA SEU CÓDIGO */
+        /* SEARCH SECTION */
         /* ====================== */
-
-        /* Header - ícones azuis */
-        .icon-btn,
-        .menu-btn {
-            color: #2e3f6e !important;
+        
+        .search-section {
+            padding: 0 16px 20px;
         }
-
-        /* Campo de pesquisa - foco azul */
-        .form-control:focus {
-            border-color: #2e3f6e !important;
-            box-shadow: 0 0 0 0.2rem rgba(46, 63, 110, 0.25) !important;
+        
+        .form-input {
+            position: relative;
+            width: 100%;
         }
-
-        /* Badges das rotas */
+        
+        .form-control.with-icon {
+            padding-left: 50px;
+            padding-right: 50px;
+            height: 50px;
+            border-radius: 25px;
+            border: 1px solid #e0e0e0;
+            font-size: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #2e3f6e;
+            font-size: 20px;
+        }
+        
+        .date-time-picker {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #2e3f6e;
+            font-size: 20px;
+        }
+        
+        /* ====================== */
+        /* ROTAS REGULARES */
+        /* ====================== */
+        
+        .section-b-space {
+            padding: 20px 0;
+        }
+        
+        .title h3 {
+            color: #2e3f6e;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-left: 16px;
+        }
+        
+        .coupon-box {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 0 16px 20px;
+            border: 2px solid rgba(46, 63, 110, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .coupon-box:hover {
+            border-color: #2e3f6e;
+            transform: translateY(-5px);
+        }
+        
         .coupon-discount {
-            background: linear-gradient(135deg, #2e3f6e 0%, #435991 100%) !important;
-            font-weight: 600 !important;
-            letter-spacing: 0.5px !important;
+            background: linear-gradient(135deg, #2e3f6e 0%, #435991 100%);
+            color: white;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-
-        /* Títulos das rotas */
+        
+        .coupon-details {
+            padding: 20px;
+        }
+        
+        .coupon-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .coupon-name {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .coupon-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
         .title-color {
             color: #2e3f6e !important;
+            font-size: 18px;
+            margin: 0 0 5px 0;
         }
-
-        /* Ícones nas listas */
-        .content-list .icon {
-            color: #2e3f6e !important;
+        
+        .coupon-name small {
+            color: #666;
+            font-size: 13px;
         }
-
-        /* Distância das rotas - destaque */
-        .content-color.fw-normal:last-child {
-            color: #2e3f6e !important;
-            font-weight: 600 !important;
-        }
-
-        /* ====================== */
-        /* BOTÕES DE AÇÃO */
-        /* ====================== */
-
-        /* Criar botões de ação adicionais */
-        .action-buttons {
-            padding: 20px 16px;
+        
+        .rating {
             display: flex;
-            gap: 12px;
-            margin-top: 20px;
+            align-items: center;
+            gap: 5px;
         }
-
-        .btn-azul {
-            background: #2e3f6e;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 14px 24px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            flex: 1;
-            transition: all 0.3s ease;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
+        
+        .star {
+            width: 16px;
+            height: 16px;
         }
-
-        .btn-azul:hover {
-            background: #233055;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(46, 63, 110, 0.2);
-        }
-
-        .btn-azul-outline {
-            background: transparent;
+        
+        .rating h6 {
             color: #2e3f6e;
-            border: 2px solid #2e3f6e;
-            border-radius: 8px;
-            padding: 14px 24px;
             font-size: 16px;
+            margin: 0;
             font-weight: 600;
-            cursor: pointer;
-            flex: 1;
-            transition: all 0.3s ease;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
         }
-
-        .btn-azul-outline:hover {
-            background: #2e3f6e;
-            color: white;
-            transform: translateY(-2px);
+        
+        .coupon-details p {
+            color: #333;
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.5;
         }
-
-        /* ====================== */
-        /* DESTAQUES EM AZUL */
-        /* ====================== */
-
-        .destaque-azul {
-            background: rgba(46, 63, 110, 0.1);
-            border-left: 4px solid #2e3f6e;
-            padding: 16px;
-            margin: 16px 0;
-            border-radius: 0 8px 8px 0;
+        
+        .content-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 15px 0;
         }
-
-        .info-azul {
-            color: #2e3f6e;
-            font-weight: 600;
+        
+        .content-list li {
             display: flex;
             align-items: center;
             gap: 8px;
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 8px;
         }
-
-        .info-azul i {
+        
+        .content-list .icon {
             color: #2e3f6e;
+            font-size: 16px;
         }
-
+        
+        .d-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .content-color {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .content-color:last-child {
+            color: #2e3f6e;
+            font-weight: 600;
+        }
+        
+        /* ====================== */
+        /* SLIDER COM TEXTOS */
+        /* ====================== */
+        
+        .slider-container {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 0 16px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slider-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .slider-text-container {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .text-background {
+            display: inline-block;
+            background: rgba(46, 63, 110, 0.9);
+            padding: 20px 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(5px);
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .slider-title {
+            color: white;
+            font-size: 24px;
+            margin: 0 0 8px 0;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        
+        .slider-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 15px;
+            margin: 0;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ====================== */
+        /* BOTTOM NAVBAR */
+        /* ====================== */
+        
+        .navbar-menu {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        
+        .navbar-menu ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav-item {
+            text-align: center;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .icon {
+            width: 24px;
+            height: 24px;
+            position: relative;
+        }
+        
+        .icon img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .icon .active {
+            display: none;
+        }
+        
+        .nav-item.active .icon .unactive {
+            display: none;
+        }
+        
+        .nav-item.active .icon .active {
+            display: block;
+        }
+        
+        .nav-text {
+            font-size: 11px;
+            color: #666;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+        
+        .nav-item.active .nav-text {
+            color: #2e3f6e;
+            font-weight: 600;
+        }
+        
         /* ====================== */
         /* RESPONSIVO */
         /* ====================== */
-
+        
         @media (max-width: 768px) {
-
-            .btn-azul,
-            .btn-azul-outline {
-                padding: 12px 20px;
-                font-size: 14px;
+            .categories-list {
+                gap: 30px;
             }
-
-            .action-buttons {
-                flex-direction: column;
+            
+            .categories-box {
+                min-width: 80px;
+                padding: 10px;
+            }
+            
+            .slider-title {
+                font-size: 20px;
+            }
+            
+            .slider-subtitle {
+                font-size: 13px;
+            }
+            
+            .text-background {
+                padding: 15px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .categories-list {
+                gap: 20px;
+            }
+            
+            .categories-img {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .categories-box h6 {
+                font-size: 12px;
+            }
+            
+            .slider-title {
+                font-size: 18px;
+            }
+            
+            .slider-subtitle {
+                font-size: 12px;
+            }
+            
+            .text-background {
+                padding: 12px 16px;
             }
         }
     </style>
@@ -319,51 +530,40 @@
     </header>
     <!-- header end -->
 
-    <section style="margin-bottom: 20px;" >
+    <!-- Categories Section -->
+    <section style="margin-bottom: 20px;">
         <div class="custom-container">
-
-
             <ul class="categories-list">
                 <li>
                     <a href="search-location.html" class="categories-box">
-                        <img class="img-fluid categories-img" src="assets/images/svg/bike-img.svg" alt="c1">
+                        <img class="img-fluid categories-img" src="assets/images/svg/bike-img.svg" alt="moto">
                         <h6>Corrida</h6>
                     </a>
                 </li>
                 <li>
                     <a href="outstation.html" class="categories-box">
-                        <img class="img-fluid categories-img" src="assets/images/svg/bike-img.svg" alt="c1">
+                        <img class="img-fluid categories-img" src="assets/images/svg/bike-img.svg" alt="entrega">
                         <h6>Entrega</h6>
                     </a>
                 </li>
-
             </ul>
         </div>
     </section>
 
-
-    <!-- search section starts -->
+    <!-- Search Section -->
     <section class="search-section section-b-space pt-0">
         <div class="custom-container">
             <div class="form-input">
-                <input type="search" class="form-control with-icon" id="inputusername"
-                    placeholder="Para onde vamos hoje?">
+                <input type="search" class="form-control with-icon" id="inputusername" placeholder="Para onde vamos hoje?">
                 <i class="iconsax search-icon" data-icon="search-normal-2"> </i>
                 <a href="date-time-schedule.html" class="date-time-picker">
-                    <i class="iconsax icon" data-icon="calendar-1">
-                    </i>
+                    <i class="iconsax icon" data-icon="calendar-1"></i>
                 </a>
             </div>
         </div>
     </section>
-    <!-- search section end -->
 
-    <!-- slider section starts -->
-    <!-- slider section end -->
-
-    <!-- category section starts -->
-
-    <!-- offer section starts -->
+    <!-- Rotas Regulares -->
     <section class="section-b-space">
         <div class="custom-container">
             <div class="title">
@@ -371,7 +571,6 @@
             </div>
 
             <div class="row gy-3">
-
                 <!-- Rota 1 -->
                 <div class="col-12">
                     <div class="coupon-box">
@@ -379,8 +578,7 @@
                         <div class="coupon-details">
                             <div class="coupon-content">
                                 <a href="#" class="coupon-name">
-                                    <img class="img-fluid coupon-img" src="assets/images/profile/p6.png"
-                                        alt="motorista">
+                                    <img class="img-fluid coupon-img" src="assets/images/profile/p6.png" alt="motorista">
                                     <div>
                                         <h5 class="fw-normal title-color">Motorista OX4</h5>
                                         <small>Maianga → Talatona</small>
@@ -420,8 +618,7 @@
                         <div class="coupon-details">
                             <div class="coupon-content">
                                 <a href="#" class="coupon-name">
-                                    <img class="img-fluid coupon-img" src="assets/images/profile/p6.png"
-                                        alt="motorista">
+                                    <img class="img-fluid coupon-img" src="assets/images/profile/p6.png" alt="motorista">
                                     <div>
                                         <h5 class="fw-normal title-color">Motorista OX4</h5>
                                         <small>Viana → Mutamba</small>
@@ -461,8 +658,7 @@
                         <div class="coupon-details">
                             <div class="coupon-content">
                                 <a href="#" class="coupon-name">
-                                    <img class="img-fluid coupon-img" src="assets/images/profile/p6.png"
-                                        alt="motorista">
+                                    <img class="img-fluid coupon-img" src="assets/images/profile/p6.png" alt="motorista">
                                     <div>
                                         <h5 class="fw-normal title-color">Motorista OX4</h5>
                                         <small>Cacuaco → Kilamba</small>
@@ -494,19 +690,18 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
+    <!-- Slider Section -->
     <section>
         <div class="swiper banner1 home-banner">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="slider-container">
-                        <img style="height: 300px;" class="img-fluid slider-img w-100" src="assets/images/corrida.png"
-                            alt="Sente a Energia">
+                        <img class="img-fluid slider-img w-100" src="assets/images/corrida.png" alt="Sente a Energia">
                         <div class="slider-text-container">
                             <div class="text-background">
                                 <h1 class="slider-title">SENTE A ENERGIA</h1>
@@ -519,8 +714,7 @@
                 <!-- Slide 2 -->
                 <div class="swiper-slide">
                     <div class="slider-container">
-                        <img style="height: 300px;" class="img-fluid slider-img w-100" src="assets/images/corrida2.png"
-                            alt="OX4 Entrega">
+                        <img class="img-fluid slider-img w-100" src="assets/images/corrida2.png" alt="OX4 Entrega">
                         <div class="slider-text-container">
                             <div class="text-background">
                                 <h1 class="slider-title">OX4 ENTREGA PARA TUDO</h1>
@@ -533,78 +727,7 @@
         </div>
     </section>
 
-    <style>
-        /* Versão com fundo atrás do texto */
-        .slider-text-container {
-            position: absolute;
-            bottom: 40px;
-            left: 0;
-            right: 0;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .text-background {
-            display: inline-block;
-            background: rgba(46, 63, 110, 0.85);
-            padding: 20px 30px;
-            border-radius: 12px;
-            backdrop-filter: blur(5px);
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .text-background .slider-title {
-            color: white;
-            font-size: 24px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-        }
-
-        .text-background .slider-subtitle {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 15px;
-            margin: 0;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Para telas pequenas */
-        @media (max-width: 768px) {
-            .slider-text-container {
-                bottom: 20px;
-                padding: 0 15px;
-            }
-
-            .text-background {
-                padding: 15px 20px;
-            }
-
-            .text-background .slider-title {
-                font-size: 18px;
-            }
-
-            .text-background .slider-subtitle {
-                font-size: 13px;
-            }
-        }
-    </style>
-    <!-- offer section end -->
-
-    <!-- panel-space start -->
-    <section class="panel-space"></section>
-    <!-- panel-space end -->
-
-    <!-- bottom navbar start -->
+    <!-- Bottom Navbar -->
     <div class="navbar-menu">
         <ul>
             <li class="active">
@@ -613,7 +736,7 @@
                         <img class="unactive" src="assets/images/svg/home.svg" alt="home">
                         <img class="active" src="assets/images/svg/home-fill.svg" alt="home">
                     </div>
-                    <span class="active">casa</span>
+                    <span class="nav-text">casa</span>
                 </a>
             </li>
 
@@ -623,7 +746,7 @@
                         <img class="unactive" src="assets/images/svg/category.svg" alt="category">
                         <img class="active" src="assets/images/svg/category-fill.svg" alt="category">
                     </div>
-                    <span>categoria</span>
+                    <span class="nav-text">categoria</span>
                 </a>
             </li>
 
@@ -633,7 +756,7 @@
                         <img class="unactive" src="assets/images/svg/car.svg" alt="car">
                         <img class="active" src="assets/images/svg/car-fill.svg" alt="car">
                     </div>
-                    <span>moto</span>
+                    <span class="nav-text">moto</span>
                 </a>
             </li>
 
@@ -643,15 +766,13 @@
                         <img class="unactive" src="assets/images/svg/setting.svg" alt="setting">
                         <img class="active" src="assets/images/svg/setting-fill.svg" alt="setting">
                     </div>
-                    <span>Configurações</span>
+                    <span class="nav-text">Configurações</span>
                 </a>
             </li>
         </ul>
     </div>
 
-    <!-- bottom navbar end -->
-
-    <!-- sidebar starts -->
+    <!-- Sidebar -->
     <div class="offcanvas sidebar-offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
         <div class="offcanvas-header sidebar-header">
             <div class="sidebar-logo">
@@ -694,7 +815,6 @@
                     </a>
                 </li>
 
-
                 <li>
                     <div class="pages">
                         <i class="iconsax sidebar-icon" data-icon="brush-3"> </i>
@@ -704,7 +824,6 @@
                         <input id="dark-switch" type="checkbox">
                     </div>
                 </li>
-
             </ul>
 
             <div class="bottom-sidebar">
@@ -715,26 +834,54 @@
             </div>
         </div>
     </div>
-    <!-- sidebar end -->
 
-    <!-- iconsax js -->
-    <script src="assets/js/iconsax.js"></script>
-
-    <!-- bootstrap js -->
+    <!-- scripts -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-    <!-- sticky-header js -->
-    <script src="assets/js/sticky-header.js"></script>
-
-    <!-- swiper js -->
+    <script src="assets/js/iconsax.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/custom-swiper.js"></script>
-
-    <!-- template-setting js -->
-    <script src="assets/js/template-setting.js"></script>
-
-    <!-- script js -->
-    <script src="assets/js/script.js"></script>
+    <script>
+        // Inicializar Swiper
+        var swiper = new Swiper('.home-banner', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        
+        // Sidebar toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            var sidebarToggler = document.querySelector('[data-bs-toggle="offcanvas"]');
+            var sidebar = document.getElementById('offcanvasLeft');
+            
+            if (sidebarToggler && sidebar) {
+                sidebarToggler.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var bsOffcanvas = new bootstrap.Offcanvas(sidebar);
+                    bsOffcanvas.show();
+                });
+            }
+            
+            // Ativar navegação da navbar
+            var navItems = document.querySelectorAll('.navbar-menu .nav-item');
+            navItems.forEach(function(item) {
+                item.addEventListener('click', function() {
+                    navItems.forEach(function(i) {
+                        i.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
