@@ -42,254 +42,255 @@
     <link rel="stylesheet" id="change-link" type="text/css" href="assets/css/style.css">
 
     <style>
-    /* ====================== */
-    /* BOTÕES AZUL ESCURO */
-    /* ====================== */
-    
-    /* Botões principais - Azul escuro */
-    .btn-primary, 
-    .btn-reservar,
-    button[type="submit"],
-    .btn-confirmar {
-        background-color: #2e3f6e !important;
-        border-color: #2e3f6e !important;
-        color: white !important;
-    }
-    
-    .btn-primary:hover,
-    .btn-reservar:hover,
-    button[type="submit"]:hover,
-    .btn-confirmar:hover {
-        background-color: #233055 !important;
-        border-color: #233055 !important;
-    }
-    
-    /* Botões secundários - Borda azul escuro */
-    .btn-outline-primary,
-    .btn-detalhes,
-    .btn-secundario {
-        color: #2e3f6e !important;
-        border-color: #2e3f6e !important;
-        background-color: transparent !important;
-    }
-    
-    .btn-outline-primary:hover,
-    .btn-detalhes:hover,
-    .btn-secundario:hover {
-        background-color: #2e3f6e !important;
-        color: white !important;
-    }
-    
-    /* Botões na seção de ofertas */
-    .coupon-discount {
-        background: #2e3f6e !important;
-        color: white !important;
-    }
-    
-    /* Elementos ativos na navbar */
-    .nav-item.active .nav-text {
-        color: #2e3f6e !important;
-    }
-    
-    .nav-icon .active {
-        filter: invert(22%) sepia(23%) saturate(2000%) hue-rotate(200deg) brightness(90%) contrast(90%) !important;
-    }
-    
-    /* Ícones ativos */
-    .iconsax[data-icon="home-2"],
-    .iconsax[data-icon="car"],
-    .iconsax[data-icon="bell-2"],
-    .iconsax[data-icon="user-1"] {
-        color: #2e3f6e !important;
-    }
-    
-    /* Campo de pesquisa */
-    .search-icon,
-    .date-time-picker i {
-        color: #2e3f6e !important;
-    }
-    
-    /* Títulos das seções */
-    .title h3,
-    .section-title,
-    h3 {
-        color: #2e3f6e !important;
-    }
-    
-    /* Links ativos */
-    a.active,
-    .active > a {
-        color: #2e3f6e !important;
-    }
-    
-    /* Estrelas de avaliação */
-    .star {
-        filter: invert(22%) sepia(23%) saturate(2000%) hue-rotate(200deg) brightness(90%) contrast(90%) !important;
-    }
-    
-    /* Cards de rota - borda azul */
-    .coupon-box {
-        border: 2px solid rgba(46, 63, 110, 0.1) !important;
-        transition: all 0.3s ease !important;
-    }
-    
-    .coupon-box:hover {
-        border-color: #2e3f6e !important;
-        box-shadow: 0 4px 15px rgba(46, 63, 110, 0.15) !important;
-    }
-    
-    /* Categorias - ícones azuis */
-    .categories-img {
-        filter: invert(22%) sepia(23%) saturate(2000%) hue-rotate(200deg) brightness(90%) contrast(90%) !important;
-    }
-    
-    /* Sidebar - elementos ativos */
-    .sidebar-menu li.active a {
-        color: #2e3f6e !important;
-        border-left-color: #2e3f6e !important;
-        background: rgba(46, 63, 110, 0.1) !important;
-    }
-    
-    /* Swiper - indicadores ativos */
-    .swiper-pagination-bullet-active {
-        background: #2e3f6e !important;
-    }
-    
-    /* ====================== */
-    /* AJUSTES ESPECÍFICOS PARA SEU CÓDIGO */
-    /* ====================== */
-    
-    /* Header - ícones azuis */
-    .icon-btn,
-    .menu-btn {
-        color: #2e3f6e !important;
-    }
-    
-    /* Campo de pesquisa - foco azul */
-    .form-control:focus {
-        border-color: #2e3f6e !important;
-        box-shadow: 0 0 0 0.2rem rgba(46, 63, 110, 0.25) !important;
-    }
-    
-    /* Badges das rotas */
-    .coupon-discount {
-        background: linear-gradient(135deg, #2e3f6e 0%, #435991 100%) !important;
-        font-weight: 600 !important;
-        letter-spacing: 0.5px !important;
-    }
-    
-    /* Títulos das rotas */
-    .title-color {
-        color: #2e3f6e !important;
-    }
-    
-    /* Ícones nas listas */
-    .content-list .icon {
-        color: #2e3f6e !important;
-    }
-    
-    /* Distância das rotas - destaque */
-    .content-color.fw-normal:last-child {
-        color: #2e3f6e !important;
-        font-weight: 600 !important;
-    }
-    
-    /* ====================== */
-    /* BOTÕES DE AÇÃO */
-    /* ====================== */
-    
-    /* Criar botões de ação adicionais */
-    .action-buttons {
-        padding: 20px 16px;
-        display: flex;
-        gap: 12px;
-        margin-top: 20px;
-    }
-    
-    .btn-azul {
-        background: #2e3f6e;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        padding: 14px 24px;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        flex: 1;
-        transition: all 0.3s ease;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-    }
-    
-    .btn-azul:hover {
-        background: #233055;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(46, 63, 110, 0.2);
-    }
-    
-    .btn-azul-outline {
-        background: transparent;
-        color: #2e3f6e;
-        border: 2px solid #2e3f6e;
-        border-radius: 8px;
-        padding: 14px 24px;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        flex: 1;
-        transition: all 0.3s ease;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-    }
-    
-    .btn-azul-outline:hover {
-        background: #2e3f6e;
-        color: white;
-        transform: translateY(-2px);
-    }
-    
-    /* ====================== */
-    /* DESTAQUES EM AZUL */
-    /* ====================== */
-    
-    .destaque-azul {
-        background: rgba(46, 63, 110, 0.1);
-        border-left: 4px solid #2e3f6e;
-        padding: 16px;
-        margin: 16px 0;
-        border-radius: 0 8px 8px 0;
-    }
-    
-    .info-azul {
-        color: #2e3f6e;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    
-    .info-azul i {
-        color: #2e3f6e;
-    }
-    
-    /* ====================== */
-    /* RESPONSIVO */
-    /* ====================== */
-    
-    @media (max-width: 768px) {
-        .btn-azul,
-        .btn-azul-outline {
-            padding: 12px 20px;
-            font-size: 14px;
+        /* ====================== */
+        /* BOTÕES AZUL ESCURO */
+        /* ====================== */
+
+        /* Botões principais - Azul escuro */
+        .btn-primary,
+        .btn-reservar,
+        button[type="submit"],
+        .btn-confirmar {
+            background-color: #2e3f6e !important;
+            border-color: #2e3f6e !important;
+            color: white !important;
         }
-        
+
+        .btn-primary:hover,
+        .btn-reservar:hover,
+        button[type="submit"]:hover,
+        .btn-confirmar:hover {
+            background-color: #233055 !important;
+            border-color: #233055 !important;
+        }
+
+        /* Botões secundários - Borda azul escuro */
+        .btn-outline-primary,
+        .btn-detalhes,
+        .btn-secundario {
+            color: #2e3f6e !important;
+            border-color: #2e3f6e !important;
+            background-color: transparent !important;
+        }
+
+        .btn-outline-primary:hover,
+        .btn-detalhes:hover,
+        .btn-secundario:hover {
+            background-color: #2e3f6e !important;
+            color: white !important;
+        }
+
+        /* Botões na seção de ofertas */
+        .coupon-discount {
+            background: #2e3f6e !important;
+            color: white !important;
+        }
+
+        /* Elementos ativos na navbar */
+        .nav-item.active .nav-text {
+            color: #2e3f6e !important;
+        }
+
+        .nav-icon .active {
+            filter: invert(22%) sepia(23%) saturate(2000%) hue-rotate(200deg) brightness(90%) contrast(90%) !important;
+        }
+
+        /* Ícones ativos */
+        .iconsax[data-icon="home-2"],
+        .iconsax[data-icon="car"],
+        .iconsax[data-icon="bell-2"],
+        .iconsax[data-icon="user-1"] {
+            color: #2e3f6e !important;
+        }
+
+        /* Campo de pesquisa */
+        .search-icon,
+        .date-time-picker i {
+            color: #2e3f6e !important;
+        }
+
+        /* Títulos das seções */
+        .title h3,
+        .section-title,
+        h3 {
+            color: #2e3f6e !important;
+        }
+
+        /* Links ativos */
+        a.active,
+        .active>a {
+            color: #2e3f6e !important;
+        }
+
+        /* Estrelas de avaliação */
+        .star {
+            filter: invert(22%) sepia(23%) saturate(2000%) hue-rotate(200deg) brightness(90%) contrast(90%) !important;
+        }
+
+        /* Cards de rota - borda azul */
+        .coupon-box {
+            border: 2px solid rgba(46, 63, 110, 0.1) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .coupon-box:hover {
+            border-color: #2e3f6e !important;
+            box-shadow: 0 4px 15px rgba(46, 63, 110, 0.15) !important;
+        }
+
+        /* Categorias - ícones azuis */
+        .categories-img {
+            filter: invert(22%) sepia(23%) saturate(2000%) hue-rotate(200deg) brightness(90%) contrast(90%) !important;
+        }
+
+        /* Sidebar - elementos ativos */
+        .sidebar-menu li.active a {
+            color: #2e3f6e !important;
+            border-left-color: #2e3f6e !important;
+            background: rgba(46, 63, 110, 0.1) !important;
+        }
+
+        /* Swiper - indicadores ativos */
+        .swiper-pagination-bullet-active {
+            background: #2e3f6e !important;
+        }
+
+        /* ====================== */
+        /* AJUSTES ESPECÍFICOS PARA SEU CÓDIGO */
+        /* ====================== */
+
+        /* Header - ícones azuis */
+        .icon-btn,
+        .menu-btn {
+            color: #2e3f6e !important;
+        }
+
+        /* Campo de pesquisa - foco azul */
+        .form-control:focus {
+            border-color: #2e3f6e !important;
+            box-shadow: 0 0 0 0.2rem rgba(46, 63, 110, 0.25) !important;
+        }
+
+        /* Badges das rotas */
+        .coupon-discount {
+            background: linear-gradient(135deg, #2e3f6e 0%, #435991 100%) !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.5px !important;
+        }
+
+        /* Títulos das rotas */
+        .title-color {
+            color: #2e3f6e !important;
+        }
+
+        /* Ícones nas listas */
+        .content-list .icon {
+            color: #2e3f6e !important;
+        }
+
+        /* Distância das rotas - destaque */
+        .content-color.fw-normal:last-child {
+            color: #2e3f6e !important;
+            font-weight: 600 !important;
+        }
+
+        /* ====================== */
+        /* BOTÕES DE AÇÃO */
+        /* ====================== */
+
+        /* Criar botões de ação adicionais */
         .action-buttons {
-            flex-direction: column;
+            padding: 20px 16px;
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
         }
-    }
-</style>
+
+        .btn-azul {
+            background: #2e3f6e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            flex: 1;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-azul:hover {
+            background: #233055;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 63, 110, 0.2);
+        }
+
+        .btn-azul-outline {
+            background: transparent;
+            color: #2e3f6e;
+            border: 2px solid #2e3f6e;
+            border-radius: 8px;
+            padding: 14px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            flex: 1;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-azul-outline:hover {
+            background: #2e3f6e;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* ====================== */
+        /* DESTAQUES EM AZUL */
+        /* ====================== */
+
+        .destaque-azul {
+            background: rgba(46, 63, 110, 0.1);
+            border-left: 4px solid #2e3f6e;
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-azul {
+            color: #2e3f6e;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-azul i {
+            color: #2e3f6e;
+        }
+
+        /* ====================== */
+        /* RESPONSIVO */
+        /* ====================== */
+
+        @media (max-width: 768px) {
+
+            .btn-azul,
+            .btn-azul-outline {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -318,27 +319,27 @@
     </header>
     <!-- header end -->
 
-    <section>
-    <div class="custom-container">
-        
+    <section style="margin-bottom: 20px;" >
+        <div class="custom-container">
 
-        <ul class="categories-list">
-            <li>
-                <a href="search-location.html" class="categories-box">
-                    <img class="img-fluid categories-img" src="assets/images/svg/bike-img.svg" alt="c1">
-                    <h6>Corrida</h6>
-                </a>
-            </li>
-            <li>
-                <a href="outstation.html" class="categories-box">
-                    <img class="img-fluid categories-img" src="assets/images/svg/bike-img.svg" alt="c1">
-                    <h6>Entrega</h6>
-                </a>
-            </li>
-            
-        </ul>
-    </div>
-</section>
+
+            <ul class="categories-list">
+                <li>
+                    <a href="search-location.html" class="categories-box">
+                        <img class="img-fluid categories-img" src="assets/images/svg/bike-img.svg" alt="c1">
+                        <h6>Corrida</h6>
+                    </a>
+                </li>
+                <li>
+                    <a href="outstation.html" class="categories-box">
+                        <img class="img-fluid categories-img" src="assets/images/svg/bike-img.svg" alt="c1">
+                        <h6>Entrega</h6>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </section>
 
 
     <!-- search section starts -->
@@ -364,233 +365,239 @@
 
     <!-- offer section starts -->
     <section class="section-b-space">
-    <div class="custom-container">
-        <div class="title">
-            <h3>Rotas regulares</h3>
-        </div>
+        <div class="custom-container">
+            <div class="title">
+                <h3>Rotas regulares</h3>
+            </div>
 
-        <div class="row gy-3">
+            <div class="row gy-3">
 
-            <!-- Rota 1 -->
-            <div class="col-12">
-                <div class="coupon-box">
-                    <div class="coupon-discount">PREÇO FIXO</div>
-                    <div class="coupon-details">
-                        <div class="coupon-content">
-                            <a href="#" class="coupon-name">
-                                <img class="img-fluid coupon-img" src="assets/images/profile/p6.png" alt="motorista">
-                                <div>
-                                    <h5 class="fw-normal title-color">Motorista OX4</h5>
-                                    <small>Maianga → Talatona</small>
+                <!-- Rota 1 -->
+                <div class="col-12">
+                    <div class="coupon-box">
+                        <div class="coupon-discount">PREÇO FIXO</div>
+                        <div class="coupon-details">
+                            <div class="coupon-content">
+                                <a href="#" class="coupon-name">
+                                    <img class="img-fluid coupon-img" src="assets/images/profile/p6.png"
+                                        alt="motorista">
+                                    <div>
+                                        <h5 class="fw-normal title-color">Motorista OX4</h5>
+                                        <small>Maianga → Talatona</small>
+                                    </div>
+                                </a>
+                                <div class="rating">
+                                    <img class="img-fluid star" src="assets/images/svg/star.svg" alt="avaliação">
+                                    <h6>4.6</h6>
                                 </div>
-                            </a>
-                            <div class="rating">
-                                <img class="img-fluid star" src="assets/images/svg/star.svg" alt="avaliação">
-                                <h6>4.6</h6>
+                            </div>
+
+                            <p>Rota diária entre o centro de Luanda e Talatona</p>
+
+                            <ul class="content-list">
+                                <li>
+                                    <i class="iconsax icon" data-icon="car"></i>
+                                    Viatura Compacta
+                                </li>
+                                <li>
+                                    <i class="iconsax icon" data-icon="user-1"></i>
+                                    Até 4 Passageiros
+                                </li>
+                            </ul>
+
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <h6 class="content-color fw-normal">Distância:</h6>
+                                <h6 class="content-color fw-normal">18 km</h6>
                             </div>
                         </div>
-
-                        <p>Rota diária entre o centro de Luanda e Talatona</p>
-
-                        <ul class="content-list">
-                            <li>
-                                <i class="iconsax icon" data-icon="car"></i>
-                                Viatura Compacta
-                            </li>
-                            <li>
-                                <i class="iconsax icon" data-icon="user-1"></i>
-                                Até 4 Passageiros
-                            </li>
-                        </ul>
-
-                        <div class="d-flex align-items-center justify-content-between mt-3">
-                            <h6 class="content-color fw-normal">Distância:</h6>
-                            <h6 class="content-color fw-normal">18 km</h6>
-                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Rota 2 -->
-            <div class="col-12">
-                <div class="coupon-box">
-                    <div class="coupon-discount">POPULAR</div>
-                    <div class="coupon-details">
-                        <div class="coupon-content">
-                            <a href="#" class="coupon-name">
-                                <img class="img-fluid coupon-img" src="assets/images/profile/p6.png" alt="motorista">
-                                <div>
-                                    <h5 class="fw-normal title-color">Motorista OX4</h5>
-                                    <small>Viana → Mutamba</small>
+                <!-- Rota 2 -->
+                <div class="col-12">
+                    <div class="coupon-box">
+                        <div class="coupon-discount">POPULAR</div>
+                        <div class="coupon-details">
+                            <div class="coupon-content">
+                                <a href="#" class="coupon-name">
+                                    <img class="img-fluid coupon-img" src="assets/images/profile/p6.png"
+                                        alt="motorista">
+                                    <div>
+                                        <h5 class="fw-normal title-color">Motorista OX4</h5>
+                                        <small>Viana → Mutamba</small>
+                                    </div>
+                                </a>
+                                <div class="rating">
+                                    <img class="img-fluid star" src="assets/images/svg/star.svg" alt="avaliação">
+                                    <h6>4.4</h6>
                                 </div>
-                            </a>
-                            <div class="rating">
-                                <img class="img-fluid star" src="assets/images/svg/star.svg" alt="avaliação">
-                                <h6>4.4</h6>
+                            </div>
+
+                            <p>Ligação entre Viana e o centro histórico</p>
+
+                            <ul class="content-list">
+                                <li>
+                                    <i class="iconsax icon" data-icon="car"></i>
+                                    Viatura Normal
+                                </li>
+                                <li>
+                                    <i class="iconsax icon" data-icon="user-1"></i>
+                                    Até 4 Passageiros
+                                </li>
+                            </ul>
+
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <h6 class="content-color fw-normal">Distância:</h6>
+                                <h6 class="content-color fw-normal">22 km</h6>
                             </div>
                         </div>
-
-                        <p>Ligação entre Viana e o centro histórico</p>
-
-                        <ul class="content-list">
-                            <li>
-                                <i class="iconsax icon" data-icon="car"></i>
-                                Viatura Normal
-                            </li>
-                            <li>
-                                <i class="iconsax icon" data-icon="user-1"></i>
-                                Até 4 Passageiros
-                            </li>
-                        </ul>
-
-                        <div class="d-flex align-items-center justify-content-between mt-3">
-                            <h6 class="content-color fw-normal">Distância:</h6>
-                            <h6 class="content-color fw-normal">22 km</h6>
-                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Rota 3 -->
-            <div class="col-12">
-                <div class="coupon-box">
-                    <div class="coupon-discount">ECONÓMICA</div>
-                    <div class="coupon-details">
-                        <div class="coupon-content">
-                            <a href="#" class="coupon-name">
-                                <img class="img-fluid coupon-img" src="assets/images/profile/p6.png" alt="motorista">
-                                <div>
-                                    <h5 class="fw-normal title-color">Motorista OX4</h5>
-                                    <small>Cacuaco → Kilamba</small>
+                <!-- Rota 3 -->
+                <div class="col-12">
+                    <div class="coupon-box">
+                        <div class="coupon-discount">ECONÓMICA</div>
+                        <div class="coupon-details">
+                            <div class="coupon-content">
+                                <a href="#" class="coupon-name">
+                                    <img class="img-fluid coupon-img" src="assets/images/profile/p6.png"
+                                        alt="motorista">
+                                    <div>
+                                        <h5 class="fw-normal title-color">Motorista OX4</h5>
+                                        <small>Cacuaco → Kilamba</small>
+                                    </div>
+                                </a>
+                                <div class="rating">
+                                    <img class="img-fluid star" src="assets/images/svg/star.svg" alt="avaliação">
+                                    <h6>4.3</h6>
                                 </div>
-                            </a>
-                            <div class="rating">
-                                <img class="img-fluid star" src="assets/images/svg/star.svg" alt="avaliação">
-                                <h6>4.3</h6>
+                            </div>
+
+                            <p>Rota intermunicipal com grande procura</p>
+
+                            <ul class="content-list">
+                                <li>
+                                    <i class="iconsax icon" data-icon="car"></i>
+                                    Viatura Normal
+                                </li>
+                                <li>
+                                    <i class="iconsax icon" data-icon="user-1"></i>
+                                    Até 4 Passageiros
+                                </li>
+                            </ul>
+
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <h6 class="content-color fw-normal">Distância:</h6>
+                                <h6 class="content-color fw-normal">30 km</h6>
                             </div>
                         </div>
-
-                        <p>Rota intermunicipal com grande procura</p>
-
-                        <ul class="content-list">
-                            <li>
-                                <i class="iconsax icon" data-icon="car"></i>
-                                Viatura Normal
-                            </li>
-                            <li>
-                                <i class="iconsax icon" data-icon="user-1"></i>
-                                Até 4 Passageiros
-                            </li>
-                        </ul>
-
-                        <div class="d-flex align-items-center justify-content-between mt-3">
-                            <h6 class="content-color fw-normal">Distância:</h6>
-                            <h6 class="content-color fw-normal">30 km</h6>
-                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section>
-    <div class="swiper banner1 home-banner">
-        <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-                <div class="slider-container">
-                    <img style="height: 300px;" class="img-fluid slider-img w-100" src="assets/images/corrida.png" alt="Sente a Energia">
-                    <div class="slider-text-container">
-                        <div class="text-background">
-                            <h1 class="slider-title">SENTE A ENERGIA</h1>
-                            <p class="slider-subtitle">Torna cada destino especial</p>
+    <section>
+        <div class="swiper banner1 home-banner">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="slider-container">
+                        <img style="height: 300px;" class="img-fluid slider-img w-100" src="assets/images/corrida.png"
+                            alt="Sente a Energia">
+                        <div class="slider-text-container">
+                            <div class="text-background">
+                                <h1 class="slider-title">SENTE A ENERGIA</h1>
+                                <p class="slider-subtitle">Torna cada destino especial</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-                <div class="slider-container">
-                    <img style="height: 300px;" class="img-fluid slider-img w-100" src="assets/images/corrida2.png" alt="OX4 Entrega">
-                    <div class="slider-text-container">
-                        <div class="text-background">
-                            <h1 class="slider-title">OX4 ENTREGA PARA TUDO</h1>
-                            <p class="slider-subtitle">Envia itens em Luanda</p>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="slider-container">
+                        <img style="height: 300px;" class="img-fluid slider-img w-100" src="assets/images/corrida2.png"
+                            alt="OX4 Entrega">
+                        <div class="slider-text-container">
+                            <div class="text-background">
+                                <h1 class="slider-title">OX4 ENTREGA PARA TUDO</h1>
+                                <p class="slider-subtitle">Envia itens em Luanda</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<style>
-    /* Versão com fundo atrás do texto */
-.slider-text-container {
-    position: absolute;
-    bottom: 40px;
-    left: 0;
-    right: 0;
-    padding: 0 20px;
-    text-align: center;
-}
+    <style>
+        /* Versão com fundo atrás do texto */
+        .slider-text-container {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            padding: 0 20px;
+            text-align: center;
+        }
 
-.text-background {
-    display: inline-block;
-    background: rgba(46, 63, 110, 0.85);
-    padding: 20px 30px;
-    border-radius: 12px;
-    backdrop-filter: blur(5px);
-    animation: fadeInUp 0.8s ease;
-}
+        .text-background {
+            display: inline-block;
+            background: rgba(46, 63, 110, 0.85);
+            padding: 20px 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(5px);
+            animation: fadeInUp 0.8s ease;
+        }
 
-.text-background .slider-title {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-}
+        .text-background .slider-title {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
 
-.text-background .slider-subtitle {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 15px;
-    margin: 0;
-}
+        .text-background .slider-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 15px;
+            margin: 0;
+        }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
 
-/* Para telas pequenas */
-@media (max-width: 768px) {
-    .slider-text-container {
-        bottom: 20px;
-        padding: 0 15px;
-    }
-    
-    .text-background {
-        padding: 15px 20px;
-    }
-    
-    .text-background .slider-title {
-        font-size: 18px;
-    }
-    
-    .text-background .slider-subtitle {
-        font-size: 13px;
-    }
-}
-</style>
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Para telas pequenas */
+        @media (max-width: 768px) {
+            .slider-text-container {
+                bottom: 20px;
+                padding: 0 15px;
+            }
+
+            .text-background {
+                padding: 15px 20px;
+            }
+
+            .text-background .slider-title {
+                font-size: 18px;
+            }
+
+            .text-background .slider-subtitle {
+                font-size: 13px;
+            }
+        }
+    </style>
     <!-- offer section end -->
 
     <!-- panel-space start -->
@@ -599,115 +606,115 @@
 
     <!-- bottom navbar start -->
     <div class="navbar-menu">
-    <ul>
-        <li class="active">
-            <a href="home.html">
-                <div class="icon">
-                    <img class="unactive" src="assets/images/svg/home.svg" alt="home">
-                    <img class="active" src="assets/images/svg/home-fill.svg" alt="home">
-                </div>
-                <span class="active">casa</span>
-            </a>
-        </li>
+        <ul>
+            <li class="active">
+                <a href="home.html">
+                    <div class="icon">
+                        <img class="unactive" src="assets/images/svg/home.svg" alt="home">
+                        <img class="active" src="assets/images/svg/home-fill.svg" alt="home">
+                    </div>
+                    <span class="active">casa</span>
+                </a>
+            </li>
 
-        <li>
-            <a href="category.html">
-                <div class="icon">
-                    <img class="unactive" src="assets/images/svg/category.svg" alt="category">
-                    <img class="active" src="assets/images/svg/category-fill.svg" alt="category">
-                </div>
-                <span>categoria</span>
-            </a>
-        </li>
+            <li>
+                <a href="category.html">
+                    <div class="icon">
+                        <img class="unactive" src="assets/images/svg/category.svg" alt="category">
+                        <img class="active" src="assets/images/svg/category-fill.svg" alt="category">
+                    </div>
+                    <span>categoria</span>
+                </a>
+            </li>
 
-        <li>
-            <a href="my-rides.html">
-                <div class="icon">
-                    <img class="unactive" src="assets/images/svg/car.svg" alt="car">
-                    <img class="active" src="assets/images/svg/car-fill.svg" alt="car">
-                </div>
-                <span>moto</span>
-            </a>
-        </li>
+            <li>
+                <a href="my-rides.html">
+                    <div class="icon">
+                        <img class="unactive" src="assets/images/svg/car.svg" alt="car">
+                        <img class="active" src="assets/images/svg/car-fill.svg" alt="car">
+                    </div>
+                    <span>moto</span>
+                </a>
+            </li>
 
-        <li>
-            <a href="setting.html">
-                <div class="icon">
-                    <img class="unactive" src="assets/images/svg/setting.svg" alt="setting">
-                    <img class="active" src="assets/images/svg/setting-fill.svg" alt="setting">
-                </div>
-                <span>Configurações</span>
-            </a>
-        </li>
-    </ul>
-</div>
+            <li>
+                <a href="setting.html">
+                    <div class="icon">
+                        <img class="unactive" src="assets/images/svg/setting.svg" alt="setting">
+                        <img class="active" src="assets/images/svg/setting-fill.svg" alt="setting">
+                    </div>
+                    <span>Configurações</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <!-- bottom navbar end -->
 
     <!-- sidebar starts -->
     <div class="offcanvas sidebar-offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
-    <div class="offcanvas-header sidebar-header">
-        <div class="sidebar-logo">
-            <img class="img-fluid logo" src="assets/images/logo/Logo 6.png" alt="logo">
-            <img class="img-fluid logo-dark" src="assets/images/logo/Logo 6.png" alt="logo">
-        </div>
-    </div>
-    <div class="offcanvas-body">
-        <a href="profile-setting.html" class="profile-part d-flex align-items-center gap-2">
-            <img class="img-fluid profile-pic" src="assets/images/profile/p8.png" alt="p8">
-            <div>
-                <h3>Carlos Muquissi</h3>
-                <span>Editar Conta</span>
+        <div class="offcanvas-header sidebar-header">
+            <div class="sidebar-logo">
+                <img class="img-fluid logo" src="assets/images/logo/Logo 6.png" alt="logo">
+                <img class="img-fluid logo-dark" src="assets/images/logo/Logo 6.png" alt="logo">
             </div>
-        </a>
-        <ul class="link-section switch-section">
-            <li class="active">
-                <a href="home.html" class="pages">
-                    <i class="iconsax sidebar-icon" data-icon="home-2"> </i>
-                    <h3>Início</h3>
-                </a>
-            </li>
-            <li>
-                <a href="my-rides.html" class="pages">
-                    <i class="iconsax sidebar-icon" data-icon="car"> </i>
-                    <h3>Minhas Viagens</h3>
-                </a>
-            </li>
-            <li>
-                <a href="notification.html" class="pages">
-                    <i class="iconsax sidebar-icon" data-icon="bell-2"> </i>
-                    <h3>Notificações</h3>
-                </a>
-            </li>
-
-            <li>
-                <a href="setting.html" class="pages">
-                    <i class="iconsax sidebar-icon" data-icon="user-1"> </i>
-                    <h3>Configurações</h3>
-                </a>
-            </li>
-
-
-            <li>
-                <div class="pages">
-                    <i class="iconsax sidebar-icon" data-icon="brush-3"> </i>
-                    <h3>Escuro</h3>
+        </div>
+        <div class="offcanvas-body">
+            <a href="profile-setting.html" class="profile-part d-flex align-items-center gap-2">
+                <img class="img-fluid profile-pic" src="assets/images/profile/p8.png" alt="p8">
+                <div>
+                    <h3>Carlos Muquissi</h3>
+                    <span>Editar Conta</span>
                 </div>
-                <div class="switch-btn">
-                    <input id="dark-switch" type="checkbox">
-                </div>
-            </li>
-
-        </ul>
-
-        <div class="bottom-sidebar">
-            <a href="login.html" class="pages">
-                <i class="iconsax sidebar-icon" data-icon="logout-2"> </i>
-                <h3>Sair</h3>
             </a>
+            <ul class="link-section switch-section">
+                <li class="active">
+                    <a href="home.html" class="pages">
+                        <i class="iconsax sidebar-icon" data-icon="home-2"> </i>
+                        <h3>Início</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="my-rides.html" class="pages">
+                        <i class="iconsax sidebar-icon" data-icon="car"> </i>
+                        <h3>Minhas Viagens</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="notification.html" class="pages">
+                        <i class="iconsax sidebar-icon" data-icon="bell-2"> </i>
+                        <h3>Notificações</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="setting.html" class="pages">
+                        <i class="iconsax sidebar-icon" data-icon="user-1"> </i>
+                        <h3>Configurações</h3>
+                    </a>
+                </li>
+
+
+                <li>
+                    <div class="pages">
+                        <i class="iconsax sidebar-icon" data-icon="brush-3"> </i>
+                        <h3>Escuro</h3>
+                    </div>
+                    <div class="switch-btn">
+                        <input id="dark-switch" type="checkbox">
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="bottom-sidebar">
+                <a href="login.html" class="pages">
+                    <i class="iconsax sidebar-icon" data-icon="logout-2"> </i>
+                    <h3>Sair</h3>
+                </a>
+            </div>
         </div>
     </div>
-</div>
     <!-- sidebar end -->
 
     <!-- iconsax js -->
