@@ -355,8 +355,15 @@
         <!-- Campo de pesquisa -->
         <div class="search-box-yango">
             <div class="search-input-wrapper">
-                <i class="iconsax search-icon-yango" data-icon="search-normal-2"></i>
+                <!-- Ícone de moto no lado esquerdo -->
+                <img src="assets/images/svg/bike-img.svg" alt="moto" class="bike-icon-search">
+                
                 <input type="text" class="search-input-yango" id="inputusername" placeholder="Para onde?" autocomplete="off">
+                
+                <!-- Calendário no lado direito (opcional) -->
+                <a href="date-time-schedule.html" class="calendar-icon-search">
+                    <i class="iconsax" data-icon="calendar-1"></i>
+                </a>
             </div>
         </div>
 
@@ -401,50 +408,6 @@
                         </div>
                         <div class="suggestion-time-fixed">15 min</div>
                     </a>
-                    
-                    <a href="#" class="suggestion-item-fixed" data-location="Talatona">
-                        <div class="suggestion-icon-fixed">
-                            <i class="iconsax" data-icon="location"></i>
-                        </div>
-                        <div class="suggestion-info-fixed">
-                            <div class="suggestion-name-fixed">Talatona</div>
-                            <div class="suggestion-details-fixed">Município Belas, Luanda</div>
-                        </div>
-                        <div class="suggestion-time-fixed">25 min</div>
-                    </a>
-                    
-                    <a href="#" class="suggestion-item-fixed" data-location="Kilamba">
-                        <div class="suggestion-icon-fixed">
-                            <i class="iconsax" data-icon="location"></i>
-                        </div>
-                        <div class="suggestion-info-fixed">
-                            <div class="suggestion-name-fixed">Kilamba</div>
-                            <div class="suggestion-details-fixed">Município Belas, Luanda</div>
-                        </div>
-                        <div class="suggestion-time-fixed">40 min</div>
-                    </a>
-                    
-                    <a href="#" class="suggestion-item-fixed" data-location="Cacuaco">
-                        <div class="suggestion-icon-fixed">
-                            <i class="iconsax" data-icon="location"></i>
-                        </div>
-                        <div class="suggestion-info-fixed">
-                            <div class="suggestion-name-fixed">Cacuaco</div>
-                            <div class="suggestion-details-fixed">Município Cacuaco, Luanda</div>
-                        </div>
-                        <div class="suggestion-time-fixed">35 min</div>
-                    </a>
-                    
-                    <a href="#" class="suggestion-item-fixed" data-location="Viana">
-                        <div class="suggestion-icon-fixed">
-                            <i class="iconsax" data-icon="location"></i>
-                        </div>
-                        <div class="suggestion-info-fixed">
-                            <div class="suggestion-name-fixed">Viana</div>
-                            <div class="suggestion-details-fixed">Município Viana, Luanda</div>
-                        </div>
-                        <div class="suggestion-time-fixed">20 min</div>
-                    </a>
                 </div>
             </div>
         </div>
@@ -453,292 +416,374 @@
 
 <style>
     /* ====================== */
-/* SEARCH SECTION YANGO COM SUGESTÕES FIXAS */
-/* ====================== */
+    /* SEARCH SECTION YANGO COM ÍCONE DE MOTO */
+    /* ====================== */
 
-.search-section-yango {
-    padding: 16px 16px 8px;
-    background: #FFFFFF;
-}
-
-/* Localização atual */
-.current-location-yango {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #2e3f6e;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 15px;
-    padding-left: 8px;
-}
-
-.current-location-yango i {
-    font-size: 16px;
-}
-
-/* Caixa de pesquisa */
-.search-box-yango {
-    background: #FFFFFF;
-    border-radius: 25px;
-    padding: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border: 1px solid #E0E0E0;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-.search-input-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.search-icon-yango {
-    position: absolute;
-    left: 20px;
-    color: #2e3f6e;
-    font-size: 20px;
-    z-index: 1;
-}
-
-.search-input-yango {
-    width: 100%;
-    height: 56px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    font-weight: 500;
-    color: #333333;
-    background: transparent;
-    padding-left: 40px;
-    padding-right: 20px;
-}
-
-.search-input-yango::placeholder {
-    color: #999999;
-    font-weight: 400;
-}
-
-.search-input-yango:focus {
-    background: #F8F9FA;
-}
-
-/* Container de sugestões FIXO */
-.suggestions-container-fixed {
-    background: #FFFFFF;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    padding: 20px;
-    margin-top: 10px;
-    display: block; /* SEMPRE VISÍVEL */
-}
-
-.suggestions-header-fixed {
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #F0F0F0;
-}
-
-.suggestions-title-fixed {
-    color: #2e3f6e;
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0;
-}
-
-/* Container com scrollbar */
-.suggestions-scroll-container {
-    max-height: 280px; /* Altura máxima para scroll */
-    overflow-y: auto;
-    padding-right: 5px; /* Espaço para a scrollbar */
-}
-
-/* Personalização da scrollbar */
-.suggestions-scroll-container::-webkit-scrollbar {
-    width: 6px;
-}
-
-.suggestions-scroll-container::-webkit-scrollbar-track {
-    background: #F8F9FA;
-    border-radius: 3px;
-}
-
-.suggestions-scroll-container::-webkit-scrollbar-thumb {
-    background: rgba(46, 63, 110, 0.3);
-    border-radius: 3px;
-}
-
-.suggestions-scroll-container::-webkit-scrollbar-thumb:hover {
-    background: rgba(46, 63, 110, 0.5);
-}
-
-/* Lista de sugestões fixas */
-.suggestions-list-fixed {
-    padding-bottom: 5px; /* Espaço extra no final */
-}
-
-.suggestion-item-fixed {
-    display: flex;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid #F8F9FA;
-    text-decoration: none;
-    color: #333333;
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.suggestion-item-fixed:last-child {
-    border-bottom: none;
-}
-
-.suggestion-item-fixed:hover {
-    background: #F8F9FA;
-    border-radius: 8px;
-    padding: 12px 10px;
-    transform: translateX(2px);
-}
-
-.suggestion-icon-fixed {
-    width: 40px;
-    height: 40px;
-    background: rgba(46, 63, 110, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-    flex-shrink: 0;
-}
-
-.suggestion-icon-fixed i {
-    color: #2e3f6e;
-    font-size: 18px;
-}
-
-.suggestion-info-fixed {
-    flex: 1;
-    min-width: 0; /* Permite que o texto quebre */
-}
-
-.suggestion-name-fixed {
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 4px;
-    color: #333333;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.suggestion-details-fixed {
-    font-size: 13px;
-    color: #666666;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.suggestion-time-fixed {
-    color: #2e3f6e;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 4px 8px;
-    background: rgba(46, 63, 110, 0.1);
-    border-radius: 6px;
-    margin-left: 10px;
-    flex-shrink: 0;
-    white-space: nowrap;
-}
-
-/* Efeito de seleção */
-.suggestion-item-fixed.active {
-    background: rgba(46, 63, 110, 0.1);
-    border-left: 3px solid #2e3f6e;
-    padding-left: 15px;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .search-box-yango {
-        border-radius: 20px;
+    .search-section-yango {
+        padding: 16px 16px 8px;
+        background: #FFFFFF;
     }
-    
-    .search-input-yango {
-        height: 52px;
-        font-size: 15px;
-    }
-    
-    .suggestions-container-fixed {
-        padding: 16px;
-        border-radius: 12px;
-    }
-    
-    .suggestions-scroll-container {
-        max-height: 250px;
-    }
-    
-    .suggestion-item-fixed {
-        padding: 10px 0;
-    }
-}
 
-@media (max-width: 480px) {
-    .search-input-yango {
-        height: 48px;
+    /* Localização atual */
+    .current-location-yango {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #2e3f6e;
         font-size: 14px;
-        padding-left: 36px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        padding-left: 8px;
     }
-    
-    .search-icon-yango {
-        left: 16px;
-        font-size: 18px;
-    }
-    
-    .suggestions-scroll-container {
-        max-height: 220px;
-    }
-    
-    .suggestion-icon-fixed {
-        width: 36px;
-        height: 36px;
-        margin-right: 12px;
-    }
-    
-    .suggestion-icon-fixed i {
+
+    .current-location-yango i {
         font-size: 16px;
     }
-    
-    .suggestion-name-fixed {
-        font-size: 15px;
-    }
-    
-    .suggestion-details-fixed {
-        font-size: 12px;
-    }
-    
-    .suggestion-time-fixed {
-        font-size: 13px;
-        padding: 3px 6px;
-    }
-}
 
-/* Para telas muito pequenas */
-@media (max-width: 360px) {
+    /* Caixa de pesquisa COM ÍCONE DE MOTO */
+    .search-box-yango {
+        background: #FFFFFF;
+        border-radius: 25px;
+        padding: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 2px solid #2e3f6e; /* Borda azul mais forte */
+        overflow: hidden;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .search-box-yango:focus-within {
+        box-shadow: 0 6px 20px rgba(46, 63, 110, 0.2);
+        border-color: #435991; /* Azul mais claro quando em foco */
+    }
+
+    .search-input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        height: 56px;
+    }
+
+    /* Ícone de moto personalizado */
+    .bike-icon-search {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+        filter: invert(22%) sepia(23%) saturate(2000%) hue-rotate(200deg) brightness(90%) contrast(90%);
+        flex-shrink: 0;
+    }
+
+    /* Campo de entrada com texto NEGRITO */
+    .search-input-yango {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        font-weight: 700 !important; /* TEXTO NEGRITO */
+        color: #333333;
+        background: transparent;
+        padding: 0 10px;
+        font-family: 'Lexend', sans-serif;
+    }
+
+    .search-input-yango::placeholder {
+        color: #666666;
+        font-weight: 500 !important; /* Placeholder também em negrito */
+        opacity: 0.8;
+    }
+
+    .search-input-yango:focus {
+        background: #F8F9FA;
+    }
+
+    /* Ícone de calendário no lado direito */
+    .calendar-icon-search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: rgba(46, 63, 110, 0.1);
+        border-radius: 50%;
+        color: #2e3f6e;
+        text-decoration: none;
+        margin-left: 10px;
+        flex-shrink: 0;
+        transition: all 0.2s ease;
+    }
+
+    .calendar-icon-search:hover {
+        background: rgba(46, 63, 110, 0.2);
+        transform: scale(1.05);
+    }
+
+    .calendar-icon-search i {
+        font-size: 18px;
+    }
+
+    /* Container de sugestões FIXO */
+    .suggestions-container-fixed {
+        background: #FFFFFF;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        margin-top: 10px;
+        display: block;
+    }
+
+    .suggestions-header-fixed {
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #F0F0F0;
+    }
+
+    .suggestions-title-fixed {
+        color: #2e3f6e;
+        font-size: 18px;
+        font-weight: 700; /* Negrito */
+        margin: 0;
+    }
+
+    /* Container com scrollbar */
     .suggestions-scroll-container {
-        max-height: 200px;
+        max-height: 280px;
+        overflow-y: auto;
+        padding-right: 5px;
     }
-    
+
+    /* Personalização da scrollbar */
+    .suggestions-scroll-container::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .suggestions-scroll-container::-webkit-scrollbar-track {
+        background: #F8F9FA;
+        border-radius: 3px;
+    }
+
+    .suggestions-scroll-container::-webkit-scrollbar-thumb {
+        background: rgba(46, 63, 110, 0.3);
+        border-radius: 3px;
+    }
+
+    .suggestions-scroll-container::-webkit-scrollbar-thumb:hover {
+        background: rgba(46, 63, 110, 0.5);
+    }
+
+    /* Lista de sugestões fixas */
+    .suggestions-list-fixed {
+        padding-bottom: 5px;
+    }
+
+    .suggestion-item-fixed {
+        display: flex;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #F8F9FA;
+        text-decoration: none;
+        color: #333333;
+        transition: all 0.2s ease;
+        cursor: pointer;
+    }
+
+    .suggestion-item-fixed:last-child {
+        border-bottom: none;
+    }
+
+    .suggestion-item-fixed:hover {
+        background: #F8F9FA;
+        border-radius: 8px;
+        padding: 12px 10px;
+        transform: translateX(2px);
+    }
+
+    .suggestion-icon-fixed {
+        width: 40px;
+        height: 40px;
+        background: rgba(46, 63, 110, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    .suggestion-icon-fixed i {
+        color: #2e3f6e;
+        font-size: 18px;
+    }
+
+    .suggestion-info-fixed {
+        flex: 1;
+        min-width: 0;
+    }
+
     .suggestion-name-fixed {
-        font-size: 14px;
+        font-size: 16px;
+        font-weight: 700; /* Negrito */
+        margin-bottom: 4px;
+        color: #333333;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
-    
+
     .suggestion-details-fixed {
-        font-size: 11px;
+        font-size: 13px;
+        color: #666666;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 500; /* Semi-negrito */
     }
-}
+
+    .suggestion-time-fixed {
+        color: #2e3f6e;
+        font-size: 14px;
+        font-weight: 700; /* Negrito */
+        padding: 4px 8px;
+        background: rgba(46, 63, 110, 0.1);
+        border-radius: 6px;
+        margin-left: 10px;
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    /* Efeito de seleção */
+    .suggestion-item-fixed.active {
+        background: rgba(46, 63, 110, 0.1);
+        border-left: 3px solid #2e3f6e;
+        padding-left: 15px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+        .search-box-yango {
+            border-radius: 20px;
+        }
+        
+        .search-input-wrapper {
+            height: 52px;
+        }
+        
+        .search-input-yango {
+            font-size: 15px;
+        }
+        
+        .bike-icon-search {
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+        }
+        
+        .calendar-icon-search {
+            width: 32px;
+            height: 32px;
+        }
+        
+        .calendar-icon-search i {
+            font-size: 16px;
+        }
+        
+        .suggestions-container-fixed {
+            padding: 16px;
+            border-radius: 12px;
+        }
+        
+        .suggestions-scroll-container {
+            max-height: 250px;
+        }
+        
+        .suggestion-item-fixed {
+            padding: 10px 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .search-input-wrapper {
+            height: 48px;
+            padding: 0 15px;
+        }
+        
+        .search-input-yango {
+            font-size: 14px;
+        }
+        
+        .bike-icon-search {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+        
+        .calendar-icon-search {
+            width: 30px;
+            height: 30px;
+            margin-left: 8px;
+        }
+        
+        .calendar-icon-search i {
+            font-size: 15px;
+        }
+        
+        .suggestions-scroll-container {
+            max-height: 220px;
+        }
+        
+        .suggestion-icon-fixed {
+            width: 36px;
+            height: 36px;
+            margin-right: 12px;
+        }
+        
+        .suggestion-icon-fixed i {
+            font-size: 16px;
+        }
+        
+        .suggestion-name-fixed {
+            font-size: 15px;
+        }
+        
+        .suggestion-details-fixed {
+            font-size: 12px;
+        }
+        
+        .suggestion-time-fixed {
+            font-size: 13px;
+            padding: 3px 6px;
+        }
+    }
+
+    /* Para telas muito pequenas */
+    @media (max-width: 360px) {
+        .search-input-wrapper {
+            height: 46px;
+            padding: 0 12px;
+        }
+        
+        .search-input-yango {
+            font-size: 13px;
+        }
+        
+        .bike-icon-search {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .suggestions-scroll-container {
+            max-height: 200px;
+        }
+        
+        .suggestion-name-fixed {
+            font-size: 14px;
+        }
+        
+        .suggestion-details-fixed {
+            font-size: 11px;
+        }
+    }
 </style>
 
 <script>
@@ -763,7 +808,7 @@ suggestionItems.forEach(item => {
     });
 });
 
-// Filtro em tempo real (opcional)
+// Filtro em tempo real
 searchInput.addEventListener('input', function() {
     const searchTerm = this.value.toLowerCase().trim();
     
@@ -779,11 +824,17 @@ searchInput.addEventListener('input', function() {
     });
 });
 
-// Limpar filtro quando clicar no X (se adicionar um botão de limpar)
+// Limpar filtro quando clicar no X
 searchInput.addEventListener('search', function() {
     suggestionItems.forEach(item => {
         item.style.display = 'flex';
     });
+});
+
+// Foco na barra de pesquisa ao carregar (opcional)
+document.addEventListener('DOMContentLoaded', function() {
+    // Remove o foco automático se não quiser
+    // searchInput.focus();
 });
 </script>
 
