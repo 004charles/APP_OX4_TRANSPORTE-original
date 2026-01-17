@@ -40,6 +40,256 @@
 
     <!-- Theme css -->
     <link rel="stylesheet" id="change-link" type="text/css" href="assets/css/style.css">
+
+    <style>
+    /* ====================== */
+    /* BOTÕES AZUL ESCURO */
+    /* ====================== */
+    
+    /* Botões principais - Azul escuro */
+    .btn-primary, 
+    .btn-reservar,
+    button[type="submit"],
+    .btn-confirmar {
+        background-color: #2e3f6e !important;
+        border-color: #2e3f6e !important;
+        color: white !important;
+    }
+    
+    .btn-primary:hover,
+    .btn-reservar:hover,
+    button[type="submit"]:hover,
+    .btn-confirmar:hover {
+        background-color: #233055 !important;
+        border-color: #233055 !important;
+    }
+    
+    /* Botões secundários - Borda azul escuro */
+    .btn-outline-primary,
+    .btn-detalhes,
+    .btn-secundario {
+        color: #2e3f6e !important;
+        border-color: #2e3f6e !important;
+        background-color: transparent !important;
+    }
+    
+    .btn-outline-primary:hover,
+    .btn-detalhes:hover,
+    .btn-secundario:hover {
+        background-color: #2e3f6e !important;
+        color: white !important;
+    }
+    
+    /* Botões na seção de ofertas */
+    .coupon-discount {
+        background: #2e3f6e !important;
+        color: white !important;
+    }
+    
+    /* Elementos ativos na navbar */
+    .nav-item.active .nav-text {
+        color: #2e3f6e !important;
+    }
+    
+    .nav-icon .active {
+        filter: invert(22%) sepia(23%) saturate(2000%) hue-rotate(200deg) brightness(90%) contrast(90%) !important;
+    }
+    
+    /* Ícones ativos */
+    .iconsax[data-icon="home-2"],
+    .iconsax[data-icon="car"],
+    .iconsax[data-icon="bell-2"],
+    .iconsax[data-icon="user-1"] {
+        color: #2e3f6e !important;
+    }
+    
+    /* Campo de pesquisa */
+    .search-icon,
+    .date-time-picker i {
+        color: #2e3f6e !important;
+    }
+    
+    /* Títulos das seções */
+    .title h3,
+    .section-title,
+    h3 {
+        color: #2e3f6e !important;
+    }
+    
+    /* Links ativos */
+    a.active,
+    .active > a {
+        color: #2e3f6e !important;
+    }
+    
+    /* Estrelas de avaliação */
+    .star {
+        filter: invert(22%) sepia(23%) saturate(2000%) hue-rotate(200deg) brightness(90%) contrast(90%) !important;
+    }
+    
+    /* Cards de rota - borda azul */
+    .coupon-box {
+        border: 2px solid rgba(46, 63, 110, 0.1) !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .coupon-box:hover {
+        border-color: #2e3f6e !important;
+        box-shadow: 0 4px 15px rgba(46, 63, 110, 0.15) !important;
+    }
+    
+    /* Categorias - ícones azuis */
+    .categories-img {
+        filter: invert(22%) sepia(23%) saturate(2000%) hue-rotate(200deg) brightness(90%) contrast(90%) !important;
+    }
+    
+    /* Sidebar - elementos ativos */
+    .sidebar-menu li.active a {
+        color: #2e3f6e !important;
+        border-left-color: #2e3f6e !important;
+        background: rgba(46, 63, 110, 0.1) !important;
+    }
+    
+    /* Swiper - indicadores ativos */
+    .swiper-pagination-bullet-active {
+        background: #2e3f6e !important;
+    }
+    
+    /* ====================== */
+    /* AJUSTES ESPECÍFICOS PARA SEU CÓDIGO */
+    /* ====================== */
+    
+    /* Header - ícones azuis */
+    .icon-btn,
+    .menu-btn {
+        color: #2e3f6e !important;
+    }
+    
+    /* Campo de pesquisa - foco azul */
+    .form-control:focus {
+        border-color: #2e3f6e !important;
+        box-shadow: 0 0 0 0.2rem rgba(46, 63, 110, 0.25) !important;
+    }
+    
+    /* Badges das rotas */
+    .coupon-discount {
+        background: linear-gradient(135deg, #2e3f6e 0%, #435991 100%) !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.5px !important;
+    }
+    
+    /* Títulos das rotas */
+    .title-color {
+        color: #2e3f6e !important;
+    }
+    
+    /* Ícones nas listas */
+    .content-list .icon {
+        color: #2e3f6e !important;
+    }
+    
+    /* Distância das rotas - destaque */
+    .content-color.fw-normal:last-child {
+        color: #2e3f6e !important;
+        font-weight: 600 !important;
+    }
+    
+    /* ====================== */
+    /* BOTÕES DE AÇÃO */
+    /* ====================== */
+    
+    /* Criar botões de ação adicionais */
+    .action-buttons {
+        padding: 20px 16px;
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+    }
+    
+    .btn-azul {
+        background: #2e3f6e;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 14px 24px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        flex: 1;
+        transition: all 0.3s ease;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    .btn-azul:hover {
+        background: #233055;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(46, 63, 110, 0.2);
+    }
+    
+    .btn-azul-outline {
+        background: transparent;
+        color: #2e3f6e;
+        border: 2px solid #2e3f6e;
+        border-radius: 8px;
+        padding: 14px 24px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        flex: 1;
+        transition: all 0.3s ease;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    .btn-azul-outline:hover {
+        background: #2e3f6e;
+        color: white;
+        transform: translateY(-2px);
+    }
+    
+    /* ====================== */
+    /* DESTAQUES EM AZUL */
+    /* ====================== */
+    
+    .destaque-azul {
+        background: rgba(46, 63, 110, 0.1);
+        border-left: 4px solid #2e3f6e;
+        padding: 16px;
+        margin: 16px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    
+    .info-azul {
+        color: #2e3f6e;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .info-azul i {
+        color: #2e3f6e;
+    }
+    
+    /* ====================== */
+    /* RESPONSIVO */
+    /* ====================== */
+    
+    @media (max-width: 768px) {
+        .btn-azul,
+        .btn-azul-outline {
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+        
+        .action-buttons {
+            flex-direction: column;
+        }
+    }
+</style>
 </head>
 
 <body>
