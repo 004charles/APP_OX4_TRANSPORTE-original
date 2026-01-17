@@ -495,18 +495,101 @@
 </section>
 
 <section>
-        <div class="swiper banner1 home-banner">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img style="height: 300px;" class="img-fluid slider-img w-100" src="assets/images/corrida.png" alt="slider">
+    <div class="swiper banner1 home-banner">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="slider-container">
+                    <img style="height: 300px;" class="img-fluid slider-img w-100" src="assets/images/corrida.png" alt="Sente a Energia">
+                    <div class="slider-text-container">
+                        <div class="text-background">
+                            <h1 class="slider-title">SENTE A ENERGIA</h1>
+                            <p class="slider-subtitle">Torna cada destino especial</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img style="height: 300px;" class="img-fluid slider-img w-100" src="assets/images/corrida2.png" alt="slider">
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div class="slider-container">
+                    <img style="height: 300px;" class="img-fluid slider-img w-100" src="assets/images/corrida2.png" alt="OX4 Entrega">
+                    <div class="slider-text-container">
+                        <div class="text-background">
+                            <h1 class="slider-title">OX4 ENTREGA PARA TUDO</h1>
+                            <p class="slider-subtitle">Envia itens em Luanda</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
+<style>
+    /* Versão com fundo atrás do texto */
+.slider-text-container {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.text-background {
+    display: inline-block;
+    background: rgba(46, 63, 110, 0.85);
+    padding: 20px 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    animation: fadeInUp 0.8s ease;
+}
+
+.text-background .slider-title {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.text-background .slider-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    margin: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Para telas pequenas */
+@media (max-width: 768px) {
+    .slider-text-container {
+        bottom: 20px;
+        padding: 0 15px;
+    }
+    
+    .text-background {
+        padding: 15px 20px;
+    }
+    
+    .text-background .slider-title {
+        font-size: 18px;
+    }
+    
+    .text-background .slider-subtitle {
+        font-size: 13px;
+    }
+}
+</style>
     <!-- offer section end -->
 
     <!-- panel-space start -->
