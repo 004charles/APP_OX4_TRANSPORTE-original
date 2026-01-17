@@ -319,7 +319,7 @@
     </header>
     <!-- header end -->
 
-    <section style="margin-bottom: 20px;" >
+    <section style="margin-bottom: 20px;">
         <div class="custom-container">
 
 
@@ -344,7 +344,7 @@
 
     <!-- search section starts -->
     <!-- Search Section estilo Yango com sugestões fixas -->
-<section class="search-section-yango">
+    <section class="search-section-yango">
     <div class="custom-container">
         <!-- Localização atual -->
         <div class="current-location-yango">
@@ -352,16 +352,25 @@
             <span class="location-text-yango">A tua localização</span>
         </div>
 
-        <!-- Campo de pesquisa -->
+        <!-- Campo de pesquisa COM ÍCONE DE MOTO -->
         <div class="search-box-yango">
             <div class="search-input-wrapper">
-                <!-- Ícone de moto no lado esquerdo -->
-                <img src="assets/images/svg/bike-img.svg" alt="moto" class="bike-icon-search">
+                <!-- ÍCONE DE MOTO NO CANTO ESQUERDO -->
+                <div class="bike-icon-search-left">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 20C6.65685 20 8 18.6569 8 17C8 15.3431 6.65685 14 5 14C3.34315 14 2 15.3431 2 17C2 18.6569 3.34315 20 5 20Z" stroke="#2e3f6e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19 20C20.6569 20 22 18.6569 22 17C22 15.3431 20.6569 14 19 14C17.3431 14 16 15.3431 16 17C16 18.6569 17.3431 20 19 20Z" stroke="#2e3f6e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 19V11L8 6H5V11" stroke="#2e3f6e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 6C8 4.89543 8.89543 4 10 4H14C14.5304 4 15.0391 4.21071 15.4142 4.58579C15.7893 4.96086 16 5.46957 16 6V11" stroke="#2e3f6e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 11H19C19.5304 11 20.0391 11.2107 20.4142 11.5858C20.7893 11.9609 21 12.4696 21 13V14" stroke="#2e3f6e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 
+                <!-- Campo de pesquisa -->
                 <input type="text" class="search-input-yango" id="inputusername" placeholder="Para onde?" autocomplete="off">
                 
-                <!-- Calendário no lado direito (opcional) -->
-                <a href="date-time-schedule.html" class="calendar-icon-search">
+                <!-- Calendário no lado direito -->
+                <a href="date-time-schedule.html" class="calendar-icon-search-right">
                     <i class="iconsax" data-icon="calendar-1"></i>
                 </a>
             </div>
@@ -416,7 +425,7 @@
 
 <style>
     /* ====================== */
-    /* SEARCH SECTION YANGO COM ÍCONE DE MOTO */
+    /* SEARCH SECTION YANGO COM ÍCONE DE MOTO NO CANTO ESQUERDO */
     /* ====================== */
 
     .search-section-yango {
@@ -440,13 +449,13 @@
         font-size: 16px;
     }
 
-    /* Caixa de pesquisa COM ÍCONE DE MOTO */
+    /* Caixa de pesquisa */
     .search-box-yango {
         background: #FFFFFF;
         border-radius: 25px;
         padding: 0;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        border: 2px solid #2e3f6e; /* Borda azul mais forte */
+        border: 2px solid #2e3f6e;
         overflow: hidden;
         margin-bottom: 20px;
         transition: all 0.3s ease;
@@ -454,7 +463,7 @@
 
     .search-box-yango:focus-within {
         box-shadow: 0 6px 20px rgba(46, 63, 110, 0.2);
-        border-color: #435991; /* Azul mais claro quando em foco */
+        border-color: #435991;
     }
 
     .search-input-wrapper {
@@ -463,43 +472,50 @@
         align-items: center;
         padding: 0 20px;
         height: 56px;
+        gap: 12px; /* Espaço entre elementos */
     }
 
-    /* Ícone de moto personalizado */
-    .bike-icon-search {
+    /* ÍCONE DE MOTO NO CANTO ESQUERDO */
+    .bike-icon-search-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+    }
+
+    .bike-icon-search-left svg {
         width: 24px;
         height: 24px;
-        margin-right: 12px;
-        filter: invert(22%) sepia(23%) saturate(2000%) hue-rotate(200deg) brightness(90%) contrast(90%);
-        flex-shrink: 0;
     }
 
     /* Campo de entrada com texto NEGRITO */
     .search-input-yango {
-        width: 100%;
+        flex: 1; /* Ocupa todo o espaço disponível */
         height: 100%;
         border: none;
         outline: none;
         font-size: 16px;
-        font-weight: 700 !important; /* TEXTO NEGRITO */
+        font-weight: 700 !important;
         color: #333333;
         background: transparent;
-        padding: 0 10px;
         font-family: 'Lexend', sans-serif;
+        padding: 0;
     }
 
     .search-input-yango::placeholder {
         color: #666666;
-        font-weight: 500 !important; /* Placeholder também em negrito */
+        font-weight: 500 !important;
         opacity: 0.8;
     }
 
     .search-input-yango:focus {
-        background: #F8F9FA;
+        background: transparent;
     }
 
     /* Ícone de calendário no lado direito */
-    .calendar-icon-search {
+    .calendar-icon-search-right {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -509,17 +525,16 @@
         border-radius: 50%;
         color: #2e3f6e;
         text-decoration: none;
-        margin-left: 10px;
         flex-shrink: 0;
         transition: all 0.2s ease;
     }
 
-    .calendar-icon-search:hover {
+    .calendar-icon-search-right:hover {
         background: rgba(46, 63, 110, 0.2);
         transform: scale(1.05);
     }
 
-    .calendar-icon-search i {
+    .calendar-icon-search-right i {
         font-size: 18px;
     }
 
@@ -542,7 +557,7 @@
     .suggestions-title-fixed {
         color: #2e3f6e;
         font-size: 18px;
-        font-weight: 700; /* Negrito */
+        font-weight: 700;
         margin: 0;
     }
 
@@ -623,7 +638,7 @@
 
     .suggestion-name-fixed {
         font-size: 16px;
-        font-weight: 700; /* Negrito */
+        font-weight: 700;
         margin-bottom: 4px;
         color: #333333;
         white-space: nowrap;
@@ -637,13 +652,13 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-weight: 500; /* Semi-negrito */
+        font-weight: 500;
     }
 
     .suggestion-time-fixed {
         color: #2e3f6e;
         font-size: 14px;
-        font-weight: 700; /* Negrito */
+        font-weight: 700;
         padding: 4px 8px;
         background: rgba(46, 63, 110, 0.1);
         border-radius: 6px;
@@ -667,24 +682,30 @@
         
         .search-input-wrapper {
             height: 52px;
+            padding: 0 16px;
+            gap: 10px;
         }
         
         .search-input-yango {
             font-size: 15px;
         }
         
-        .bike-icon-search {
-            width: 22px;
-            height: 22px;
-            margin-right: 10px;
+        .bike-icon-search-left {
+            width: 28px;
+            height: 28px;
         }
         
-        .calendar-icon-search {
+        .bike-icon-search-left svg {
+            width: 22px;
+            height: 22px;
+        }
+        
+        .calendar-icon-search-right {
             width: 32px;
             height: 32px;
         }
         
-        .calendar-icon-search i {
+        .calendar-icon-search-right i {
             font-size: 16px;
         }
         
@@ -705,26 +726,30 @@
     @media (max-width: 480px) {
         .search-input-wrapper {
             height: 48px;
-            padding: 0 15px;
+            padding: 0 14px;
+            gap: 8px;
         }
         
         .search-input-yango {
             font-size: 14px;
         }
         
-        .bike-icon-search {
+        .bike-icon-search-left {
+            width: 26px;
+            height: 26px;
+        }
+        
+        .bike-icon-search-left svg {
             width: 20px;
             height: 20px;
-            margin-right: 8px;
         }
         
-        .calendar-icon-search {
+        .calendar-icon-search-right {
             width: 30px;
             height: 30px;
-            margin-left: 8px;
         }
         
-        .calendar-icon-search i {
+        .calendar-icon-search-right i {
             font-size: 15px;
         }
         
@@ -761,15 +786,30 @@
         .search-input-wrapper {
             height: 46px;
             padding: 0 12px;
+            gap: 6px;
         }
         
         .search-input-yango {
             font-size: 13px;
         }
         
-        .bike-icon-search {
+        .bike-icon-search-left {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .bike-icon-search-left svg {
             width: 18px;
             height: 18px;
+        }
+        
+        .calendar-icon-search-right {
+            width: 28px;
+            height: 28px;
+        }
+        
+        .calendar-icon-search-right i {
+            font-size: 14px;
         }
         
         .suggestions-scroll-container {
@@ -830,205 +870,198 @@ searchInput.addEventListener('search', function() {
         item.style.display = 'flex';
     });
 });
-
-// Foco na barra de pesquisa ao carregar (opcional)
-document.addEventListener('DOMContentLoaded', function() {
-    // Remove o foco automático se não quiser
-    // searchInput.focus();
-});
 </script>
 
     <section>
-    <div class="swiper banner1 home-banner">
-        <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-                <div class="slider-container">
-                    <img class="img-fluid slider-img w-100" src="assets/images/corrida.png" alt="Sente a Energia">
-                    <div class="slider-overlay-dark">
-                        <div class="slider-content-center">
-                            <h1 class="slider-title-large">SENTE A ENERGIA</h1>
-                            <p class="slider-subtitle-light">Torna cada destino especial</p>
+        <div class="swiper banner1 home-banner">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="slider-container">
+                        <img class="img-fluid slider-img w-100" src="assets/images/corrida.png" alt="Sente a Energia">
+                        <div class="slider-overlay-dark">
+                            <div class="slider-content-center">
+                                <h1 class="slider-title-large">SENTE A ENERGIA</h1>
+                                <p class="slider-subtitle-light">Torna cada destino especial</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="slider-container">
+                        <img class="img-fluid slider-img w-100" src="assets/images/corrida2.png" alt="OX4 Entrega">
+                        <div class="slider-overlay-dark">
+                            <div class="slider-content-center">
+                                <h1 class="slider-title-large">OX4 ENTREGA PARA TUDO</h1>
+                                <p class="slider-subtitle-light">Envia itens em Luanda</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-                <div class="slider-container">
-                    <img class="img-fluid slider-img w-100" src="assets/images/corrida2.png" alt="OX4 Entrega">
-                    <div class="slider-overlay-dark">
-                        <div class="slider-content-center">
-                            <h1 class="slider-title-large">OX4 ENTREGA PARA TUDO</h1>
-                            <p class="slider-subtitle-light">Envia itens em Luanda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Pagination dots -->
+            <div class="swiper-pagination"></div>
         </div>
-        
-        <!-- Pagination dots -->
-        <div class="swiper-pagination"></div>
-    </div>
-</section>
+    </section>
     <style>
         /* ====================== */
-/* SLIDER COM OVERLAY ESCURO */
-/* ====================== */
+        /* SLIDER COM OVERLAY ESCURO */
+        /* ====================== */
 
-.slider-container {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    margin: 0 16px 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    height: 300px;
-}
+        .slider-container {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 0 16px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            height: 300px;
+        }
 
-.slider-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
+        .slider-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
-.slider-overlay-dark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.6)
-    );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
+        .slider-overlay-dark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.6));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
 
-.slider-content-center {
-    text-align: center;
-    color: white;
-    max-width: 90%;
-    z-index: 2;
-    animation: fadeInScale 0.8s ease-out;
-}
+        .slider-content-center {
+            text-align: center;
+            color: white;
+            max-width: 90%;
+            z-index: 2;
+            animation: fadeInScale 0.8s ease-out;
+        }
 
-.slider-title-large {
-    font-size: 32px;
-    font-weight: 800;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    line-height: 1.2;
-}
+        .slider-title-large {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            line-height: 1.2;
+        }
 
-.slider-subtitle-light {
-    font-size: 18px;
-    font-weight: 400;
-    opacity: 0.95;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    margin: 0;
-    line-height: 1.4;
-}
+        .slider-subtitle-light {
+            font-size: 18px;
+            font-weight: 400;
+            opacity: 0.95;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            margin: 0;
+            line-height: 1.4;
+        }
 
-/* Animações */
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+        /* Animações */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
 
-/* Efeito de brilho no texto */
-.slider-title-large {
-    position: relative;
-    display: inline-block;
-}
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
 
-.slider-title-large::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 10%;
-    width: 80%;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 2px;
-}
+        /* Efeito de brilho no texto */
+        .slider-title-large {
+            position: relative;
+            display: inline-block;
+        }
 
-/* Responsivo */
-@media (max-width: 768px) {
-    .slider-container {
-        height: 250px;
-        border-radius: 12px;
-    }
-    
-    .slider-title-large {
-        font-size: 26px;
-        letter-spacing: 1px;
-        margin-bottom: 12px;
-    }
-    
-    .slider-subtitle-light {
-        font-size: 16px;
-    }
-    
-    .slider-overlay-dark {
-        padding: 15px;
-    }
-}
+        .slider-title-large::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 10%;
+            width: 80%;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+        }
 
-@media (max-width: 480px) {
-    .slider-container {
-        height: 200px;
-        border-radius: 10px;
-        margin: 0 12px 15px;
-    }
-    
-    .slider-title-large {
-        font-size: 22px;
-        letter-spacing: 0.8px;
-        margin-bottom: 10px;
-    }
-    
-    .slider-subtitle-light {
-        font-size: 14px;
-    }
-    
-    .slider-overlay-dark {
-        padding: 10px;
-    }
-}
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .slider-container {
+                height: 250px;
+                border-radius: 12px;
+            }
 
-/* Paginação do slider */
-.swiper-pagination {
-    position: absolute;
-    bottom: 10px !important;
-}
+            .slider-title-large {
+                font-size: 26px;
+                letter-spacing: 1px;
+                margin-bottom: 12px;
+            }
 
-.swiper-pagination-bullet {
-    background: rgba(255, 255, 255, 0.7) !important;
-    width: 10px;
-    height: 10px;
-    opacity: 0.7;
-}
+            .slider-subtitle-light {
+                font-size: 16px;
+            }
 
-.swiper-pagination-bullet-active {
-    background: #2e3f6e !important;
-    opacity: 1;
-    width: 12px;
-    height: 12px;
-}
+            .slider-overlay-dark {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slider-container {
+                height: 200px;
+                border-radius: 10px;
+                margin: 0 12px 15px;
+            }
+
+            .slider-title-large {
+                font-size: 22px;
+                letter-spacing: 0.8px;
+                margin-bottom: 10px;
+            }
+
+            .slider-subtitle-light {
+                font-size: 14px;
+            }
+
+            .slider-overlay-dark {
+                padding: 10px;
+            }
+        }
+
+        /* Paginação do slider */
+        .swiper-pagination {
+            position: absolute;
+            bottom: 10px !important;
+        }
+
+        .swiper-pagination-bullet {
+            background: rgba(255, 255, 255, 0.7) !important;
+            width: 10px;
+            height: 10px;
+            opacity: 0.7;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #2e3f6e !important;
+            opacity: 1;
+            width: 12px;
+            height: 12px;
+        }
     </style>
     <!-- offer section end -->
 
