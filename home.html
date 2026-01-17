@@ -343,7 +343,7 @@
 
 
     <!-- search section starts -->
-    <!-- Search Section estilo Yango -->
+    <!-- Search Section estilo Yango com sugestões fixas -->
 <section class="search-section-yango">
     <div class="custom-container">
         <!-- Localização atual -->
@@ -360,24 +360,92 @@
             </div>
         </div>
 
-        <!-- Sugestões de pesquisa -->
-        <div class="suggestions-container" id="suggestionsContainer">
-            <div class="suggestions-header">
-                <h4 class="suggestions-title">Sugestões</h4>
+        <!-- Sugestões de pesquisa (SEMPRE VISÍVEL) -->
+        <div class="suggestions-container-fixed">
+            <div class="suggestions-header-fixed">
+                <h4 class="suggestions-title-fixed">Destinos Populares</h4>
             </div>
             
-            <div class="suggestions-list" id="suggestionsList">
-                <!-- Sugestões serão carregadas aqui -->
-            </div>
-            
-            <div class="recent-searches">
-                <div class="recent-header">
-                    <h5>Pesquisas Recentes</h5>
-                    <button class="clear-recent" id="clearRecent">Limpar</button>
+            <div class="suggestions-scroll-container">
+                <div class="suggestions-list-fixed" id="suggestionsList">
+                    <!-- Sugestões fixas -->
+                    <a href="#" class="suggestion-item-fixed" data-location="Maianga">
+                        <div class="suggestion-icon-fixed">
+                            <i class="iconsax" data-icon="location"></i>
+                        </div>
+                        <div class="suggestion-info-fixed">
+                            <div class="suggestion-name-fixed">Maianga</div>
+                            <div class="suggestion-details-fixed">Município Luanda, Luanda</div>
+                        </div>
+                        <div class="suggestion-time-fixed">1h 20 min</div>
+                    </a>
+                    
+                    <a href="#" class="suggestion-item-fixed" data-location="Zango IV">
+                        <div class="suggestion-icon-fixed">
+                            <i class="iconsax" data-icon="location"></i>
+                        </div>
+                        <div class="suggestion-info-fixed">
+                            <div class="suggestion-name-fixed">Zango IV</div>
+                            <div class="suggestion-details-fixed">Município Viana, Luanda</div>
+                        </div>
+                        <div class="suggestion-time-fixed">6 min</div>
+                    </a>
+                    
+                    <a href="#" class="suggestion-item-fixed" data-location="Avenida 4 de Fevereiro">
+                        <div class="suggestion-icon-fixed">
+                            <i class="iconsax" data-icon="location"></i>
+                        </div>
+                        <div class="suggestion-info-fixed">
+                            <div class="suggestion-name-fixed">Avenida 4 de Fevereiro</div>
+                            <div class="suggestion-details-fixed">Marginal de Luanda</div>
+                        </div>
+                        <div class="suggestion-time-fixed">15 min</div>
+                    </a>
+                    
+                    <a href="#" class="suggestion-item-fixed" data-location="Talatona">
+                        <div class="suggestion-icon-fixed">
+                            <i class="iconsax" data-icon="location"></i>
+                        </div>
+                        <div class="suggestion-info-fixed">
+                            <div class="suggestion-name-fixed">Talatona</div>
+                            <div class="suggestion-details-fixed">Município Belas, Luanda</div>
+                        </div>
+                        <div class="suggestion-time-fixed">25 min</div>
+                    </a>
+                    
+                    <a href="#" class="suggestion-item-fixed" data-location="Kilamba">
+                        <div class="suggestion-icon-fixed">
+                            <i class="iconsax" data-icon="location"></i>
+                        </div>
+                        <div class="suggestion-info-fixed">
+                            <div class="suggestion-name-fixed">Kilamba</div>
+                            <div class="suggestion-details-fixed">Município Belas, Luanda</div>
+                        </div>
+                        <div class="suggestion-time-fixed">40 min</div>
+                    </a>
+                    
+                    <a href="#" class="suggestion-item-fixed" data-location="Cacuaco">
+                        <div class="suggestion-icon-fixed">
+                            <i class="iconsax" data-icon="location"></i>
+                        </div>
+                        <div class="suggestion-info-fixed">
+                            <div class="suggestion-name-fixed">Cacuaco</div>
+                            <div class="suggestion-details-fixed">Município Cacuaco, Luanda</div>
+                        </div>
+                        <div class="suggestion-time-fixed">35 min</div>
+                    </a>
+                    
+                    <a href="#" class="suggestion-item-fixed" data-location="Viana">
+                        <div class="suggestion-icon-fixed">
+                            <i class="iconsax" data-icon="location"></i>
+                        </div>
+                        <div class="suggestion-info-fixed">
+                            <div class="suggestion-name-fixed">Viana</div>
+                            <div class="suggestion-details-fixed">Município Viana, Luanda</div>
+                        </div>
+                        <div class="suggestion-time-fixed">20 min</div>
+                    </a>
                 </div>
-                <ul class="recent-list" id="recentList">
-                    <!-- Pesquisas recentes serão carregadas aqui -->
-                </ul>
             </div>
         </div>
     </div>
@@ -385,7 +453,7 @@
 
 <style>
     /* ====================== */
-/* SEARCH SECTION YANGO STYLE */
+/* SEARCH SECTION YANGO COM SUGESTÕES FIXAS */
 /* ====================== */
 
 .search-section-yango {
@@ -457,56 +525,83 @@
     background: #F8F9FA;
 }
 
-/* Container de sugestões */
-.suggestions-container {
+/* Container de sugestões FIXO */
+.suggestions-container-fixed {
     background: #FFFFFF;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     padding: 20px;
     margin-top: 10px;
-    display: none; /* Inicialmente escondido */
-    animation: fadeInUp 0.3s ease;
+    display: block; /* SEMPRE VISÍVEL */
 }
 
-.suggestions-container.show {
-    display: block;
-}
-
-.suggestions-header {
+.suggestions-header-fixed {
     margin-bottom: 15px;
     padding-bottom: 10px;
     border-bottom: 1px solid #F0F0F0;
 }
 
-.suggestions-title {
+.suggestions-title-fixed {
     color: #2e3f6e;
     font-size: 18px;
     font-weight: 600;
     margin: 0;
 }
 
-/* Lista de sugestões */
-.suggestions-list {
-    margin-bottom: 25px;
+/* Container com scrollbar */
+.suggestions-scroll-container {
+    max-height: 280px; /* Altura máxima para scroll */
+    overflow-y: auto;
+    padding-right: 5px; /* Espaço para a scrollbar */
 }
 
-.suggestion-item {
+/* Personalização da scrollbar */
+.suggestions-scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.suggestions-scroll-container::-webkit-scrollbar-track {
+    background: #F8F9FA;
+    border-radius: 3px;
+}
+
+.suggestions-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(46, 63, 110, 0.3);
+    border-radius: 3px;
+}
+
+.suggestions-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(46, 63, 110, 0.5);
+}
+
+/* Lista de sugestões fixas */
+.suggestions-list-fixed {
+    padding-bottom: 5px; /* Espaço extra no final */
+}
+
+.suggestion-item-fixed {
     display: flex;
     align-items: center;
     padding: 12px 0;
     border-bottom: 1px solid #F8F9FA;
     text-decoration: none;
     color: #333333;
-    transition: background 0.2s ease;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
-.suggestion-item:hover {
+.suggestion-item-fixed:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item-fixed:hover {
     background: #F8F9FA;
     border-radius: 8px;
     padding: 12px 10px;
+    transform: translateX(2px);
 }
 
-.suggestion-icon {
+.suggestion-icon-fixed {
     width: 40px;
     height: 40px;
     background: rgba(46, 63, 110, 0.1);
@@ -518,28 +613,35 @@
     flex-shrink: 0;
 }
 
-.suggestion-icon i {
+.suggestion-icon-fixed i {
     color: #2e3f6e;
     font-size: 18px;
 }
 
-.suggestion-info {
+.suggestion-info-fixed {
     flex: 1;
+    min-width: 0; /* Permite que o texto quebre */
 }
 
-.suggestion-name {
+.suggestion-name-fixed {
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 4px;
     color: #333333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.suggestion-details {
+.suggestion-details-fixed {
     font-size: 13px;
     color: #666666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.suggestion-time {
+.suggestion-time-fixed {
     color: #2e3f6e;
     font-size: 14px;
     font-weight: 500;
@@ -548,97 +650,14 @@
     border-radius: 6px;
     margin-left: 10px;
     flex-shrink: 0;
+    white-space: nowrap;
 }
 
-/* Pesquisas recentes */
-.recent-searches {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #F0F0F0;
-}
-
-.recent-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.recent-header h5 {
-    color: #666666;
-    font-size: 14px;
-    font-weight: 600;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.clear-recent {
-    background: none;
-    border: none;
-    color: #2e3f6e;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: background 0.2s ease;
-}
-
-.clear-recent:hover {
+/* Efeito de seleção */
+.suggestion-item-fixed.active {
     background: rgba(46, 63, 110, 0.1);
-}
-
-.recent-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.recent-item {
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #F8F9FA;
-}
-
-.recent-icon {
-    color: #666666;
-    font-size: 16px;
-    margin-right: 12px;
-}
-
-.recent-text {
-    color: #333333;
-    font-size: 15px;
-    flex: 1;
-}
-
-.recent-remove {
-    background: none;
-    border: none;
-    color: #999999;
-    cursor: pointer;
-    padding: 4px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-}
-
-.recent-remove:hover {
-    color: #FF0000;
-    background: rgba(255, 0, 0, 0.1);
-}
-
-/* Animações */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    border-left: 3px solid #2e3f6e;
+    padding-left: 15px;
 }
 
 /* Responsivo */
@@ -652,12 +671,16 @@
         font-size: 15px;
     }
     
-    .suggestions-container {
+    .suggestions-container-fixed {
         padding: 16px;
         border-radius: 12px;
     }
     
-    .suggestion-item {
+    .suggestions-scroll-container {
+        max-height: 250px;
+    }
+    
+    .suggestion-item-fixed {
         padding: 10px 0;
     }
 }
@@ -674,254 +697,96 @@
         font-size: 18px;
     }
     
-    .suggestion-icon {
+    .suggestions-scroll-container {
+        max-height: 220px;
+    }
+    
+    .suggestion-icon-fixed {
         width: 36px;
         height: 36px;
         margin-right: 12px;
     }
     
-    .suggestion-icon i {
+    .suggestion-icon-fixed i {
         font-size: 16px;
     }
     
-    .suggestion-name {
+    .suggestion-name-fixed {
         font-size: 15px;
     }
     
-    .suggestion-details {
+    .suggestion-details-fixed {
         font-size: 12px;
+    }
+    
+    .suggestion-time-fixed {
+        font-size: 13px;
+        padding: 3px 6px;
+    }
+}
+
+/* Para telas muito pequenas */
+@media (max-width: 360px) {
+    .suggestions-scroll-container {
+        max-height: 200px;
+    }
+    
+    .suggestion-name-fixed {
+        font-size: 14px;
+    }
+    
+    .suggestion-details-fixed {
+        font-size: 11px;
     }
 }
 </style>
 
-
 <script>
-// Dados de sugestões (pode vir de uma API)
-const suggestionsData = [
-    {
-        name: "Maianga",
-        details: "Município Luanda, Luanda",
-        time: "1h 20 min",
-        icon: "location",
-        type: "bairro"
-    },
-    {
-        name: "Zango IV",
-        details: "Município Viana, Luanda",
-        time: "6 min",
-        icon: "location",
-        type: "bairro"
-    },
-    {
-        name: "Avenida 4 de Fevereiro",
-        details: "Marginal de Luanda",
-        time: "15 min",
-        icon: "location",
-        type: "avenida"
-    },
-    {
-        name: "Talatona",
-        details: "Município Belas, Luanda",
-        time: "25 min",
-        icon: "location",
-        type: "bairro"
-    },
-    {
-        name: "Kilamba",
-        details: "Município Belas, Luanda",
-        time: "40 min",
-        icon: "location",
-        type: "cidade"
-    }
-];
-
-// Pesquisas recentes (armazenadas no localStorage)
-let recentSearches = JSON.parse(localStorage.getItem('ox4_recent_searches')) || [];
-
 // Elementos DOM
 const searchInput = document.getElementById('inputusername');
-const suggestionsContainer = document.getElementById('suggestionsContainer');
-const suggestionsList = document.getElementById('suggestionsList');
-const recentList = document.getElementById('recentList');
-const clearRecentBtn = document.getElementById('clearRecent');
+const suggestionItems = document.querySelectorAll('.suggestion-item-fixed');
 
-// Mostrar/ocultar sugestões
-searchInput.addEventListener('focus', showSuggestions);
-searchInput.addEventListener('input', handleSearchInput);
-document.addEventListener('click', handleOutsideClick);
-
-// Função para mostrar sugestões
-function showSuggestions() {
-    suggestionsContainer.classList.add('show');
-    renderSuggestions(suggestionsData);
-    renderRecentSearches();
-}
-
-// Função para lidar com input de pesquisa
-function handleSearchInput(e) {
-    const searchTerm = e.target.value.toLowerCase().trim();
-    
-    if (searchTerm.length === 0) {
-        renderSuggestions(suggestionsData);
-        return;
-    }
-    
-    const filteredSuggestions = suggestionsData.filter(suggestion => 
-        suggestion.name.toLowerCase().includes(searchTerm) ||
-        suggestion.details.toLowerCase().includes(searchTerm)
-    );
-    
-    renderSuggestions(filteredSuggestions);
-}
-
-// Função para renderizar sugestões
-function renderSuggestions(suggestions) {
-    if (suggestions.length === 0) {
-        suggestionsList.innerHTML = `
-            <div class="no-results">
-                <i class="iconsax" data-icon="search-normal"></i>
-                <p>Nenhum resultado encontrado</p>
-            </div>
-        `;
-        return;
-    }
-    
-    suggestionsList.innerHTML = suggestions.map(suggestion => `
-        <a href="#" class="suggestion-item" data-location="${suggestion.name}">
-            <div class="suggestion-icon">
-                <i class="iconsax" data-icon="${suggestion.icon}"></i>
-            </div>
-            <div class="suggestion-info">
-                <div class="suggestion-name">${suggestion.name}</div>
-                <div class="suggestion-details">${suggestion.details}</div>
-            </div>
-            <div class="suggestion-time">${suggestion.time}</div>
-        </a>
-    `).join('');
-    
-    // Adicionar eventos aos itens de sugestão
-    document.querySelectorAll('.suggestion-item').forEach(item => {
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            const location = this.getAttribute('data-location');
-            searchInput.value = location;
-            addToRecentSearches(location);
-            suggestionsContainer.classList.remove('show');
-        });
+// Quando clicar em uma sugestão
+suggestionItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const location = this.getAttribute('data-location');
+        searchInput.value = location;
+        
+        // Remover classe active de todos
+        suggestionItems.forEach(i => i.classList.remove('active'));
+        // Adicionar classe active ao item clicado
+        this.classList.add('active');
+        
+        // Rolar para o item selecionado (se necessário)
+        this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
-}
-
-// Função para renderizar pesquisas recentes
-function renderRecentSearches() {
-    if (recentSearches.length === 0) {
-        recentList.innerHTML = `
-            <li class="no-recent">
-                <i class="iconsax" data-icon="clock"></i>
-                <span>Nenhuma pesquisa recente</span>
-            </li>
-        `;
-        return;
-    }
-    
-    recentList.innerHTML = recentSearches.map(search => `
-        <li class="recent-item">
-            <i class="iconsax recent-icon" data-icon="clock"></i>
-            <span class="recent-text">${search}</span>
-            <button class="recent-remove" data-search="${search}">
-                <i class="iconsax" data-icon="close-circle"></i>
-            </button>
-        </li>
-    `).join('');
-    
-    // Adicionar eventos aos botões de remover
-    document.querySelectorAll('.recent-remove').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const searchToRemove = this.getAttribute('data-search');
-            removeFromRecentSearches(searchToRemove);
-        });
-    });
-}
-
-// Função para adicionar às pesquisas recentes
-function addToRecentSearches(location) {
-    // Remover se já existir
-    recentSearches = recentSearches.filter(s => s !== location);
-    
-    // Adicionar no início
-    recentSearches.unshift(location);
-    
-    // Manter apenas as últimas 5
-    if (recentSearches.length > 5) {
-        recentSearches = recentSearches.slice(0, 5);
-    }
-    
-    // Salvar no localStorage
-    localStorage.setItem('ox4_recent_searches', JSON.stringify(recentSearches));
-    renderRecentSearches();
-}
-
-// Função para remover das pesquisas recentes
-function removeFromRecentSearches(location) {
-    recentSearches = recentSearches.filter(s => s !== location);
-    localStorage.setItem('ox4_recent_searches', JSON.stringify(recentSearches));
-    renderRecentSearches();
-}
-
-// Limpar todas as pesquisas recentes
-clearRecentBtn.addEventListener('click', function() {
-    recentSearches = [];
-    localStorage.setItem('ox4_recent_searches', JSON.stringify([]));
-    renderRecentSearches();
 });
 
-// Fechar sugestões ao clicar fora
-function handleOutsideClick(e) {
-    if (!searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
-        suggestionsContainer.classList.remove('show');
-    }
-}
+// Filtro em tempo real (opcional)
+searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase().trim();
+    
+    suggestionItems.forEach(item => {
+        const location = item.getAttribute('data-location').toLowerCase();
+        const details = item.querySelector('.suggestion-details-fixed').textContent.toLowerCase();
+        
+        if (searchTerm === '' || location.includes(searchTerm) || details.includes(searchTerm)) {
+            item.style.display = 'flex';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+});
 
-// CSS adicional para estados vazios
-const style = document.createElement('style');
-style.textContent = `
-    .no-results {
-        text-align: center;
-        padding: 30px 20px;
-        color: #666666;
-    }
-    
-    .no-results i {
-        font-size: 40px;
-        color: #CCCCCC;
-        margin-bottom: 10px;
-        display: block;
-    }
-    
-    .no-results p {
-        font-size: 14px;
-        margin: 0;
-    }
-    
-    .no-recent {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 15px 0;
-        color: #999999;
-        font-size: 14px;
-    }
-    
-    .no-recent i {
-        font-size: 18px;
-    }
-`;
-document.head.appendChild(style);
-
-// Inicializar
-document.addEventListener('DOMContentLoaded', function() {
-    renderRecentSearches();
+// Limpar filtro quando clicar no X (se adicionar um botão de limpar)
+searchInput.addEventListener('search', function() {
+    suggestionItems.forEach(item => {
+        item.style.display = 'flex';
+    });
 });
 </script>
+
     <section>
     <div class="swiper banner1 home-banner">
         <div class="swiper-wrapper">
