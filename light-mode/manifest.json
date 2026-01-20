@@ -2,14 +2,13 @@
   "name": "OX4 Transporte",
   "short_name": "OX4 Transporte",
   "lang": "pt-BR",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#2e3f6e",
-  "theme_color": "#2e3f6e",
-  "description": "OX4 Transporte",
+  "theme_color": "#ffffff",
+  "description": "Aplicativo OX4 Transporte",
   "orientation": "portrait",
-  
   "icons": [
     {
       "src": "assets/images/Colorful Modern Infinity Creative Studio Logo.png",

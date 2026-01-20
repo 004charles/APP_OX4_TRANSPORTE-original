@@ -1,53 +1,4 @@
-/*------------------------------------------------------------------
-Project: Taxigo App
-Author: The_Krishna       
-Last change: 15/04/2024 
-Primary use: Taxi Booking Mobile App PWA
--------------------------------------------------------------------*/
 
-/*----------------Table of contents Start---------------------------
-1.Default CSS
-2.Splash Screen CSS
-3.Let you screen CSS
-4.Verify Number CSS
-5.Invite Friend CSS
-6.Finger Print CSS
-7.Preferred Language CSS
-8.Account Screen CSS
-9.Setting Screen CSS
-10.Language Screen CSS
-11.About Us Screen CSS
-12.Privacy Screen CSS
-13.Enable location Screen CSS
-14.Reward Screen CSS
-15.Taxigo Platinum Screen CSS
-16.Promocode Screen CSS
-17.HomeScreen CSS
-18.Preloader CSS
-19.Driver Trip Screen CSS
-20.Cancel Ride Screen CSS
-21.Going Screen CSS
-22.Payment method Screen CSS
-23.Address Screen CSS
-24.logout Screen CSS
-25.Rides Screen CSS
-26.Faq Screen CSS
-27.Processing Screen CSS
-28.Wallet Screen CSS
-29.Package Screen CSS
-30.Arrived Screen CSS
-
----------Table of contents End-----------------------------------*/
-
-/*------------------------ [Color codes] ------------------------
-                        
-Background:#FFFFFF,F0F0F0,#212B46,#FFAA01    
-Content:#212B46, #67696B      
-Heading h1: #212B46       
-paragraph p:#67696B    
--------------------------------------------------------------------*/
-
-/************************ 1.Default CSS ***************************/
 html {
    scroll-behavior: smooth;
    -webkit-text-size-adjust: 100%;
@@ -113,7 +64,7 @@ textarea{
     color: var(--2, #212B46) !important;
 }
 .bg-yellow{
-    background-color: #FFAA01 !important;
+    background-color: #2e3f6e !important;
 }
 .color-white{
     color: white !important;
@@ -415,7 +366,7 @@ p.taxigo-title {
 .going1-next-btn a{
     width: calc(100% - 32px);
     border-radius: 12px;
-    background: var(--4, #FFAA01);
+    background: var(--4, #2e3f6e);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -639,7 +590,7 @@ input[type=number] {
     column-gap: 11px;
 }
 .otp-section input:focus {
-    border: 2px solid var(--4, #FFAA01);
+    border: 2px solid var(--4, #2e3f6e);
     background: var(--1, #FFF);
     box-shadow: none !important;
 }
@@ -844,7 +795,7 @@ input[type=number] {
  color: var(--1, #FFF);
 }
 .continue-btn{
-  background: var(--4, #FFAA01);  
+  background: var(--4, #2e3f6e);  
   border-radius: 12px;
   display: flex;
   align-items: center;
