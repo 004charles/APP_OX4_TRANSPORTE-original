@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8">
-	  <meta name="theme-color" content="#ffffff">
-
+	<meta name="theme-color" content="#ffffff">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Taxigo - Taxi Booking Mobile App</title>
+	<title>Taxigo - App Móvil de Reserva de Taxis</title>
 	<link rel="icon" href="assets/images/favicon/icon.png">
 	<link href="../../../../../fonts.googleapis.com/css2%3Ffamily=League+Spartan:wght@100..900&amp;display=swap.css" rel="stylesheet">
 	<link href="../../../../../fonts.googleapis.com/css2%3Ffamily=Space+Grotesk:wght@300..700&amp;display=swap.css" rel="stylesheet">
@@ -15,18 +14,17 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/media-query.css">
 	<link rel="manifest" href="manifest.json">
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js')
-      .then(() => console.log('Service Worker registrado'))
-      .catch(err => console.log(err));
-  }
-</script>
-
+	<script>
+	  if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('sw.js')
+		  .then(() => console.log('Service Worker registrado'))
+		  .catch(err => console.log(err));
+	  }
+	</script>
 </head>
 <body>
 	<div class="site-content">
-		<!-- Preloader start -->
+		<!-- Precargador inicio -->
 		<div class="loader-mask">
 			<div class="loading-window">
 				<div class="car">
@@ -45,17 +43,17 @@
 				</div>
 			</div>
 		</div>
-		<!-- Preloader end -->
-		<!-- Homescreen content start -->
+		<!-- Precargador fin -->
+		<!-- Contenido de la pantalla principal inicio -->
 		<section id="homescreen" class="homescreen-main">
 			<div class="homescreen-wrap">
 				<div class="header-sec">
 					<div class="header-sec-wrap">
 						<div class="header-setting">
-							<a data-bs-toggle="offcanvas" href="homescreen.html#offcanvasExample" role="button"><img src="assets/images/map/setting-icon.svg" alt="setting-icon"></a>
+							<a data-bs-toggle="offcanvas" href="homescreen.html#offcanvasExample" role="button"><img src="assets/images/map/setting-icon.svg" alt="icono-configuración"></a>
 						</div>
-						<div  class="header-profile account-redirect">
-							<img src="assets/images/map/profile.png" alt="profile-img">
+						<div class="header-profile account-redirect">
+							<img src="assets/images/map/profile.png" alt="imagen-perfil">
 						</div>
 					</div>
 				</div>
@@ -63,42 +61,42 @@
 					<div class="homescree-bottom-sec-wrap">
 						<div class="active-ride-sec">
 							<div class="moreless-button">
-								<img src="assets/images/map/read_less_image.svg" alt="Read more">
+								<img src="assets/images/map/read_less_image.svg" alt="Leer más">
 							</div>
 							<div class="home-content">
-								<p>Hey, Jessica</p>
-								<h1>Where are you going?</h1>
+								<p>Hola, Jessica</p>
+								<h1>¿A dónde vas?</h1>
 							</div>
 							<div class="moretext">
 								<div class="going-screen1-wrap mt-32">
-									<div class="going1-feature location-redirect"> 
-										<div class="going1-icon"><img src="assets/images/map/trip.svg" alt="trip-img"></div>
+									<div class="going1-feature location-redirect">
+										<div class="going1-icon"><img src="assets/images/map/trip.svg" alt="imagen-viaje"></div>
 										<div class="going-content1">
-											<h2>New Trip</h2>
-											<h3>Tap for location</h3>
+											<h2>Nuevo Viaje</h2>
+											<h3>Toca para ubicación</h3>
 										</div>
 									</div>
-									<div class="going1-feature location-redirect"> 
-										<div class="going1-icon"><img src="assets/images/map/work.svg" alt="map-img"></div>
+									<div class="going1-feature location-redirect">
+										<div class="going1-icon"><img src="assets/images/map/work.svg" alt="imagen-mapa"></div>
 										<div class="going-content1">
-											<h2>Work</h2>
-											<h3>38 Minutes</h3>
+											<h2>Trabajo</h2>
+											<h3>38 Minutos</h3>
 										</div>
 									</div>
-									<div class="going1-feature location-redirect"> 
+									<div class="going1-feature location-redirect">
 										<div class="going1-icon">
-											<img src="assets/images/map/airport.svg" alt="airport-img">
+											<img src="assets/images/map/airport.svg" alt="imagen-aeropuerto">
 										</div>
 										<div class="going-content1">
-											<h2>Airport</h2>
-											<h3>23 Minutes</h3>
+											<h2>Aeropuerto</h2>
+											<h3>23 Minutos</h3>
 										</div>
 									</div>
-									<div class="going1-feature location-redirect"> 
-										<div class="going1-icon"><img src="assets/images/map/bus.svg" alt="bus-img"></div>
+									<div class="going1-feature location-redirect">
+										<div class="going1-icon"><img src="assets/images/map/bus.svg" alt="imagen-autobús"></div>
 										<div class="going-content1">
-											<h2>Bus</h2>
-											<h3>25 Minutes</h3>
+											<h2>Autobús</h2>
+											<h3>25 Minutos</h3>
 										</div>
 									</div>
 								</div>
@@ -106,18 +104,18 @@
 						</div>
 					</div>
 				</div>
-			</div>	
+			</div>
 		</section>
-		<!-- Homescreen content end -->
-		<!-- Sidebar Screen content start -->
+		<!-- Contenido de la pantalla principal fin -->
+		<!-- Contenido de la barra lateral inicio -->
 		<div class="offcanvas offcanvas-start sidecanvas" tabindex="-1" id="offcanvasExample">
 			<div class="offcanvas-header">
-				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
 			</div>
 			<div class="offcanvas-body">
 				<div class="setting-page-wrapper">
 					<a href="notification-option.html">
-						<div class="setting-deatils  pt-0">
+						<div class="setting-deatils pt-0">
 							<div class="setting-icon">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<mask id="mask0_311_1232" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -130,7 +128,7 @@
 								</svg>
 							</div>
 							<div class="icon-name">
-								<p>Notification Options</p>
+								<p>Opciones de Notificación</p>
 							</div>
 							<div class="icon-back-btn">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -162,7 +160,7 @@
 								</svg>
 							</div>
 							<div class="icon-name">
-								<p>Language</p>
+								<p>Idioma</p>
 							</div>
 							<div class="icon-back-btn">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -190,7 +188,7 @@
 								</svg>
 							</div>
 							<div class="icon-name">
-								<p>Currency</p>
+								<p>Moneda</p>
 							</div>
 							<div class="icon-back-btn">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -219,7 +217,7 @@
 								</svg>
 							</div>
 							<div class="icon-name">
-								<p>About Us</p>
+								<p>Sobre Nosotros</p>
 							</div>
 							<div class="icon-back-btn">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -248,7 +246,7 @@
 								</svg>
 							</div>
 							<div class="icon-name">
-								<p>Privacy Policy</p>
+								<p>Política de Privacidad</p>
 							</div>
 							<div class="icon-back-btn">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -272,12 +270,12 @@
 									<g mask="url(#mask0_311_1160)">
 										<path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#FFAA01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 										<path d="M12 17V17.01" stroke="#FFAA01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M12 13.5C11.9816 13.1754 12.0692 12.8535 12.2495 12.583C12.4299 12.3125 12.6933 12.1079 13 12C13.3759 11.8563 13.7132 11.6272 13.9856 11.331C14.2579 11.0347 14.4577 10.6792 14.5693 10.2926C14.6809 9.90595 14.7013 9.49869 14.6287 9.10286C14.5562 8.70704 14.3928 8.33345 14.1513 8.01151C13.9099 7.68958 13.597 7.42808 13.2373 7.24762C12.8776 7.06715 12.4809 6.97264 12.0785 6.97152C11.6761 6.97041 11.2789 7.06272 10.9182 7.24118C10.5576 7.41965 10.2432 7.67941 10 8" stroke="#FFAA01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M12 13.5C11.9816 13.1754 12.0692 12.8535 12.2495 12.583C12.4299 12.3125 12.6933 12.1079 13 12C13.3759 11.8563 13.7132 11.6272 13.9856 11.331C14.2579 11.0347 14.4577 10.6792 14.5693 10.2926C14.6809 9.90595 14.7013 9.49869 14.6287 9.10286C14.5562 8.70704 14.3928 8.33345 14.1513 8.01151C13.9099 7.68958 13.597 7.42808 13.2373 7.24762C12.8776 7.06715 12.4809 6.97264 12.0785 6.97152C11.6761 6.97041 11.2789 6.06272 10.9182 7.24118C10.5576 7.41965 10.2432 7.67941 10 8" stroke="#FFAA01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 									</g>
 								</svg>
 							</div>
 							<div class="icon-name">
-								<p>FAQs</p>
+								<p>Preguntas Frecuentes</p>
 							</div>
 							<div class="icon-back-btn">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -305,7 +303,7 @@
 								</svg>
 							</div>
 							<div class="icon-name">
-								<p>Send Feedback</p>
+								<p>Enviar Comentarios</p>
 							</div>
 							<div class="icon-back-btn">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -338,7 +336,7 @@
 								</svg>
 							</div>
 							<div class="icon-name">
-								<p>Contact Us</p>
+								<p>Contáctanos</p>
 							</div>
 							<div class="icon-back-btn">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -357,7 +355,7 @@
 							<div class="dz-icon theme-btn bg-pink light">
 								<svg class="dark" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFAA01"><g></g><g><g><g><path d="M11.57,2.3c2.38-0.59,4.68-0.27,6.63,0.64c0.35,0.16,0.41,0.64,0.1,0.86C15.7,5.6,14,8.6,14,12s1.7,6.4,4.3,8.2 c0.32,0.22,0.26,0.7-0.09,0.86C16.93,21.66,15.5,22,14,22c-6.05,0-10.85-5.38-9.87-11.6C4.74,6.48,7.72,3.24,11.57,2.3z"></path></g></g></g>
 								</svg>
-								<svg  class="light" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="light" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<mask id="mask0_311_1116" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
 										<rect width="24" height="24" fill="white"/>
 									</mask>
@@ -369,7 +367,7 @@
 							</div>
 						</div>
 						<div class="icon-name " >
-							<p>Dark Mode</p>
+							<p>Modo Oscuro</p>
 						</div>
 						<div class="notification-option-switch ">
 							<label class="switch">
@@ -393,7 +391,7 @@
 								</svg>
 							</div>
 							<div class="icon-name">
-								<p>Invite Friends</p>
+								<p>Invitar Amigos</p>
 							</div>
 							<div class="icon-back-btn">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -410,7 +408,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- Sidebar Screen content end -->
+		<!-- Contenido de la barra lateral fin -->
 	</div>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/slick.min.js"></script>
