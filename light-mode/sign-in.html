@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="utf-8">
     <meta name="theme-color" content="#ffffff">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Taxigo - Taxi Booking Mobile App</title>
+  <title>OX4 Transportes - Aplicativo Móvel de Reserva de Táxi</title>
   <link rel="icon" href="assets/images/favicon/icon.png">
   <link href="../../../../../fonts.googleapis.com/css2%3Ffamily=League+Spartan:wght@100..900&amp;display=swap.css" rel="stylesheet">
   <link href="../../../../../fonts.googleapis.com/css2%3Ffamily=Space+Grotesk:wght@300..700&amp;display=swap.css" rel="stylesheet">
@@ -16,6 +16,19 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/media-query.css">
   <link rel="manifest" href="manifest.json">
+<style>
+  .sign-in-password-btn a,
+  .block-footer a {
+    background-color: #2e3f6e !important;
+    color: white !important;
+    border-color: #2e3f6e !important;
+  }
+  .sign-in-password-btn a:hover,
+  .block-footer a:hover {
+    background-color: #24325a !important;
+    border-color: #24325a !important;
+  }
+</style>
 <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js')
@@ -47,58 +60,58 @@
       </div>
     </div>
     <!-- Preloader end -->
-    <!-- Sign in screen content start -->
+    <!-- Tela de login content start -->
     <div class="let-you-page-main">
       <div class="let-you-top" >
         <div class="let-you-top-wrap">
           <header class="back-btn">
             <a href="javascript:history.go(-1)">
-              <img src="assets/svg/back-btn-arrow.svg" alt="back-btn">
+              <img src="assets/svg/back-btn-arrow.svg" alt="botão-voltar">
             </a>
           </header>
           <div class="taxi-img_main">
-            <img class="taxi-img_img" src="assets/images/let-you-screen/logo.svg" alt="logo">
+            <img class="taxi-img_img" src="assets/images/Colorful Modern Infinity Creative Studio Logo.png" alt="logo">
           </div>
         </div>
       </div>
       <div class="let-you-social-sec">
         <div class="lets_you_in_box">
           <h1 class="d-none">hidden</h1>
-          <h2 class="lets_you_in_text">Sign In</h2>
+          <h2 class="lets_you_in_text">Entrar</h2>
           <form>
             <div class="mobile-form mt-32">
-              <input type="number" id="mobile_code" class="sign-in-custom-input" placeholder="Enter Mobile Number">
+              <input type="number" id="mobile_code" class="sign-in-custom-input" placeholder="Digite o Número de Telefone">
             </div>
           </form>
           <div class="sign-in-password-btn mt-32">
-            <a href="verify-number.html">Sign In</a>
+            <a href="verify-number.html">Entrar</a>
           </div>
           <div class="or-section mt-32">
-            <p>or continue with</p>
+            <p>ou continue com</p>
           </div>
           <div class="icons_main mt-32">
             <a href="https://www.facebook.com" target="_blank">
-              <img class="icons" src="assets/images/let-you-screen/fb-icon.svg" alt="Icon-fb">
+              <img class="icons" src="assets/images/let-you-screen/fb-icon.svg" alt="Icone-facebook">
             </a>
             <a href="https://www.google.com" target="_blank">
-              <img class="icons" src="assets/images/let-you-screen/google-icon.svg" alt="Icon-google">
+              <img class="icons" src="assets/images/let-you-screen/google-icon.svg" alt="Icone-google">
             </a>
             <a href="https://www.icloud.com" target="_blank">
-              <img class="apple" src="assets/images/let-you-screen/apple-icon.svg" alt="Icon-apple">
+              <img class="apple" src="assets/images/let-you-screen/apple-icon.svg" alt="Icone-apple">
             </a>
             <a href="https://wa.me/+12345678899" target="_blank">
-              <img class="icons" src="assets/images/let-you-screen/whatsapp.svg" alt="Icon-whatsapp">
+              <img class="icons" src="assets/images/let-you-screen/whatsapp.svg" alt="Icone-whatsapp">
             </a>
           </div>
         </div>
       </div>
       <footer id="let-you-footer">
         <div class="block-footer">
-          <p>Don’t have an account? <a href="sign-up.html">Sign up</a></p>
+          <p>Não tem uma conta? <a href="sign-up.html">Cadastre-se</a></p>
         </div>
       </footer>
     </div>
-    <!-- Sign in screen content end -->
+    <!-- Tela de login content end -->
   </div>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/slick.min.js"></script>
