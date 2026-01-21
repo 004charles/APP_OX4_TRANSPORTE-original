@@ -1071,7 +1071,7 @@ label.custom-radio-sel-lang {
 }
 .accout-screen-edit {
     border-radius: 12px;
-    background: var(--4, #FFAA01);
+    background: var(--4, #2e3f6e);
     padding: 12px;
     width: fit-content;
 }
@@ -1275,7 +1275,7 @@ label.custom-radio-sel-lang {
     justify-content: space-between;
 }
 .notification-option-switch input:checked + .slider {
-    background: #FFAA01;
+    background: #2e3f6e;
     border: 1px solid transparent;
 }
 .notification-option-switch input:checked + .slider:before {
@@ -1455,7 +1455,7 @@ label.custom-radio-sel-lang {
 
 /************************ 14.Reward Screen CSS ***************************/
 .first-sec-wrap h1 {
-    color: var(--4, #FFAA01);
+    color: var(--4, #2e3f6e);
     font-family: "Space Grotesk", sans-serif;
     font-size: 32px;
     font-style: normal;
@@ -1463,7 +1463,7 @@ label.custom-radio-sel-lang {
     line-height: 36px; 
 }
 .first-sec-wrap span {
-    color: var(--4, #FFAA01);
+    color: var(--4, #2e3f6e);
     font-family: "Space Grotesk", sans-serif;
     font-size: 20px;
     font-style: normal;
@@ -1584,7 +1584,7 @@ label.custom-radio-sel-lang {
     border-radius: 16px;
 }
 
-/************************ 15.Taxigo Platinum Screen CSS ***************************/
+/************************ 15.ox4 Platinum Screen CSS ***************************/
 #header-top{
     background-image: url(../images/taxigo-platinum/bg-img.png);
     background-repeat: no-repeat;
@@ -1634,9 +1634,9 @@ label.custom-radio-sel-lang {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #FFAA01;
+  background: #2e3f6e;
   cursor: pointer;
-  box-shadow: -407px 0 0 400px #FFAA01;
+  box-shadow: -407px 0 0 400px #2e3f6e;
 }
 span.ride-txt {
     color: var(--1, #FFF);
@@ -1924,7 +1924,7 @@ span.ride-txt {
 }
 .going8-screen .lang-sec input[type="radio"]:checked + label{
     border-radius: 12px;
-    border: 2px solid var(--4, #FFAA01) !important;
+    border: 2px solid var(--4, #2e3f6e) !important;
     background: var(--2, #212B46) !important;
 }
 .homescree-bottom-sec-wrap {
@@ -2049,7 +2049,7 @@ span.ride-txt {
 }
 .going7-screen .lang-sec input[type="radio"]:checked + label{
     border-radius: 12px;
-    border: 2px solid var(--4, #FFAA01);
+    border: 2px solid var(--4, #2e3f6e);
     background: var(--2, #212B46);
 }
 .select-lang-sec{
@@ -2175,7 +2175,7 @@ span.back-txt {
 }
 .select-car-content li button.active{
     background: #212B46 !important;
-    border: 2px solid #FFAA01;
+    border: 2px solid #2e3f6e;
 }
 .homescreen-main .homescree-bottom-sec-wrap,
 .driver-trip-main .homescree-bottom-sec-wrap{
@@ -2333,7 +2333,7 @@ to {
   position: absolute;
   width: 11px;
   height: 1px;
-  background: #FFAA01;
+  background: #2e3f6e;
   animation: strikes 0.2s linear infinite;
 }
 .car .strike2 {
@@ -2355,7 +2355,7 @@ to {
 .car-detail {
   position: absolute;
   display: block;
-  background: #FFAA01;
+  background: #2e3f6e;
   animation: speed 0.5s linear infinite;
 }
 .car-detail.spoiler {
@@ -2364,8 +2364,8 @@ to {
   top: 7px;
   background: none;
   border: 20px solid transparent;
-  border-bottom: 8px solid #FFAA01;
-  border-left: 20px solid #FFAA01;
+  border-bottom: 8px solid #2e3f6e;
+  border-left: 20px solid #2e3f6e;
 }
 .car-detail.back {
   height: 20px;
@@ -2379,7 +2379,7 @@ to {
   left: 12px;
   border-top-left-radius: 30px;
   border-top-right-radius: 45px 40px;
-  border: 4px solid #FFAA01;
+  border: 4px solid #2e3f6e;
   background: none;
   box-sizing: border-box;
 }
@@ -2404,7 +2404,7 @@ to {
   top: 20px;
   left: 12px;
   border: 3px solid #333;
-  background: linear-gradient(45deg, transparent 45%, #FFAA01 46%, #FFAA01 54%, transparent 55%), linear-gradient(-45deg, transparent 45%, #FFAA01 46%, #FFAA01 54%, transparent 55%), linear-gradient(90deg, transparent 45%, #FFAA01 46%, #FFAA01 54%, transparent 55%), linear-gradient(0deg, transparent 45%, #FFAA01 46%, #FFAA01 54%, transparent 55%), radial-gradient(#FFAA01 29%, transparent 30%, transparent 50%, #FFAA01 51%), #333;
+  background: linear-gradient(45deg, transparent 45%, #2e3f6e 46%, #2e3f6e 54%, transparent 55%), linear-gradient(-45deg, transparent 45%, #2e3f6e 46%, #2e3f6e 54%, transparent 55%), linear-gradient(90deg, transparent 45%, #2e3f6e 46%, #2e3f6e 54%, transparent 55%), linear-gradient(0deg, transparent 45%, #2e3f6e 46%, #2e3f6e 54%, transparent 55%), radial-gradient(#2e3f6e 29%, transparent 30%, transparent 50%, #2e3f6e 51%), #333;
   animation-name: spin;
 }
 .car-detail.wheel2 {
@@ -2436,7 +2436,7 @@ to {
     background: var(--2, #212B46);
 }
 .going2-screen .lang-sec input[type="radio"]:checked + label span svg path {
-    stroke: #FFAA01;
+    stroke: #2e3f6e;
 }
 .location-content h2 {
     color: var(--2, #212B46);
@@ -2629,7 +2629,7 @@ div#ui-datepicker-div {
     background: #ffaa0170;
 }
 .ui-datepicker-calendar tbody td a.ui-state-active {
-    background-color: #FFAA01;
+    background-color: #2e3f6e;
     color: white;
 }
 .ui-datepicker-header a.ui-corner-all {
@@ -2660,7 +2660,7 @@ div#ui-datepicker-div {
     margin-bottom: 15px;
 }
 .form-check-input-radio:checked+.checkout-modal-lbl-payment .payment-type {
-    border-color: #FF484D;
+    border-color: #2e3f6e;
 }
 .payment-type2 {
     border: 1px solid var(--border-colors);
@@ -2680,7 +2680,7 @@ div#ui-datepicker-div {
     margin: auto;
 }
 .connect-text {
-    color: var(--4, #00D061);
+    color: var(--4, #2e3f6e);
     text-align: right;
     font-family: Satoshi;
     font-size: 16px;
@@ -2689,7 +2689,7 @@ div#ui-datepicker-div {
     line-height: 24px;
 }
 .not-connect {
-    color: var(--4, #FF484D);
+    color: var(--4, #2e3f6e);
 }
 .edit-info {
     font-size: 20px;
@@ -2908,7 +2908,7 @@ div#ui-datepicker-div {
     color: var(--9, #F0F0F0);
 }
 .star-rating label {
-    color: #FFAA01;
+    color: #2e3f6e;
     font-size: 2rem;
     padding: 0;
     cursor: pointer;
@@ -2952,7 +2952,7 @@ div#ui-datepicker-div {
     column-gap: 12px;
 }
 .trip-custom{
-    color: var(--6, #FB4945);
+    color: var(--6, #2e3f6e);
     text-align: center;
     font-family: "League Spartan", sans-serif;
     font-size: 16px;
@@ -2961,7 +2961,7 @@ div#ui-datepicker-div {
     line-height: 20px;
 }
 .driver-trip-main .lang-sec input[type="radio"]:checked + label{
-    border: 2px solid var(--4, #FFAA01);
+    border: 2px solid var(--4, #2e3f6e);
 }
 
 /************************ 20.Cancel Ride Screen CSS ***************************/
@@ -2994,7 +2994,7 @@ div#ui-datepicker-div {
     width: 100%;
 }
 .pay-btn.active {
-    border: 1px solid #FFAA01 !important;
+    border: 1px solid #2e3f6e !important;
     border-radius: 4px !important;
 }
 .form-check-input:active{
@@ -3041,7 +3041,7 @@ div#ui-datepicker-div {
     text-transform: uppercase;
 }
 .wallet-price1 {
-    color: var(--6, #FB4945);
+    color: var(--6, #2e3f6e);
     text-align: right;
     font-family: "League Spartan", sans-serif;
     font-size: 16px;
@@ -3133,7 +3133,7 @@ p.pay-txt1 {
     margin-left: auto;
 }
 .add-deatils-txt2 {
-   color: var(--4, #FFAA01);
+   color: var(--4, #2e3f6e);
    text-align: center;
    font-family: "Space Grotesk", sans-serif;
    font-size: 12px;
@@ -3194,7 +3194,7 @@ button.text-reset {
     margin: 0;
 }
 .logout-text-pop {
-   color: var(--6, #FB4945);
+   color: var(--6, #2e3f6e);
    text-align: center;
    font-family: "League Spartan", sans-serif;
    font-size: 32px;
@@ -3233,7 +3233,7 @@ button.text-reset {
 }
 .yes-logot {
    border-radius: 12px;
-   background: var(--4, #FFAA01);
+   background: var(--4, #2e3f6e);
    color: var(--1, #FFF);
    text-align: center;
    font-family: "League Spartan", sans-serif;
@@ -3275,7 +3275,7 @@ button.text-reset {
     background: #FB4945;
 }
 .order-screen2-tab-btn.active {
-    color: #FFAA01 !important;
+    color: #2e3f6e !important;
 }
 .order-screen2-tab-btn:hover{
    color: #212B46;
@@ -3299,7 +3299,7 @@ button.text-reset {
 }
 .order-screen2-tab li.nav-item button:before {
     content: '';
-    background: #FFAA01;
+    background: #2e3f6e;
     height: 2px;
     width: 100%;
     position: absolute;
@@ -3322,7 +3322,7 @@ p.ride-time {
 .ride-active{
     margin-left: auto;
     border-radius: 4px;
-    background: var(--4, #FFAA01);
+    background: var(--4, #2e3f6e);
     padding: 3px 12px;
     height: fit-content;
 }
@@ -3354,7 +3354,7 @@ p.ride-time {
 .yellow{
     width: 20px;
     height: 20px;
-    background: #FFAA01;
+    background: #2e3f6e;
     border-radius: 10px;
 }
 .black{
@@ -3474,7 +3474,7 @@ input:-webkit-autofill:focus {
     content: url(../svg/plus-icon.svg) !important;
     position: absolute;
     right: 0;
-    color: #FF4C3B;
+    color: #2e3f6e;
 }
 .faq-txt1.selected:before {
     content: url(../svg/minus-icon.svg) !important;
@@ -3488,7 +3488,7 @@ input:-webkit-autofill:focus {
    line-height: 20px;
 }
 .faq-txt1.selected {
-   color: var(--6, #FB4945) !important;
+   color: var(--6, #2e3f6e) !important;
    font-family: "Space Grotesk" !important;
    font-size: 16px !important;
    font-style: normal !important;
@@ -3509,7 +3509,7 @@ input:-webkit-autofill:focus {
     line-height: 18px; 
 }
 #faq-section .lang-sec input[type="radio"]:checked + label{
-    color: var(--4, #FFAA01);
+    color: var(--4, #2e3f6e);
     border-radius: 16px;
     border: 2px solid var(--2, #212B46);
     background: var(--2, #212B46);
@@ -3583,7 +3583,7 @@ input:-webkit-autofill:focus {
     z-index: -1;
 }
 .home_faq_accodian_title.active h5{
-    color: #FFAA01 !important;
+    color: #2e3f6e !important;
 }
 .color_white{
     color: white;
@@ -3635,7 +3635,7 @@ h5.faq-que {
     transition: .5s;
 }
 .btn-slide2:hover {
-   background: #FFAA01;
+   background: #2e3f6e;
 }
 .btn-slide2:hover span.circle2 {
     left: 100%;
@@ -3700,7 +3700,7 @@ p.driver-price {
     line-height: 24px;
 }
 p.driver-price1 {
-    color: var(--6, #FB4945);
+    color: var(--6, #2e3f6e);
     text-align: right;
     font-family: "League Spartan", sans-serif;
     font-size: 32px;
@@ -3731,7 +3731,7 @@ p.driver-price1 {
   margin: 0 auto;
   width: 15%;
   height: 15%;
-  background-color: #FFAA01;
+  background-color: #2e3f6e;
   border-radius: 100%;
   -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
   animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
@@ -3867,7 +3867,7 @@ p.driver-price1 {
     line-height: 24px;
 }
 .wallet-price span:last-child {
-    color: var(--4, #FFAA01);
+    color: var(--4, #2e3f6e);
     font-family: "Space Grotesk", sans-serif;
     font-size: 32px;
     font-style: normal;
@@ -3920,7 +3920,7 @@ p.driver-price1 {
     border-radius: 24px;
 }
 #wallet-screen .pay-btn.active{
-    border: 2px solid #FFAA01 !important;
+    border: 2px solid #2e3f6e !important;
     border-radius: 24px !important;
 }
 
@@ -3944,7 +3944,7 @@ p.driver-price1 {
 }
 .package-btn.active,
 .package-btn:hover{
-    background: var(--4, #FFAA01) !important;
+    background: var(--4, #2e3f6e) !important;
     color: var(--1, #FFF) !important;
 }
 .nav-link.package-btn{
@@ -4017,7 +4017,7 @@ p.driver-price1 {
 }
 .package-buy-btn a {
     border-radius: 12px;
-    background: var(--4, #FFAA01);
+    background: var(--4, #2e3f6e);
     color: var(--1, #FFF);
     text-align: center;
     font-family: "League Spartan", sans-serif;
@@ -4031,7 +4031,7 @@ p.driver-price1 {
 }
 .package-buy-btn {
     border-radius: 12px;
-    background: var(--4, #FFAA01);
+    background: var(--4, #2e3f6e);
     width: 106px;
     height: auto;
     display: flex;
@@ -4182,7 +4182,7 @@ ul.condition li {
     line-height: 24px;
 }
 #arrived-screen .skip-btn-print{
-    background: var(--4, #FFAA01);
+    background: var(--4, #2e3f6e);
 }
 #arrived-screen .continue-btn{
     background: var(--9, #F0F0F0);
@@ -4196,13 +4196,13 @@ ul.condition li {
 .go-to-home a {
     width: 100%;
     border-radius: 12px;
-    border: 2px solid var(--4, #FFAA01);
+    border: 2px solid var(--4, #2e3f6e);
     background: var(--1, #FFF);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 15px 0;
-    color: var(--4, #FFAA01);
+    color: var(--4, #2e3f6e);
     text-align: center;
     font-family: "League Spartan", sans-serif;
     font-size: 20px;
