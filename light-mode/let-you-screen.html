@@ -15,6 +15,23 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/media-query.css">
   <link rel="manifest" href="manifest.json">
+<style>
+  /* Nossa cor #2e3f6e */
+  .sign-in-password-btn a,
+  .block-footer a {
+    background-color: #2e3f6e !important;
+    color: white !important;
+    border-color: #2e3f6e !important;
+  }
+  .sign-in-password-btn a:hover,
+  .block-footer a:hover {
+    background-color: #24325a !important;
+    border-color: #24325a !important;
+  }
+  .back-btn img {
+    filter: invert(22%) sepia(89%) saturate(1178%) hue-rotate(199deg) brightness(89%) contrast(95%);
+  }
+</style>
 <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js')
