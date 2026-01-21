@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="utf-8">
-    <meta name="theme-color" content="#ffffff">
-
+  <meta name="theme-color" content="#ffffff">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Taxigo - Taxi Booking Mobile App</title>
+  <title>OX4 Transportes - App de Transporte Urbano</title>
   <link rel="icon" href="assets/images/favicon/icon.png">
   <link href="../../../../../fonts.googleapis.com/css2%3Ffamily=League+Spartan:wght@100..900&amp;display=swap.css" rel="stylesheet">
   <link href="../../../../../fonts.googleapis.com/css2%3Ffamily=Space+Grotesk:wght@300..700&amp;display=swap.css" rel="stylesheet">
@@ -15,18 +14,17 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/media-query.css">
   <link rel="manifest" href="manifest.json">
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js')
-      .then(() => console.log('Service Worker registrado'))
-      .catch(err => console.log(err));
-  }
-</script>
-
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker registrado'))
+        .catch(err => console.log(err));
+    }
+  </script>
 </head>
 <body>
   <div class="site-content">
-    <!-- Preloader start -->
+    <!-- Preloader início -->
     <div class="loader-mask">
       <div class="loading-window">
         <div class="car">
@@ -45,38 +43,38 @@
         </div>
       </div>
     </div>
-    <!-- Preloader end -->
-    <!-- Header start -->
+    <!-- Preloader fim -->
+    <!-- Cabeçalho início -->
     <header id="top-header">
       <div class="header-wrap">
         <div class="header-back">
-          <a href="javascript:history.go(-1)"><img src="assets/svg/back-btn-white.svg" alt="back-btn"></a>
+          <a href="javascript:history.go(-1)"><img src="assets/svg/back-btn-white.svg" alt="botão-voltar"></a>
         </div>
         <div class="header-name">
-          <p>Notification</p>
+          <p>Notificação</p>
         </div>
       </div>
       <div class="boder"></div>
     </header>
-    <!-- Header end -->
-    <!-- Account created screen content start -->
+    <!-- Cabeçalho fim -->
+    <!-- Conteúdo da tela de conta criada início -->
     <section id="account-created">
       <div class="container">
         <div class="enable-location-wrap mt-32">
           <div class="enable-img">
-            <img src="assets/images/account-create/account-img.png" alt="account-img">
+            <img src="assets/images/account-create/account-img.png" alt="imagem-conta">
           </div>
           <div class="enable-details mt-32">
-            <h1>Account Created</h1>
-            <p class="sm-txt mt-16">Your account had been created successfully.</p>
+            <h1>Conta Criada</h1>
+            <p class="sm-txt mt-16">Sua conta foi criada com sucesso.</p>
           </div>
           <div class="verify-number-btn">
-            <a href="homescreen.html">Book My First Ride!</a>
+            <a href="homescreen.html">Solicitar Minha Primeira Viagem!</a>
           </div>
         </div>
       </div>
     </section>
-    <!-- Account created screen content end -->
+    <!-- Conteúdo da tela de conta criada fim -->
   </div>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/slick.min.js"></script>

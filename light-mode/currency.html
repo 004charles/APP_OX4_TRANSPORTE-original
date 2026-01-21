@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="utf-8">
-    <meta name="theme-color" content="#ffffff">
-
+  <meta name="theme-color" content="#ffffff">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Taxigo - Taxi Booking Mobile App</title>
+  <title>OX4 Transportes - App de Transporte Urbano</title>
   <link rel="icon" href="assets/images/favicon/icon.png">
   <link href="../../../../../fonts.googleapis.com/css2%3Ffamily=League+Spartan:wght@100..900&amp;display=swap.css" rel="stylesheet">
   <link href="../../../../../fonts.googleapis.com/css2%3Ffamily=Space+Grotesk:wght@300..700&amp;display=swap.css" rel="stylesheet">
@@ -22,11 +21,10 @@
       .catch(err => console.log(err));
   }
 </script>
-
 </head>
 <body>
   <div class="site-content">
-    <!-- Preloader start -->
+    <!-- Preloader início -->
     <div class="loader-mask">
       <div class="loading-window">
         <div class="car">
@@ -45,31 +43,31 @@
         </div>
       </div>
     </div>
-    <!-- Preloader end -->
-    <!-- Header start -->
+    <!-- Preloader fim -->
+    <!-- Cabeçalho início -->
     <header id="top-header">
       <div class="header-wrap">
         <div class="header-back">
           <a href="javascript:history.go(-1)">
-            <img src="assets/svg/back-btn-white.svg" alt="back-btn">
+            <img src="assets/svg/back-btn-white.svg" alt="botão-voltar">
           </a>
         </div>
         <div class="header-name">
-          <p>Currency</p>
+          <p>Moeda</p>
         </div>
       </div>
       <div class="boder"></div>
     </header>
-    <!-- Header end -->
-    <!-- Currency screen content start -->
+    <!-- Cabeçalho fim -->
+    <!-- Conteúdo da tela de moeda início -->
     <section id="currency-page">
       <div class="container">
         <div class="language-screen-full">
           <div class="lang-list">
-            <h1 class="d-none">Currency Page</h1>
+            <h1 class="d-none">Página de Moeda</h1>
             <div class="form-check change-lan-sec language-sel">
-              <input class="form-check-input custom-input"  name="language" type="radio" id="language1" checked>
-              <label class="form-check-label custom-lable"  for="language1">
+              <input class="form-check-input custom-input" name="language" type="radio" id="currency1" checked>
+              <label class="form-check-label custom-lable" for="currency1">
                 <span>
                   <svg class="curr-icon active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_1_303" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -80,12 +78,12 @@
                     </g>
                   </svg>
                 </span>
-                Dollar
+                Real Brasileiro (R$)
               </label>
             </div>
             <div class="form-check change-lan-sec">
-              <input class="form-check-input custom-input"  name="language" type="radio" id="language2">
-              <label class="form-check-label custom-lable" for="language2">
+              <input class="form-check-input custom-input" name="language" type="radio" id="currency2">
+              <label class="form-check-label custom-lable" for="currency2">
                 <span>
                   <svg class="curr-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_1_295" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -96,14 +94,14 @@
                     </g>
                   </svg>
                 </span>
-                Bitcoin
+                Dólar Americano (US$)
               </label>
             </div>
             <div class="form-check change-lan-sec">
-              <input class="form-check-input custom-input"  name="language" type="radio" id="language3">
-              <label class="form-check-label custom-lable" for="language3">
+              <input class="form-check-input custom-input" name="language" type="radio" id="currency3">
+              <label class="form-check-label custom-lable" for="currency3">
                 <span>
-                  <svg  class="curr-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="curr-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_1_287" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
                       <rect width="24" height="24" fill="white"/>
                     </mask>
@@ -112,12 +110,12 @@
                     </g>
                   </svg>
                 </span>
-                Ethereum
+                Euro (€)
               </label>
             </div>
             <div class="form-check change-lan-sec">
-              <input class="form-check-input custom-input"  name="language" type="radio" id="language4">
-              <label class="form-check-label custom-lable" for="language4">
+              <input class="form-check-input custom-input" name="language" type="radio" id="currency4">
+              <label class="form-check-label custom-lable" for="currency4">
                 <span>
                   <svg class="curr-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_1_279" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -128,12 +126,12 @@
                     </g>
                   </svg>
                 </span>
-                Euro
+                Libra Esterlina (£)
               </label>
             </div>
             <div class="form-check change-lan-sec">
-              <input class="form-check-input custom-input"  name="language" type="radio" id="language5">
-              <label class="form-check-label custom-lable" for="language5">
+              <input class="form-check-input custom-input" name="language" type="radio" id="currency5">
+              <label class="form-check-label custom-lable" for="currency5">
                 <span>
                   <svg class="curr-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_1_271" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -144,12 +142,12 @@
                     </g>
                   </svg>
                 </span>
-                Pound
+                Peso Argentino ($)
               </label>
             </div>
             <div class="form-check change-lan-sec">
-              <input class="form-check-input custom-input"  name="language" type="radio" id="language6">
-              <label class="form-check-label custom-lable" for="language6">
+              <input class="form-check-input custom-input" name="language" type="radio" id="currency6">
+              <label class="form-check-label custom-lable" for="currency6">
                 <span>
                   <svg class="curr-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_1_263" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -160,12 +158,12 @@
                     </g>
                   </svg>
                 </span>
-                Ruble
+                Peso Chileno (CLP$)
               </label>
             </div>
             <div class="form-check change-lan-sec">
-              <input class="form-check-input custom-input"  name="language" type="radio" id="language7">
-              <label class="form-check-label custom-lable" for="language7">
+              <input class="form-check-input custom-input" name="language" type="radio" id="currency7">
+              <label class="form-check-label custom-lable" for="currency7">
                 <span>
                   <svg class="curr-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_1_255" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -176,12 +174,12 @@
                     </g>
                   </svg>
                 </span>
-                Rupee
+                Peso Colombiano (COP$)
               </label>
             </div>
             <div class="form-check change-lan-sec">
-              <input class="form-check-input custom-input"  name="language" type="radio" id="language8">
-              <label class="form-check-label custom-lable" for="language8">
+              <input class="form-check-input custom-input" name="language" type="radio" id="currency8">
+              <label class="form-check-label custom-lable" for="currency8">
                 <span>
                   <svg class="curr-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_1_247" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -192,14 +190,14 @@
                     </g>
                   </svg>
                 </span>
-                Yen
+                Peso Uruguaio ($U)
               </label>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Currency screen content end -->
+    <!-- Conteúdo da tela de moeda fim -->
   </div>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/slick.min.js"></script>
