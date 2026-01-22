@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
 	<meta charset="utf-8">
-	  <meta name="theme-color" content="#ffffff">
-
+	<meta name="theme-color" content="#ffffff">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Taxigo - Taxi Booking Mobile App</title>
+	<title>OX4 Transportes - App de Transporte Urbano</title>
 	<link rel="icon" href="assets/images/favicon/icon.png">
 	<link href="../../../../../fonts.googleapis.com/css2%3Ffamily=League+Spartan:wght@100..900&amp;display=swap.css" rel="stylesheet">
 	<link href="../../../../../fonts.googleapis.com/css2%3Ffamily=Space+Grotesk:wght@300..700&amp;display=swap.css" rel="stylesheet">
@@ -22,11 +21,10 @@
       .catch(err => console.log(err));
   }
 </script>
-
 </head>
 <body>
 	<div class="site-content">
-		<!-- Preloader start -->
+		<!-- Preloader início -->
 		<div class="loader-mask">
 			<div class="loading-window">
 				<div class="car">
@@ -45,51 +43,51 @@
 				</div>
 			</div>
 		</div>
-		<!-- Preloader end -->
-		<!-- Header start -->
+		<!-- Preloader fim -->
+		<!-- Cabeçalho início -->
 		<header id="top-header">
 			<div class="header-wrap">
 				<div class="header-back">
 					<a href="javascript:history.go(-1)">
-						<img src="assets/svg/back-btn-white.svg" alt="back-btn">
+						<img src="assets/svg/back-btn-white.svg" alt="botão-voltar">
 					</a>
 				</div>
 				<div class="header-name">
-					<p>Set Your Location</p>
+					<p>Definir Localização</p>
 				</div>
 			</div>
 			<div class="boder"></div>
 		</header>
-		<!-- Header end -->
-		<!-- Set address screen content start -->
+		<!-- Cabeçalho fim -->
+		<!-- Conteúdo da tela de definir endereço início -->
 		<section id="add-new-add">
 			<div class="container">
 				<div class="add-new-add-wrap">
-					<h1 class="d-none">Hidden</h1>
+					<h1 class="d-none">Oculto</h1>
 					<div class="add-map mt-24">
-						<img src="assets/images/map/add-address-img.png" alt="address-icon">	
+						<img src="assets/images/map/add-address-img.png" alt="ícone-endereço">	
 					</div>
 					<form class="map-section-form mt-24">
 						<div class="title-sec">
-							<label for="title">PLACE NAME</label>
-							<input type="text" value="Home" id="title" class="mt-8">
+							<label for="title">NOME DO LOCAL</label>
+							<input type="text" value="Casa" id="title" class="mt-8" placeholder="Ex: Casa, Trabalho, Academia">
 						</div>
 						<div class="title-sec mt-16">
-							<label for="address">PLACE LOCATION</label>
-							<input type="text" value="61480 Sunbrook Park, PC 5679" id="address" class="mt-8">
+							<label for="address">ENDEREÇO COMPLETO</label>
+							<input type="text" value="Avenida Paulista, 1000 - São Paulo/SP" id="address" class="mt-8" placeholder="Digite o endereço completo">
 						</div>
 						<div class="footer-checkbox-sec mt-16">
 							<input class="checkbox-input-add" id="footer-checkbox" type="checkbox">
-							<label for="footer-checkbox" class="footer-chec-txt1">Make this as the default address</label>
+							<label for="footer-checkbox" class="footer-chec-txt1">Definir como endereço padrão</label>
 						</div>
 					</form>
 					<div class="verify-number-btn">
-						<a href="account-created.html">Continue</a>
+						<a href="account-created.html">Continuar</a>
 					</div>
 				</div>	
 			</div>
 		</section>
-		<!-- Set address screen content end -->
+		<!-- Conteúdo da tela de definir endereço fim -->
 	</div>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/slick.min.js"></script>
